@@ -29,7 +29,10 @@ public class MainService extends Application<ServiceConfiguration> {
                     JdNativeLogin.class,
                     JdSsoLogin.class,
                     JdLoginTracking.class,
-                    JdClinic.class
+                    JdClinic.class,
+                    JdAppointment.class,
+                    JdBookingSlots.class,
+                    JdClinicRoleMap.class
             ) {
         @Override
         public DataSourceFactory getDataSourceFactory(ServiceConfiguration configuration) {
@@ -88,6 +91,18 @@ public class MainService extends Application<ServiceConfiguration> {
         final JdClinicDAO jdClinicDAO = new JdClinicDAO(hibernate.getSessionFactory());
         final JdClinicResource jdClinicResource = new JdClinicResource(jdClinicDAO);
         environment.jersey().register(jdClinicResource);
+
+        final JdClinicRoleMapDAO jdClinicRoleMapDAO = new JdClinicRoleMapDAO(hibernate.getSessionFactory());
+        final JdClinicRoleMapResource jdClinicRoleMapResource = new JdClinicRoleMapResource(jdClinicRoleMapDAO);
+        environment.jersey().register(jdClinicRoleMapResource);
+
+        final JdBookingSlotsDAO jdBookingSlotsDAO = new JdBookingSlotsDAO(hibernate.getSessionFactory());
+        final JdBookingSlotsResource jdBookingSlotsResource = new JdBookingSlotsResource(jdBookingSlotsDAO);
+        environment.jersey().register(jdBookingSlotsResource);
+
+        final JdAppointmentDAO jdAppointmentDAO = new JdAppointmentDAO(hibernate.getSessionFactory());
+        final JdAppointmentResource jdAppointmentResource = new JdAppointmentResource(jdAppointmentDAO);
+        environment.jersey().register(jdAppointmentResource);
 
         environment.healthChecks().register("health",
                 new DatabaseHealthCheck(jdbi, configuration.getDataSourceFactory().getValidationQuery()));

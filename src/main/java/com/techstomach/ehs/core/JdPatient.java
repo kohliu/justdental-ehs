@@ -20,11 +20,6 @@
 //@Table(name = "jd_patient", catalog = "jdehs_dev")
 //public class JdPatient extends JdUser {
 //
-//	/** Serial Version UID. */
-//	private static final long serialVersionUID = -559033256L;
-//
-//
-//
 //	/** Field mapping. */
 //	private String aadharnumber;
 //	/** Field mapping. */

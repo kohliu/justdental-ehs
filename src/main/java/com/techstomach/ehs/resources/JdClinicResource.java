@@ -52,7 +52,7 @@ public class JdClinicResource {
     @PUT
     @Path("/{id}")
     @UnitOfWork
-    @ApiOperation(value = "update existing Just Dental Roles", notes = "update existing Just Dental Roles", response = JdClinic.class)
+    @ApiOperation(value = "update existing Just Dental Clinics", notes = "update existing Just Dental Clinics", response = JdClinic.class)
     public JdClinic update(@PathParam("id") Long id, @Valid JdClinic jdClinic) {
         jdClinic.setClinicId(id);
         jdClinicDAO.update(jdClinic);
@@ -62,7 +62,7 @@ public class JdClinicResource {
     @DELETE
     @Path("/{id}")
     @UnitOfWork
-    @ApiOperation(value = "delete specific Just Dental Roles", notes = "delete specific Just Dental Roles", response = JdClinic.class)
+    @ApiOperation(value = "delete specific Just Dental RolClinicses", notes = "delete specific Just Dental Clinics", response = JdClinic.class)
     public void delete(@PathParam("id") Long id) {
         jdClinicDAO.delete(jdClinicDAO.findById(id));
     }
