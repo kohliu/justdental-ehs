@@ -104,6 +104,10 @@ public class MainService extends Application<ServiceConfiguration> {
         final JdAppointmentResource jdAppointmentResource = new JdAppointmentResource(jdAppointmentDAO);
         environment.jersey().register(jdAppointmentResource);
 
+        final JdPatientDAO jdPatientDAO = new JdPatientDAO(hibernate.getSessionFactory());
+        final JdPatientResource jdPatientResource = new JdPatientResource(jdPatientDAO);
+        environment.jersey().register(jdPatientResource);
+
         environment.healthChecks().register("health",
                 new DatabaseHealthCheck(jdbi, configuration.getDataSourceFactory().getValidationQuery()));
 
