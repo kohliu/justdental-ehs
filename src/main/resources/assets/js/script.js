@@ -678,3 +678,19 @@ function callFormSubmit(){
            }
 	});    
 }
+
+function loginUserTypeOnchange()
+{
+    var loginUserType = document.getElementById('loginUserType').value;
+    console.log(loginUserType);
+    if(loginUserType == 'admin')
+    {
+        document.getElementById('facebook-login').style.visibility = "hidden";
+        document.getElementById('google-login').style.visibility = "hidden";
+    }
+    else
+    {
+        document.getElementById('facebook-login').style.visibility = "visible";
+        document.getElementById('google-login').style.visibility = "visible";
+    }
+}
