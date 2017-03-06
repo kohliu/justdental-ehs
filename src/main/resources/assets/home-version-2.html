@@ -1211,6 +1211,7 @@
         </div>
     </div>
     
+    
     <div id="addClinicModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -1278,7 +1279,7 @@
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <button class="btn btn-success btn-md btn-block btn-round" onClick={ this.doValidateAndLogin}> <i class="fa fa-sign-in"></i> Login </button>
+                                                            <button class="btn btn-success btn-md btn-block btn-round" onClick="login()"> <i class="fa fa-sign-in"></i> Login </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1290,13 +1291,29 @@
                                                             <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
                                                                 <i class="fa fa-user fa-fw text-success"></i>
                                                             </span>
-                                                                <input class="form-control" type="text" placeholder="First name" /> </div>
+                                                                <input class="form-control" id="loginId" type="text" placeholder="Login Id" /> </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                                <i class="fa fa-user fa-fw text-success"></i>
+                                                            </span>
+                                                                <input class="form-control" id="password" type="password" placeholder="Password" /> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-6">
+                                                            <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
+                                                                <i class="fa fa-user fa-fw text-success"></i>
+                                                            </span>
+                                                                <input class="form-control" id="firstName" type="text" placeholder="First name" /> </div>
                                                         </div>
                                                         <div class="col-md-6 pl-20">
                                                             <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
                                                                 <i class="fa fa-user fa-fw text-success"></i>
                                                             </span>
-                                                                <input class="form-control" type="text" placeholder="Last name" /> </div>
+                                                                <input class="form-control" id="lastName" type="text" placeholder="Last name" /> </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1306,7 +1323,7 @@
                                                             <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
                                                                 <i class="fa fa-envelope-o fa-fw text-success"></i>
                                                             </span>
-                                                                <input class="form-control" type="text" placeholder="email id" /> </div>
+                                                                <input id="emailId" class="form-control" type="text" placeholder="email id" /> </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1316,14 +1333,14 @@
                                                             <div class="input-group margin-bottom-sm"> <span class="input-group-addon">
                                                                 <i class="fa fa-mobile fa-fw text-success"></i>
                                                             </span>
-                                                                <input class="form-control" type="text" placeholder="Mobile number" /> </div>
+                                                                <input id="mobileNumber" class="form-control" type="text" placeholder="Mobile number" /> </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="col-md-12">
-                                                            <button class="btn btn-success btn-md btn-block btn-round"><i class="fa fa-sign-in"></i> Register</button>
+                                                            <button class="btn btn-success btn-md btn-block btn-round" onClick="register()"><i class="fa fa-sign-in"></i> Register</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1380,6 +1397,12 @@
     
     <!-- Custom JS -->
     <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/jd/payload.js" type="text/javascript"></script>
+    <script src="config/url.config.js" type="text/javascript"></script>
+    <script src="js/jd/misc.js" type="text/javascript"></script>
+    
+    
+    
     
 </body>
 

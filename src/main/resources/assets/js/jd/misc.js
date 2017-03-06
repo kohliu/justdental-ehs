@@ -1,14 +1,47 @@
-function login(){
-    console.log("Login called  "+NATIVE_LOGIN);
+/* Main screen login */
+function login() {
+    console.log("Login called  " + NATIVE_LOGIN);
     fetch(NATIVE_LOGIN, {
-	method: 'get',
-        mode: 'cors', 
-	redirect: 'follow',
-        credentials: 'include'
-}).then(function(response) {
-	console.log(response);
-}).catch(function(err) {
-	// Error :(
+        method: 'get'
+        , mode: 'cors'
+        , redirect: 'follow'
+        , credentials: 'include'
+    }).then(function (response) {
+        console.log(response);
+    }).catch(function (err) {
+        // Error :(
         console.log(err);
-});
+    });
+}
+/* Main screen regstration */
+function register() {
+    var loginId = document.getElementById('loginId').value;
+    var password = document.getElementById('password').value;
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var emailId = document.getElementById('emailId').value;
+    var mobileNumber = document.getElementById('mobileNumber').value;
+    var payload = createLogin;
+    payload.uniqueLoginName = loginId;
+    payload.passwordKey = password;
+    payload.userIdFk.firstName = firstName;
+    payload.userIdFk.lastName = lastName;
+    payload.userIdFk.emailAddress = emailId;
+    console.log(JSON.stringify(payload));
+    fetch(NATIVE_REGISTRATION, {
+        method: 'POST'
+        , mode: 'cors'
+        , redirect: 'follow'
+        , credentials: 'include'
+        , headers: {
+            'Accept': 'application/json'
+            , 'Content-Type': 'application/json'
+        }
+        , body: JSON.stringify(payload)
+    }).then(function (response) {
+        console.log('suc', response);
+    }).catch(function (err) {
+        // Error :(
+        console.log('err', err);
+    });
 }
