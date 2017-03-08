@@ -29,3 +29,7 @@ var createLogin = {
  "passwordQuestion": "string"
 };
 
+function getCreateLoginPayload(){
+    return jQuery.extend(true, {}, createLogin);
+}
+

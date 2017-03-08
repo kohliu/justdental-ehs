@@ -21,12 +21,15 @@ function register() {
     var lastName = document.getElementById('lastName').value;
     var emailId = document.getElementById('emailId').value;
     var mobileNumber = document.getElementById('mobileNumber').value;
-    var payload = createLogin;
+    var payload = getCreateLoginPayload();
+    
+    console.log(JSON.stringify(payload));
     payload.uniqueLoginName = loginId;
     payload.passwordKey = password;
     payload.userIdFk.firstName = firstName;
     payload.userIdFk.lastName = lastName;
     payload.userIdFk.emailAddress = emailId;
+    console.log(JSON.stringify(payload));
     console.log(JSON.stringify(payload));
     fetch(NATIVE_REGISTRATION, {
         method: 'POST'
