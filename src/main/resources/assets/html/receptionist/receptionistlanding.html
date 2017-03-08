@@ -178,7 +178,7 @@
                 </div>
                 <div class="row mt-20 mb-20">
                     <div class="col-md-12">
-                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#clinicEditModal"> <i class="fa fa-edit"></i> Edit Clinic Info</button>
+                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#clinicEditModal" data-toggle="tooltip" data-placement="top" title="Edit Clinic Information"> <i class="fa fa-edit"></i> Edit Clinic Info</button>
                     </div>
                 </div>
                 <div class="row top5">
@@ -192,12 +192,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="contact-list">
-                            <li> <i class="fa fa-location-arrow"></i>Mallige Medical Centre Pvt. Ltd. </li>
+                            <li> <i class="fa fa-location-arrow" data-toggle="tooltip" data-placement="top" title="Clinic Address"></i>Mallige Medical Centre Pvt. Ltd. </li>
                             <li> 31/32 Crescent Road </li>
                             <li> Bangalore - 560001</li>
-                            <li> <i class="fa fa-phone"></i> +91-80-67165555 </li>
-                            <li> <i class="fa fa-fax"></i> +91-80-22265298 </li>
-                            <li> <i class="fa fa-envelope"></i>  info@mallige.com </li>
+                            <li> <i class="fa fa-phone" data-toggle="tooltip" data-placement="top" title="Phone Number"></i> +91-80-67165555 </li>
+                            <li> <i class="fa fa-fax" data-toggle="tooltip" data-placement="top" title="Fax"></i> +91-80-22265298 </li>
+                            <li> <i class="fa fa-envelope" data-toggle="tooltip" data-placement="top" title="email Id"></i>  info@mallige.com </li>
                         </ul>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="a2heading2">
                                 <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body2" aria-expanded="true" aria-controls="a2body1">
+                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body2" aria-expanded="false" aria-controls="a2body1">
                                         Quick Links
                                     </a>
                                 </h4>
@@ -226,7 +226,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="a2heading20">
                                 <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body20" aria-expanded="true" aria-controls="a2body20">
+                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body20" aria-expanded="false" aria-controls="a2body20">
                                         Manage Doctor
                                     </a>
                                 </h4>
@@ -246,7 +246,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="a2heading30">
                                 <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body30" aria-expanded="true" aria-controls="a2body30">
+                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body30" aria-expanded="false" aria-controls="a2body30">
                                         Manage Patients
                                     </a>
                                 </h4>
@@ -256,7 +256,8 @@
                                     <ul class="list-styled">
                                         <li>Book Appointment</li>
                                         <li>Invoice Generation</li>
-                                        <li>Update Basic Profile</li>                                        
+                                        <li>Register Patient</li>                                        
+                                        <li>Update Patient</li>                                        
                                     </ul>
                                 </div>
                             </div>
@@ -283,10 +284,10 @@
                             <div id="appointments" class="tab-pane fade in active">
                                 <div class="row">
                                     <div class="col-md-4 pull-right">
-                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="icon-i-dental"></i> Regsiter Patient </button>
+                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal" data-toggle="tooltip" data-placement="top" title="Regsiter Patient"> <i class="icon-i-dental"></i> Regsiter Patient </button>
                                     </div>
                                     <div class="col-md-4 pull-right">
-                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="fa fa-calendar"></i> Book Appointment </button>
+                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal" data-toggle="tooltip" data-placement="top" title="Book Appointment"> <i class="fa fa-calendar"></i> Book Appointment </button>
                                         </div>
                                 </div>
                                 <div class="row mt-20">
@@ -403,15 +404,27 @@
                             <form>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <h3 class="heading">Welcome <span class="color1"></span> Santhosh, book your appointment </h3>
+                                        <h3 class="heading"> <span class="color1"></span> Book appointment (Behalf of patient)</h3>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Phone Number" value="+91 7892317589"> </div>
+                                            <select>
+                                                <option>Select Patient</option>
+                                                <option>Suresh</option>
+                                                <option>Seema</option>
+                                                <option>Nandu</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Email ID" value="drsantoshkumarr@gmail.com"> </div>
+                                            <input class="form-control" type="text" placeholder="Your Phone Number" value="+91 9886656678">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Your Email ID" value="suresh@gmail.com">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">                                    
@@ -419,7 +432,7 @@
                                         <div class="form-group">
                                             <select>
                                                 <option>Select Locality</option>
-                                                <option>Bengaluru - Malleswaram</option>
+                                                <option selected>Bengaluru - Malleswaram</option>
                                                 <option>Bengaluru - Marathahalli</option>
                                                 <option>Bengaluru - Domlur</option>
                                             </select>
@@ -429,6 +442,7 @@
                                         <div class="form-group">
                                             <select>
                                                 <option>Select Clinic</option>
+                                                <option selected>Mallige Medical Centre Pvt. Ltd.</option>
                                                 <option>Smile Clinic</option>
                                                 <option>Partha Dental Hospitals</option>
                                                 <option>Rashmi Dental Clinic</option>
@@ -652,41 +666,18 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" rows="5" placeholder="Notification"></textarea>
+                                                        </div>
+                                                    </div>                                                    
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="a2heading40">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body40" aria-expanded="false" aria-controls="a2body40">
-                                                      Medical history
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="a2body40" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading40">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Medical History"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Family History"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Social History"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Update my Profile</button>
+                                    <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Update Clinic Details</button>
                                 </div>
                             </form>
                         </div>
