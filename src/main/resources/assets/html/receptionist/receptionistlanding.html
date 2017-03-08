@@ -174,29 +174,30 @@
         <div class="row top90">
             <div class="col-md-3" style="height:300px">
                 <div class="row ">
-                    <div class="col-md-offset-2 col-md-8"> <img src="../../images/sample-clinic-logo.jpg" alt="" class="img-rounded img-responsive patient-profile-img" /> </div>
+                    <div class="col-md-offset-2 col-md-8"> <img src="../../images/mallige.png" style="height:60px" alt="" class="img-rounded img-responsive patient-profile-img" /> </div>
                 </div>
                 <div class="row mt-20 mb-20">
                     <div class="col-md-12">
-                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#profileEditModal"> <i class="fa fa-edit"></i> Edit </button>
+                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#clinicEditModal"> <i class="fa fa-edit"></i> Edit Clinic Info</button>
                     </div>
                 </div>
                 <div class="row top5">
                     <div class="col-md-12">
                         <blockquote>
-                            <p>Mr. Santhosh Kumar</p> <small>
-                        <cite title="Source Title">35 / Male - Bengaluru <i class="glyphicon glyphicon-map-marker"></i></cite>
+                            <p>Ms. Sumathi</p> <small>
+                        <cite title="Source Title">23 / Female - Bengaluru <i class="glyphicon glyphicon-map-marker"></i></cite>
                     </small> </blockquote>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="contact-list">
-                            <li> <i class="fa fa-location-arrow"></i> Behind Canara bank </li>
-                            <li> Ramamandir, 3rd block Rajajinagar, </li>
-                            <li> Bangalore </li>
-                            <li> <i class="fa fa-phone"></i> +91 7892317589 </li>
-                            <li> <i class="fa fa-envelope"></i> justdentalindia@gmail.com </li>
+                            <li> <i class="fa fa-location-arrow"></i>Mallige Medical Centre Pvt. Ltd. </li>
+                            <li> 31/32 Crescent Road </li>
+                            <li> Bangalore - 560001</li>
+                            <li> <i class="fa fa-phone"></i> +91-80-67165555 </li>
+                            <li> <i class="fa fa-fax"></i> +91-80-22265298 </li>
+                            <li> <i class="fa fa-envelope"></i>  info@mallige.com </li>
                         </ul>
                     </div>
                 </div>
@@ -220,13 +221,53 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
+                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="a2heading20">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body20" aria-expanded="true" aria-controls="a2body20">
+                                        Manage Doctor
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="a2body20" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading20">
+                                <div class="panel-body">
+                                    <ul class="list-styled">
+                                        <li>Register Doctor Information</li>
+                                        <li>Update Timings</li>
+                                        <li>Edit Doctor Information</li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="a2heading30">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body30" aria-expanded="true" aria-controls="a2body30">
+                                        Manage Patients
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="a2body30" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading30">
+                                <div class="panel-body">
+                                    <ul class="list-styled">
+                                        <li>Book Appointment</li>
+                                        <li>Invoice Generation</li>
+                                        <li>Update Basic Profile</li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="alert alert-warning"> <i class="fa fa-info-circle"></i> Your next appointment is on 10 March 2017 </div>
+                        <div class="alert alert-primary">Good Evening, Sumathi. You have 10 appointments today. </div>
                     </div>
                 </div>
                 <div class="row">
@@ -242,8 +283,11 @@
                             <div id="appointments" class="tab-pane fade in active">
                                 <div class="row">
                                     <div class="col-md-4 pull-right">
-                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="fa fa-calendar"></i> Book Appointment </button>
+                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="icon-i-dental"></i> Regsiter Patient </button>
                                     </div>
+                                    <div class="col-md-4 pull-right">
+                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="fa fa-calendar"></i> Book Appointment </button>
+                                        </div>
                                 </div>
                                 <div class="row mt-20">
                                     <div class="col-md-12">
@@ -264,27 +308,29 @@
                                                     <td>1</td>
                                                     <td>Suresh</td>
                                                     <td>RC - #1</td>
-                                                    <td>Dr Sumanth</td>                                                    
+                                                    <td>Dr Srinath</td>                                                    
                                                     <td><span class="label label-default">Not Started</span></td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                    <td><span class="label label-default">20/March/2017</span></td>
+                                                    <td><a href="#" data-toggle="tooltip" data-placement="top" title="Edit Suresh's Appointment"><i class="fa fa-edit fa-fw text-warning"></i></a>
+                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Cancel Suresh's Appointment"><i class="fa fa-times-circle fa-fw text-danger"></i></a>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
                                                     <td>Ganesh</td>
                                                     <td>RC - #2</td>
-                                                    <td>Dr Sumanth</td>                                                    
+                                                    <td>Dr Srinath</td>                                                    
                                                     <td><span class="label label-default">Not Started</span></td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
+                                                    <td><span class="label label-default">20/March/2017</span></td>
                                                     <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
                                                     <td>Sriram</td>
                                                     <td>RC - #3</td>
-                                                    <td>Dr Sumanth</td> 
+                                                    <td>Dr Srinath</td> 
                                                     <td><span class="label label-default">Not Started</span></td>
-                                                    <td><span class="label label-default">21/Jan/2017</span></td>
+                                                    <td><span class="label label-default">21/March/2017</span></td>
                                                     <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
                                                 </tr>
                                                 <tr>
@@ -293,7 +339,7 @@
                                                     <td>Crown Measurement</td>
                                                     <td>Dr Suresh</td>   
                                                     <td><span class="label label-warning">Delayed</span></td>
-                                                    <td><span class="label label-warning">24/Jan/2017</span></td>
+                                                    <td><span class="label label-warning">24/March/2017</span></td>
                                                     <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
                                                 </tr>
                                                 <tr>
@@ -302,7 +348,7 @@
                                                     <td>Crown Fitting</td>
                                                     <td>Dr Suresh</td> 
                                                     <td><span class="label label-success">Consulting</span></td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><span class="label label-success">28/March/2017</span></td>
                                                     <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
                                                 </tr>
                                                 <tr>
@@ -311,7 +357,7 @@
                                                     <td>Crown Fitting</td>
                                                     <td>Dr Suresh</td>    
                                                     <td><span class="label label-success">Consulting</span></td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><span class="label label-success">28/March/2017</span></td>
                                                     <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
                                                 </tr>
                                                  <tr>
@@ -320,7 +366,7 @@
                                                     <td>Crown Fitting</td>
                                                     <td>Dr Suresh</td> 
                                                      <td><span class="label label-success">Consulting</span></td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><span class="label label-success">28/March/2017</span></td>
                                                     <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
                                                 </tr>
                                                  <tr>
@@ -329,7 +375,7 @@
                                                     <td>Crown Fitting</td>
                                                     <td>Dr Suresh</td>  
                                                      <td><span class="label label-danger">Cancelled</span></td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><span class="label label-danger">28/March/2017</span></td>
                                                     <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
                                                 </tr>                                                 
                                             </tbody>
@@ -444,7 +490,7 @@
             </div>
         </div>
         <!-- Profile edit Modal -->
-        <div class="modal fade" id="profileEditModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
+        <div class="modal fade" id="clinicEditModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
@@ -453,7 +499,7 @@
                             <form>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                            <h3 class="heading">Edit your profile</h3>
+                                            <h3 class="heading">Edit your Clinic Information</h3>
                                     </div>
                                 </div>
                                 <div class="accordion-2">
@@ -469,26 +515,31 @@
                                             <div id="a2body1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading1">
                                                 <div class="panel-body">
                                                     <div class="row">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Firstname" value="Santhosh">
+                                                                <input class="form-control" type="text" placeholder="Clinic Name" value="Mallige Medical Centre Pvt. Ltd.">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Middlename" >
+                                                                <input class="form-control" type="text" placeholder="Tax Number" value="TIN: 9876567757">                                                               
+                                                            </div>
+                                                        </div>                                                        
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Primary Contact Person" value="Subramani"> 
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
+                                                                <input class="form-control" type="text" placeholder="Primary Contact Number" value="+91 98099 89765">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="email id" value="drsantoshkumarr@gmail.com">
+                                                                <input class="form-control" type="text" placeholder="email id" value="info@mallige.com">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
@@ -498,59 +549,22 @@
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <select>
-                                                                    <option>Marital Status</option>
-                                                                    <option>Single</option>
-                                                                    <option>Married</option>                                                                    
-                                                                    <option>Dont want to disclose</option>                                                                    
-                                                                </select>
+                                                                <input class="form-control" type="text" placeholder="Phone number" value="+91-80-22265298">
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select>
-                                                                    <option>Select Gender</option>
-                                                                    <option>Male</option>
-                                                                    <option>Female</option>                                                                    
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select>
-                                                                    <option>Select blood Group</option>
-                                                                    <option>A+</option>
-                                                                    <option>A-</option>
-                                                                    <option>B+</option>
-                                                                    <option>B-</option>
-                                                                    <option>O+</option>
-                                                                    <option>O-</option>
-                                                                    <option>AB+</option>
-                                                                    <option>AB-</option>
-                                                                    <option>Not Sure</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    </div>                                                    
                                                 </div>
                                             </div>
                                         </div>
                                          <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="a2heading20">
+                                            <div class="panel-heading" role="tab" id="a2heading21">
                                                 <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body20" aria-expanded="false" aria-controls="a2body20">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body21" aria-expanded="false" aria-controls="a2body21">
                                                       Contact Address Information
                                                     </a>
                                                 </h4>
                                             </div>
-                                            <div id="a2body20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading20">
+                                            <div id="a2body21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading21">
                                                 <div class="panel-body">
                                                    <div class="row">
                                                         <div class="col-md-4">
@@ -596,29 +610,45 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="a2heading30">
+                                            <div class="panel-heading" role="tab" id="a2heading31">
                                                 <h4 class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body30" aria-expanded="false" aria-controls="a2body30">
-                                                      Emergency Contact Information
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body31" aria-expanded="false" aria-controls="a2body31">
+                                                      Working Schedule
                                                     </a>
                                                 </h4>
                                             </div>
-                                            <div id="a2body30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading30">
+                                            <div id="a2body31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading31">
                                                 <div class="panel-body">
                                                    <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person Name" value="">
+                                                                 <select>
+                                                                    <option>Select Working Hours</option>
+                                                                    <option>Full Day</option>
+                                                                    <option>Morning 9:00AM - 1:00PM</option>
+                                                                    <option>Evening 6:00PM - 10:00PM</option>                                               
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person relationship" >
+                                                                 <select>
+                                                                    <option>Select Working Days</option>
+                                                                    <option>All Days</option>
+                                                                    <option>Week Days</option>
+                                                                    <option>Only Weekends</option>                                               
+                                                                    <option>Odd days [ Mon, Wed, Fri ]</option>                                               
+                                                                    <option>Even days [ Tue, Thurs, Sat ]</option>                                               
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Phone number" value="Kumar">
+                                                                <select>
+                                                                    <option>Current Status</option>
+                                                                    <option><i class="fa fa-edit fa-fw text-warning">Working</i></option>
+                                                                    <option>Not Working</option>                                                                                                                 
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
