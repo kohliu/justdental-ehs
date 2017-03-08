@@ -182,7 +182,7 @@ CREATE TABLE jd_patient
 	emailAddress varchar(255) NULL,
 	street1 varchar(1000) NULL,
 	street2 varchar(1000) NULL,
-	lcality varchar(500) NULL,
+	locality varchar(500) NULL,
 	city varchar(255) NOT NULL,
 	state varchar(255)NOT NULL,
 	country varchar(255) NOT NULL,

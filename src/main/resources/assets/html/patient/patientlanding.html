@@ -187,7 +187,7 @@
                 </div>
                 <div class="row mt-20 mb-20">
                     <div class="col-md-12">
-                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="fa fa-edit"></i> Edit </button>
+                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#profileEditModal"> <i class="fa fa-edit"></i> Edit </button>
                     </div>
                 </div>
                 <div class="row top5">
@@ -391,7 +391,14 @@
                                             <textarea class="form-control" rows="5" placeholder="Appointment Description"></textarea>
                                         </div>
                                     </div>
-                                </div>                                
+                                </div>   
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Book Appointment</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -408,109 +415,196 @@
                             <form>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <h3 class="heading"><span class="color1">Welcome Santhosh </span>Book your appointment </h3> </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your First Name"> </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Last Name"> </div>
+                                            <h3 class="heading">Edit your profile</h3>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Phone Number"> </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="number" placeholder="Your Email ID"> </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control date-select" type="text" placeholder="Your Date of Birth"> </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <select>
-                                                <option>Select Appointment Slot</option>
-                                                <option>9:00 p.m. - 12:00 p.m.</option>
-                                                <option>12:00 p.m. - 4:00 p.m.</option>
-                                                <option>4:00 p.m. - 8:00 p.m.</option>
-                                            </select>
+                                <div class="accordion-2">
+                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading1">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body1" aria-expanded="true" aria-controls="a2body1">
+                                                        Basic Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading1">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Firstname" value="Santhosh">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Middlename" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="email id" value="drsantoshkumarr@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Phone number" value="+91 7892317589">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Marital Status</option>
+                                                                    <option>Single</option>
+                                                                    <option>Married</option>                                                                    
+                                                                    <option>Dont want to disclose</option>                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Gender</option>
+                                                                    <option>Male</option>
+                                                                    <option>Female</option>                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select blood Group</option>
+                                                                    <option>A+</option>
+                                                                    <option>A-</option>
+                                                                    <option>B+</option>
+                                                                    <option>B-</option>
+                                                                    <option>O+</option>
+                                                                    <option>O-</option>
+                                                                    <option>AB+</option>
+                                                                    <option>AB-</option>
+                                                                    <option>Not Sure</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                                         <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading2">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body2" aria-expanded="false" aria-controls="a2body2">
+                                                      Contact Address Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading2">
+                                                <div class="panel-body">
+                                                   <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Street # 1" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Street # 2" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Locality">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="City" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Pincode" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select blood Group</option>
+                                                                    <option>Karnataka</option>
+                                                                    <option>Tamilnade</option>
+                                                                    <option>Kerala</option>
+                                                                    <option>...</option>                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading2">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body2" aria-expanded="false" aria-controls="a2body2">
+                                                      Emergency Contact Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading2">
+                                                <div class="panel-body">
+                                                   <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person Name" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person relationship" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Phone number" value="Kumar">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading3">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body3" aria-expanded="false" aria-controls="a2body3">
+                                                      Medical history
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading3">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Book Appointment</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Book Apponiment Modal -->
-        <div class="modal fade" id="bookAppointmentModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <h3 class="heading">Avoid Long Queues. <span class="color1">Book Online!</span></h3> </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your First Name"> </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Last Name"> </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Phone Number"> </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="number" placeholder="Your Email ID"> </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control date-select" type="text" placeholder="Your Date of Birth"> </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <select>
-                                                <option>Select Appointment Slot</option>
-                                                <option>9:00 p.m. - 12:00 p.m.</option>
-                                                <option>12:00 p.m. - 4:00 p.m.</option>
-                                                <option>4:00 p.m. - 8:00 p.m.</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Book Appointment</button>
+                                    <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Book Appointment</button>
                                 </div>
                             </form>
                         </div>
