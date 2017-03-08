@@ -3963,3 +3963,14 @@ blockquote footer{
 
 #social_side_links li a:hover img {background: rgba(0, 0, 0, .2);}
 /* floating div end */
+
+/* */
+.btn-round {
+    border-radius: 90px;
+}
+.patient-profile-img{
+    height: 250px;
+    vertical-align: center;
+    width: 400px;
+}
+/* */
