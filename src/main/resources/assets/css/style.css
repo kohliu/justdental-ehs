@@ -34,7 +34,8 @@ html,body{
 }
 
 body{
-    color: #585858;
+    color: #585style.css
+        858;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -3973,4 +3974,5 @@ blockquote footer{
     vertical-align: center;
     width: 400px;
 }
+
 /* */
