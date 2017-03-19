@@ -3975,4 +3975,10 @@ blockquote footer{
     width: 400px;
 }
 
+.left-panel-yellow{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid yellow;word-wrap:break-word}
+.left-panel-green{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+.left-panel-orange{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid orange;word-wrap:break-word}
+.left-panel-violet{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid darkviolet;word-wrap:break-word}
+
+
 /* */
