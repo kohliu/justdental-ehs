@@ -8,13 +8,16 @@ $(document).ready(function() {
 //alert('loading');
 	$('#receptionistLanding').fullCalendar({
         eventClick: function(calEvent, jsEvent, view) {
-            debugger;
+            console.log(calEvent);
+           // alert('Edit: ')            
+            $('#editEventAppointmentModal').modal('show')
+            //debugger;
         },
         select: function(start, end, jsEvent, view) {
             debugger;
         },
         dayClick: function(date, jsEvent, view) {
-            $('#btnClinicEditModal').click();
+            //$('#btnClinicEditModal').click();
         //alert('Clicked on: ' + date.format());
             debugger;
 //console.log(JSON.stringify(jsEvent));
@@ -29,6 +32,7 @@ $(document).ready(function() {
         dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
  'Thursday', 'Friday', 'Saturday'],
         slotMinutes: 30,
+        slotDuration: '00:45:00', 
           defaultEventMinutes: 120,
         firstHour: 8,
         minTime: '08:00:00',
