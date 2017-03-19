@@ -20,6 +20,7 @@
     <link href="../../../css/medical-icons.css" type="text/css" rel="stylesheet">
     <!-- Stylesheets -->
     <link href="../../../css/vendors.css" type="text/css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css" type="text/css" rel="stylesheet">
     <link href="../../../css/style.css" type="text/css" rel="stylesheet" id="style">
     <link href="../../../css/components.css" type="text/css" rel="stylesheet" id="components">
     <!--Slider Revolution -->
@@ -170,15 +171,45 @@
         </nav>
     </header>
     
-    <div class="container mt-150">
+    <div class="container-fluid mt-150">
         <div class="row top90">
             <div class="col-md-3" style="height:300px">
                 <div class="row ">
                     <div class="col-md-offset-2 col-md-8"> <img src="../../images/mallige.png" style="height:60px" alt="" class="img-rounded img-responsive patient-profile-img" /> </div>
                 </div>
                 <div class="row mt-20 mb-20">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 20rem;color:red;font-weight:bold">10
+                            <div class="card-block">
+                                Scheduled
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 20rem;color:darkviolet;font-weight:bold">4
+                            <div class="card-block">
+                                Waiting
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 20rem;color:orange;font-weight:bold">2
+                            <div class="card-block">
+                                Consulting
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 20rem;color:chartreuse;font-weight:bold">4
+                            <div class="card-block">
+                                Completed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-20 mb-20">
                     <div class="col-md-12">
-                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#clinicEditModal" data-toggle="tooltip" data-placement="top" title="Edit Clinic Information"> <i class="fa fa-edit"></i> Edit Clinic Info</button>
+                        <button id="btnClinicEditModal" class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#clinicEditModal" data-toggle="tooltip" data-placement="top" title="Edit Clinic Information"> <i class="fa fa-edit"></i> Edit Clinic Info</button>
                     </div>
                 </div>
                 <div class="row top5">
@@ -273,15 +304,17 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <ul class="nav nav-tabs list-group">
-                            <li class="active"><a data-toggle="tab" href="#appointments">Appointments</a></li>
+                        <ul class="nav nav-tabs list-group">                            
+                            <li class="active"><a data-toggle="tab" href="#calendar">Calendar</a></li>
+                            <li><a data-toggle="tab" href="#appointments">Appointments</a></li>
                             <li><a data-toggle="tab" href="#reports">Reports</a></li>
                             <li><a data-toggle="tab" href="#bills">Bills</a></li>
                             <li><a data-toggle="tab" href="#prescription">Prescription</a></li>
                             <li><a data-toggle="tab" href="#conversations">Conversations</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div id="appointments" class="tab-pane fade in active">
+                            <div id="calendar" class="tab-pane fade in active"> <div id="receptionistLanding"></div></div>
+                            <div id="appointments" class="tab-pane fade in">
                                 <div class="row">
                                     <div class="col-md-4 pull-right">
                                         <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal" data-toggle="tooltip" data-placement="top" title="Regsiter Patient"> <i class="icon-i-dental"></i> Regsiter Patient </button>
@@ -383,11 +416,11 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="reports" class="tab-pane fade in active"> </div>
-                            <div id="bills" class="tab-pane fade in active"> </div>
-                            <div id="prescription" class="tab-pane fade in active"> </div>
-                            <div id="conversations" class="tab-pane fade in active"> </div>
+                            </div>                            
+                            <div id="reports" class="tab-pane fade in"> </div>
+                            <div id="bills" class="tab-pane fade in"> </div>
+                            <div id="prescription" class="tab-pane fade in"> </div>
+                            <div id="conversations" class="tab-pane fade in"> </div>                            
                         </div>
                     </div>
                 </div>
@@ -709,9 +742,13 @@
     <script src="../../../js/fetch.min.js" type="text/javascript"></script>
     <!-- Fetch JS -->
     <script src="../../config/url.config.js" type="text/javascript"></script>
+    <!-- Calendar -->
+    <script src="../../js/moment.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js" type="text/javascript"></script>
     <!-- Custom JS -->
     <script src="../../../../js/script.js" type="text/javascript"></script>
     <script src="../../js/jd/misc.js" type="text/javascript"></script>
+    <script src="../../js/jd/calendar-events.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -33,3 +33,7 @@ function getCreateLoginPayload(){
     return jQuery.extend(true, {}, createLogin);
 }
 
+function getCalendarForReceptionist()
+{
+    
+}
