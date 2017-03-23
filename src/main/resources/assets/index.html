@@ -124,7 +124,7 @@
             </div>            
         </nav>
 	</header>
-    <div class="container">
+    <div class="container-fluid mt-100">
     <div class="row">
         <div class="col-md-12" style="height:90">
         <div class="carousel slide" id="carousel">
@@ -137,6 +137,10 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
+                                <div class="carousel-caption">
+                                    <h3>Chania</h3>
+                                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                </div>
                                 <img src="images/850-450-normal-3.jpg" alt="First slide">
                             </div>
                             <div class="item">
@@ -496,7 +500,7 @@
         </div>
     -->
     
-    <div class="bgcolor1 pt-60 pb-60">
+    <div class="bgcolor1 pt-40 pb-10">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
@@ -505,19 +509,27 @@
                         <br><br>
                         <h4 class="heading">Patient Centric Approach</h4>
                         <p>In Just Dental, we believe that a good doctor treats the disease, a great doctor treats the patient.Come and experience a new way and world of dentistry.</p>
-                        <p>Our approach ranges from system level research to shape the care and quality of treatment by working with front line staff to understand, measure and improve patient experience, satisfaction and quality in dental health and general well being.</p>
-                        <br>
+                        <br><br>
+                        <button class="btn btn-black btn-sm" data-toggle="collapse" data-target="#patientApproach">Read More</button>
+                        <div id="patientApproach" class="collapse">
+                            <p>Our approach ranges from system level research to shape the care and quality of treatment by working with front line staff to understand, measure and improve patient experience, satisfaction and quality in dental health and general well being.</p>
+                            <br>
+                        </div>
                       <!--  <a href="why-us.html" class="btn btn-black btn-sm">Read More</a> -->
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="iconbox-4">
-                        <i class="fa fa-cloud"></i>
-                        <br><br>
-                        <h4 class="heading">Technology</h4>
-                        <p>Our Chain of Clinics have the best of technology Electronic Patient records, appointments,Electronic invoices, mobile apps etc,. at the disposal of our dentists and patients.</p>
-                        <br>
-                        <p>This will bring in transparency, efficiency and speed of delivery and enable our dentists to provide best of patient care.</p>
+                         <i class="fa fa-cloud"></i>
+                         <br><br>
+                         <h4 class="heading">Technology</h4>
+                         <p>Our Chain of Clinics have the best of technology Electronic Patient records, appointments,Electronic invoices, mobile apps etc,. at the disposal of our dentists and patients.</p>
+                         <br>
+                         <button class="btn btn-black btn-sm" data-toggle="collapse" data-target="#technology">Read More</button>
+                         <div id="technology" class="collapse">
+                            <p>This will bring in transparency, efficiency and speed of delivery and enable our dentists to provide best of patient care.</p>
+                            <br>
+                         </div>
                         <br>
                        <!--  <a href="why-us.html" class="btn btn-black btn-sm">Read More</a> -->                   
                     </div>
@@ -529,8 +541,11 @@
                         <h4 class="heading">100+ Dentists On Panel</h4>
                         <p>We have 100+ dentists and specialists available in our panel. We will always ensure that you get the right specialist for the right treatment.</p>
                         <br><br>
-                        <p>Our technology connects all of the specialists and you get the combined knowledge and expertise of all our specialists.</p>
-                        <br>
+                        <button class="btn btn-black btn-sm" data-toggle="collapse" data-target="#100Dentist">Read More</button>
+                        <div id="100Dentist" class="collapse">
+                            <p>Our technology connects all of the specialists and you get the combined knowledge and expertise of all our specialists.</p>
+                            <br>
+                        </div>
                        <!--  <a href="why-us.html" class="btn btn-black btn-sm">Read More</a> -->                  
                     </div>
                 </div>                
@@ -654,9 +669,14 @@
                         <h3 class="heading">Braces and Orthodontics</h3>
                     </div>
                     <div class="body">
-                        <p>Braces are orthodontic devices that straighten teeth and correct improper bites. Braces work by gently applying continuous pressure to your teeth over a period of time (typically 6 to 30 months) to gradually move them into their ideal positions.</p>
-                        <br>
-                        <a href="department-single-sidebar.html" class="btn btn-primary btn-sm">Know More</a>
+                        <p>Braces are orthodontic devices that straighten teeth and correct improper bites. </p>
+                        <br><br>
+                        <div id="braces" class="collapse">
+                            <p>Braces work by gently applying continuous pressure to your teeth over a period of time (typically 6 to 30 months) to gradually move them into their ideal positions.</p>
+                            <br>
+                        </div>
+                        <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#braces">Read More</button>
+                        <br>                        
                     </div>    
                 </div>
             </div>
@@ -667,11 +687,15 @@
                         <h3 class="heading">Cavities and Hygiene</h3>
                     </div>
                     <div class="body">
-                        <p>Cavities can happen to anyone at any age. In addition to regular dental checkups and professional cleanings from Just Dental, good oral hygiene including daily brushing and flossing can help prevent cavities.
- 
-The good news is that many dental problems, including cavities, are entirely preventable.</p>
+                        <p>Cavities can happen to anyone at any age.The good news is that many dental problems, including cavities, are entirely preventable. </p>
                         <br>
-                        <a href="department-single-sidebar.html" class="btn btn-primary btn-sm">Know More</a>
+                        <div id="Cavities" class="collapse">
+                            <p>In addition to regular dental checkups and professional cleanings from Just Dental, good oral hygiene including daily brushing and flossing can help prevent cavities.
+                            </p>
+                            <br>
+                        </div>
+                        <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#Cavities">Read More</button>
+                        <br>                        
                     </div>    
                 </div>
             </div>
@@ -682,9 +706,15 @@ The good news is that many dental problems, including cavities, are entirely pre
                         <h3 class="heading">Preventive Dental Care</h3>
                     </div>
                     <div class="body">
-                        <p>Just like adults, children face a variety of dental challenges including tooth decay and infection.The best way for your child to avoid dental issues now and in the future – is to start forming good dental habits at an early age. We at Just Dental recommend that children begin regular dental visits from 1 year of age.</p>
-                        <br>
-                        <a href="department-single-sidebar.html" class="btn btn-primary btn-sm">Know More</a>
+                        <p>Just like adults, children face a variety of dental challenges including tooth decay and infection.</p>
+                        <br><br>
+                        <div id="Preventive" class="collapse">
+                            <p>The best way for your child to avoid dental issues now and in the future – is to start forming good dental habits at an early age. We at Just Dental recommend that children begin regular dental visits from 1 year of age.
+                            </p>
+                            <br>
+                        </div>
+                        <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#Preventive">Read More</button>
+                        <br>                        
                     </div>    
                 </div>
             </div>
@@ -697,9 +727,14 @@ The good news is that many dental problems, including cavities, are entirely pre
                         <h3 class="heading">Restorative Dental Care</h3>
                     </div>
                     <div class="body">
-                        <p>At Just Dental we give you the smile you desire. Be it cosmetic improvements, overcoming dental injuries or correcting tooth breakages, we are here to help you.</p>
+                        <p>At Just Dental we give you the smile you desire.</p>
                         <br>
-                        <a href="department-single-sidebar.html" class="btn btn-primary btn-sm">Know More</a>
+                        <div id="Restorative" class="collapse">
+                            <p> Be it cosmetic improvements, overcoming dental injuries or correcting tooth breakages, we are here to help you.
+                            </p>
+                            <br>
+                        </div>
+                        <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#Restorative">Read More</button>                        
                     </div>    
                 </div>
             </div>
@@ -710,9 +745,14 @@ The good news is that many dental problems, including cavities, are entirely pre
                         <h3 class="heading">Gum Disease &amp; Tooth Pain</h3>
                     </div>
                     <div class="body">
-                        <p>Gum disease is usually painless and can often go undiscovered. Because of this reason and the fact that gum disease is a potentially serious condition, it’s important to get regular dental checkups and examinations from Just Dental.</p>
+                        <p>Gum disease is usually painless and can often go undiscovered. </p>
                         <br>
-                        <a href="department-single-sidebar.html" class="btn btn-primary btn-sm">Know More</a>
+                        <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#Gum">Read More</button>
+                        <div id="Gum" class="collapse">
+                            <p> Because of this reason and the fact that gum disease is a potentially serious condition, it’s important to get regular dental checkups and examinations from Just Dental.
+                            </p>
+                            <br>
+                        </div>
                     </div>    
                 </div>
             </div>
@@ -723,28 +763,32 @@ The good news is that many dental problems, including cavities, are entirely pre
                         <h3 class="heading">Tooth Removal (Extraction)</h3>
                     </div>
                     <div class="body">
-                        <p>While permanent teeth were meant to be just that, there are many reasons why a tooth may need to be removed (extracted) including trauma, severe decay or infection, and crowding (a lack of space in your mouth for all of your teeth). Wisdom teeth removal is also a leading reason (especially for teens and young adults).</p>
-                        <br>
-                        <a href="department-single-sidebar.html" class="btn btn-primary btn-sm">Know More</a>
+                        <p>While permanent teeth were meant to be just that, there are many reasons why a tooth may need to be removed (extracted)</p>
+                        <div id="Tooth" class="collapse">
+                            <p>  This includsestrauma, severe decay or infection, and crowding (a lack of space in your mouth for all of your teeth). Wisdom teeth removal is also a leading reason (especially for teens and young adults).
+                            </p>
+                            <br>
+                        </div>
+                        <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#Tooth">Read More</button>
+                        
                     </div>    
                 </div>
             </div>
         </div>
     </div>
     
+    <!--
     <div class="bgcolor2 pt-60 pb-60 mt-80">
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 mt-20">
                     <div class="carousel slide" id="carousel">
-                        <!-- Indicators -->
+                        
                         <ol class="carousel-indicators">
                             <li class="active" data-slide-to="0" data-target="#carousel"></li>
                             <li data-slide-to="1" data-target="#carousel"></li>
                         </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
+<div class="carousel-inner">
                             <div class="item active">
                                 <img src="images/850-450-normal-3.jpg" alt="First slide">
                             </div>
@@ -752,8 +796,6 @@ The good news is that many dental problems, including cavities, are entirely pre
                                 <img src="images/850-450-normal-2.jpg" alt="Second slide">
                             </div>
                         </div>
-
-                        <!-- Controls -->
                         <a class="left carousel-control" data-slide="prev" href="#carousel">
                             <i class="fa fa-angle-left"></i>
                         </a>
@@ -775,7 +817,7 @@ The good news is that many dental problems, including cavities, are entirely pre
             </div>
         </div>
     </div>
-        
+      -->  
     <!-- 
     <div class="container mt-80">
         <div class="row">
@@ -863,7 +905,7 @@ The good news is that many dental problems, including cavities, are entirely pre
     
     <div class="mt-40" style="background-image:url('images/1920-1200-normal.jpg')" data-speed="10">
         <div class="container-fluid">
-            <div class="row">
+            <div id="bookAppointment" class="row">
                 <div class="col-sm-6 col-sm-offset-6 no-gutter">
                     <div class="quick-appointment-form">
                         <h3 class="heading thin font-2 inverse font30">Book Appointment</h3>
@@ -873,7 +915,7 @@ The good news is that many dental problems, including cavities, are entirely pre
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Your First Name">
+                                        <input class="form-control" type="text" placeholder="Your First Name" autofocus>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -1024,7 +1066,7 @@ The good news is that many dental problems, including cavities, are entirely pre
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 col-sm-offset-5">
-                    <h2 class="heading inverse">Download the JustDental App today!</h2>
+                    <h2 class="heading inverse">Download the Just Dental App today!</h2>
                     <p>Book appointments, track medical history and many more from one mobile app</p>
                     <br>
                     <form>
@@ -1106,7 +1148,7 @@ The good news is that many dental problems, including cavities, are entirely pre
     <div id="aboutus" class="container mt-80">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="heading"> About JustDental<span class="color1"></span></h2>
+                <h2 class="heading"> About Just Dental<span class="color1"></span></h2>
                 <p class="justify"><b><span class="color1">J</span></b>ust Dental healthcare Pvt ltd started in the year 2015. Our aim is to provide most efficient and cost effective treatment for Dental aliments to our patients. We also aim to educate and share knowledge to the masses thereby bringing a change and awareness in oral hygiene and general wellbeing.</p>
                 <p class="justify"><b><span class="color1">V</span></b>ision Our vision is to deliver a comprehensive Dental service, which showcases the highest standards of care and clinical excellence, sufficiently innovative to be appropriate to our society. There shall be an atmosphere of continuous learning and research, conscious of the rights and dignity of our patients. We will work with our employees, dentists, consultants and patients to bring in a culture of care to support the overall health and well-being of our people.</p>
                 <div class="row mt-40">
@@ -1133,43 +1175,36 @@ The good news is that many dental problems, including cavities, are entirely pre
         </div>
     </div>
     
-    <footer id="contactus" class="footer-2">           <!-- footer Style 2  -->
+   <footer id="contactus" class="footer-2">           <!-- footer Style 2  -->
         <div class="footer-pri">            <!-- Primary Footer -->
             <div class="bgcolor1 pt-20 pb-20 mb-40">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-4 no-gutter">
+                        <div class="col-sm-6 no-gutter">
                             <div class="widget widget-icon">
                                 <strong>Call Us </strong>
                                 <i class="fa fa-phone"></i>
                                 <span>+91-9986426673</span>
                             </div>
                         </div>
-                        <div class="col-sm-4 no-gutter">
+                        <div class="col-sm-6 no-gutter">
                             <div class="widget widget-icon">
                                 <strong>Write to Us </strong>
                                 <i class="fa fa-envelope-o"></i> 
                                 <span>enquire@justdental.in</span>
                             </div>
-                        </div>
-                        <div class="col-sm-4 no-gutter">
-                            <div class="widget widget-icon">
-                                <strong>We're Social</strong>
-                                <i class="fa fa-comment-o"></i> 
-                                <span>@justdental</span>
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="widget widget-about">
                             <a href="home-version-1.html">
-							<img src="images/JustDentalLogoSmall.png" alt="" width="70" height="70"></a>							
+							<img src="../../images/JustDentalLogoSmall.png" alt="" width="70" height="70"></a>							
                             <br/><br/>
-                            <p><img src="images/Tagline_50_opacity.png" alt="" width="230" height="20"></p>
+                            <p><img src="../../images/Tagline_50_opacity.png" alt="" width="230" height="20"></p>
                             <!-- 
                                 <p>Explore a new world of Dentistry.</p>
                             -->
@@ -1188,42 +1223,22 @@ The good news is that many dental problems, including cavities, are entirely pre
                                 </ul>
                             -->
                         </div>
-                    </div>
-                    <div class="col-sm-3">
+                    </div>                    
+                    <div class="col-sm-4">
                         <div class="widget widget-links">
                             <h4 class="heading">Helpful Links</h4>
                             <ul>
-                                <li><a href="book-appointment-form.html">Book Appoitment</a></li>
-                                <li><a href="about.html">About Medwise</a></li>
-                                <li><a href="process.html">Process</a></li>
-                                <li><a href="doctors-mini.html">Doctors On Panel</a></li>
-                                <li><a href="doctor-single.html">Doctor Profile</a></li>
-                                <li><a href="department-single.html">Department Detail</a></li>
+                                <li><a href="book-appointment-form.html">Home</a></li>
+                                <li><a href="about.html">About Just Dental</a></li>                                
+                                <li><a href="department-single.html">Our Chain of Clinics</a></li>
                                 <li><a href="contact-1.html">Contact Us</a></li>
-                                <li><a href="policies.html">Our Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="widget widget-flickr">
-                            <h5 class="heading">Our clinics &amp; Happy smiles</h5>
-                            <ul>
-                                <li><img src="images/clinic001.png" alt=""></li>
-                                <li><img src="images/clinic002.png" alt=""></li>
-                                <li><img src="images/clinic003.png" alt=""></li>
-                               <li><img src="images/clinic002.png" alt=""></li>
-                                <li><img src="images/clinic003.png" alt=""></li>
-                                <li><img src="images/clinic001.png" alt=""></li>
-                              <li><img src="images/clinic001.png" alt=""></li>
-                                <li><img src="images/clinic003.png" alt=""></li>
-                                <li><img src="images/clinic004.png" alt=""></li>
-                            </ul>
-                        </div>                       
-                    </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4"> 
                         <div class="widget widget-subscribe">
-                            <h4 class="heading">Subscribe to blog</h4>
-                            <p>Be the first to know what's new at JustDental</p>
+                            <h4 class="heading">Subscribe for our updates</h4>
+                            <p>Be the first to know what's new at Just Dental</p>
                             <form>
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="name@email.com">
@@ -1234,10 +1249,12 @@ The good news is that many dental problems, including cavities, are entirely pre
                             </form>
                         </div>
                         <hr/>
+                        <!--
                         <div class="widget widget-twitter">
                             <h4 class="heading">Latest News</h4>
                             <p><a href="">#JustDental</a> had been awarded as best clinical chain in India.<a href="">Read More ...</a></p>                            
-                        </div>                        
+                        </div>
+                        -->
                     </div>
                 </div>
             </div>
@@ -1252,7 +1269,7 @@ The good news is that many dental problems, including cavities, are entirely pre
             </div>
         </div>
     </footer>
-    
+ 
 	<div id="back"><i class="fa fa-angle-up"></i></div>
     
     <!-- Modal 
@@ -1461,16 +1478,22 @@ The good news is that many dental problems, including cavities, are entirely pre
     -->
     
     <!-- floating social icons -->   
-    <ul id="social_side_links">
+    <ul id="social_side_links">        
         <li>
             <a style="background-color: #3c5a96;" href="http://facebook.com" target="_blank"><img src="images/facebook.png" alt="" /></a>
-        </li>
+        </li>        
         <li>
             <a style="background-color: #1dadeb;" href="http://twitter.com" target="_blank"><img src="images/twitter.png" alt="" /></a>
         </li>
         <li>
             <a style="background-color: #1178b3;" href="http://linkedin.com" target="_blank"><img src="images/linkedin.png" alt="" /></a>
         </li>
+    </ul>
+    
+     <ul id="social_side_appmnt_links">        
+        <li>
+            <a  style="color: #f68d11;background-color:white; border: 2px solid;border-radius: 25px;" href="#bookAppointment"><p>     Book Appointment         .</p></a>
+        </li>       
     </ul>
     
     <!-- JQuery Version 3.1.0 -->

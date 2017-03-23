@@ -3963,6 +3963,20 @@ blockquote footer{
 }
 
 #social_side_links li a:hover img {background: rgba(0, 0, 0, .2);}
+
+#social_side_appmnt_links {
+  position: fixed;
+  bottom: 70px;
+  left: -57px;
+  padding: 0;
+  list-style: none;
+  z-index: 99;
+  transform: rotate(90deg);
+  font-weight: bold;
+}
+
+#social_side_appmnt_links li a {display: block;}
+
 /* floating div end */
 
 /* */
