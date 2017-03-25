@@ -92,7 +92,8 @@
         </div>
         -->
         
-        <nav class="navbar navbar-default">         <!-- Navigation Bar -->
+         <!-- Navigation Bar -->
+        <nav class="navbar navbar-default">        
             <div class="container">            
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
@@ -117,54 +118,68 @@
                         <li><a href="#aboutus">About us</a> 
                         <li><a href="#contactus" >Contact us</a>                            
                         </li>
-                        <li><a href="" data-toggle="modal" data-target="#addClinicModal">Login</a>                            
-                        </li>                        
+                       <!-- <li><a href="" data-toggle="modal" data-target="#addClinicModal">Login</a>                            
+                        </li>            -->            
                     </ul>
                 </div>
             </div>            
         </nav>
 	</header>
-    <div class="container-fluid mt-100">
-    <div class="row">
-        <div class="col-md-12" style="height:90">
-        <div class="carousel slide" id="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li class="active" data-slide-to="0" data-target="#carousel"></li>
-                            <li data-slide-to="1" data-target="#carousel"></li>
-                        </ol>
+    
+    <div class="container-fluid mt-110 mb-20" style="padding-right:0px;padding-left:0px;">
+        <div class="row">
+            <div class="col-md-12" style="height:90">
+                <div class="carousel slide" id="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#carousel"></li>
+                        <li data-slide-to="1" data-target="#carousel"></li>
+                        <li data-slide-to="2" data-target="#carousel"></li>                        
+                    </ol>
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="carousel-caption">
-                                    <h3>Chania</h3>
-                                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                                </div>
-                                <img src="images/850-450-normal-3.jpg" alt="First slide">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" style="max-height: 460px !important;">
+                        <div class="item active">
+                            <div class="carousel-caption" >
+                                <h3 style="color:white">Chania</h3>
+                                <p style="color:white">The atmosphere in Chania has a touch of Florence and Venice.</p>
                             </div>
-                            <div class="item">
-                                <img src="images/850-450-normal-2.jpg" alt="Second slide">
-                            </div>
+                            <img src="images/carosel-1.png" alt="First slide">
                         </div>
-
-                        <!-- Controls -->
-                        <a class="left carousel-control" data-slide="prev" href="#carousel">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="right carousel-control" data-slide="next" href="#carousel">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
+                        <div class="item" style="max-height: 460px !important;">
+                            <div class="carousel-caption">
+                                <h3 style="color:white">Chania</h3>
+                                <p style="color:white">The atmosphere in Chania has a touch of Florence and Venice.</p>
+                            </div>
+                            <img src="images/carosel-2.png" alt="Second slide">
+                        </div>
+                        <div class="item" style="max-height: 460px !important;">
+                            <div class="carousel-caption">
+                                <h3 style="color:white">Chania</h3>
+                                <p style="color:white">The atmosphere in Chania has a touch of Florence and Venice.</p>
+                            </div>
+                            <img src="images/carosel-3.png" alt="Second slide">
+                        </div>                        
                     </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" data-slide="prev" href="#carousel">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="right carousel-control" data-slide="next" href="#carousel">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-        </div>
     
     <!-- Slider Revolution -->
+    <!--
     <div class="rev_slider_wrapper fullwidthbanner-container">
         <div id="slider" class="rev_slider fullwidthbanner" data-version="5.0.7">    
             <ul>	
-                <!-- Slide 1 -->
+               
                 <li data-index="rs-129"
                     data-transition="parallaxvertical"
                     data-slotamount="default"  
@@ -180,10 +195,10 @@
                     data-title="A STUDY ON HAPPINESS" 
                     data-description="Nurturing the most awesome minds.">
 
-                    <!-- MAIN IMAGE -->
+                    
                     <img src="images/dummy.jpg" height="200px" data-lazyload="images/carosel-1.png" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 
-                    <!-- Small Text -->
+                    
                     <div class="tp-caption tp-resizeme rs-parallaxlevel-0 color2" 
                         id="layer-1-small-text" 
                         data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" 
@@ -205,7 +220,7 @@
                         style="z-index: 10; white-space: nowrap; font-weight:400;">Smile.
                     </div>
 
-                    <!-- Main Text -->
+                    
                     <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
                         id="slide-1-main-text" 
                         data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" 
@@ -228,7 +243,7 @@
                         style="z-index: 11; min-width: 600px; max-width: 600px; font-weight:400; white-space: normal; text-shadow:0px 2px 5px #000; text-transform:capitalize; text-align:left;">A smile is the universal language of kindness.
                     </div>
 
-                    <!-- Button -->
+                   
                     <a href="about.html" class="tp-caption btn btn-primary rs-parallaxlevel-0 hidden-xs tp-resizeme" 
                         id="slide-1-button-1" 
                         data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" 
@@ -249,7 +264,7 @@
                         style="z-index: 12;">READ MORE 
                     </a>
                     
-                    <!-- Button -->
+                    
                     <a href="pricing-tables.html" class="tp-caption btn btn-black rs-parallaxlevel-0 hidden-xs tp-resizeme" 
                         id="slide-1-button-2" 
                         data-x="['left','left','left','left']" data-hoffset="['210','210','210','210']" 
@@ -271,7 +286,7 @@
                     </a>
                 </li>
 
-                <!-- Slide 2 -->
+                
                 <li data-index="rs-2"
                     data-transition="parallaxvertical"
                     data-slotamount="default"  
@@ -286,10 +301,10 @@
                     data-saveperformance="off"  
                     data-title="A STUDY ON HAPPINESS" 
                     data-description="Nurturing the most awesome minds.">
-                    <!-- MAIN IMAGE -->
+                   
                     <img src="images/dummy.jpg" data-lazyload="images/carosel-2.png" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 
-                    <!-- Small Text -->
+                   
                     <div class="tp-caption tp-resizeme rs-parallaxlevel-0 color2" 
                         id="layer-2-small-text" 
                         data-x="['right','right','right','right']" data-hoffset="['50','50','50','50']" 
@@ -311,7 +326,7 @@
                         style="z-index: 10; white-space: nowrap; font-weight:400; text-align:right">Caring.
                     </div>                            
 
-                    <!-- Main Text -->
+                    
                     <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
                         id="slide-2-main-text" 
                         data-x="['right','right','right','right']" data-hoffset="['50','50','50','50']" 
@@ -334,7 +349,7 @@
                         style="z-index: 11; min-width: 600px; max-width: 600px; font-weight:400; white-space: normal; text-shadow:0px 2px 5px #000; text-transform:capitalize; text-align:right;">From caring comes courage.
                     </div>
 
-                    <!-- Button -->
+                    
                     <a href="about.html" class="tp-caption btn btn-primary rs-parallaxlevel-0 hidden-xs" 
                         id="slide-2-button-1" 
                         data-x="['right','right','right','right']" data-hoffset="['50','50','50','50']" 
@@ -355,7 +370,7 @@
                         style="z-index: 12;">READ MORE 
                     </a>
                     
-                    <!-- Button -->
+                    
                     <a href="pricing-tables.html" class="tp-caption btn btn-black rs-parallaxlevel-0 hidden-xs" 
                         id="slide-2-button-2" 
                         data-x="['right','right','right','right']" data-hoffset="['210','210','210','210']" 
@@ -377,7 +392,7 @@
                     </a>
                 </li>
                 
-                <!-- Slide3 -->
+              
                 <li data-index="rs-3"
                     data-transition="parallaxvertical"
                     data-slotamount="default"  
@@ -392,10 +407,10 @@
                     data-saveperformance="off"  
                     data-title="A STUDY ON HAPPINESS" 
                     data-description="Nurturing the most awesome minds.">
-                    <!-- MAIN IMAGE -->
+                   
                     <img src="images/dummy.jpg" data-lazyload="images/carosel-3.png" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 
-                    <!-- Small Text -->
+                   
                     <div class="tp-caption tp-resizeme rs-parallaxlevel-0 color2" 
                         id="layer-1-small-text" 
                         data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" 
@@ -417,7 +432,7 @@
                         style="z-index: 10; white-space: nowrap; font-weight:400;">Trust.
                     </div>
 
-                    <!-- Main Text -->
+                   
                     <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
                         id="slide-1-main-text" 
                         data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']" 
@@ -440,7 +455,7 @@
                         style="z-index: 11; min-width: 600px; max-width: 600px; font-weight:400; white-space: normal; text-shadow:0px 2px 5px #000; text-transform:capitalize; text-align:left;">Trust is built with consistency.
                     </div>
 
-                    <!-- Button -->
+                   
                     <a href="about.html" class="tp-caption btn btn-primary rs-parallaxlevel-0 hidden-xs tp-resizeme" 
                         id="slide-1-button-1" 
                         data-x="['left','left','left','left']" data-hoffset="['53','53','53','30']" 
@@ -461,7 +476,7 @@
                         style="z-index: 12;">READ MORE 
                     </a>
                     
-                    <!-- Button -->
+                    
                     <a href="pricing-tables.html" class="tp-caption btn btn-black rs-parallaxlevel-0 hidden-xs tp-resizeme" 
                         id="slide-1-button-2" 
                         data-x="['left','left','left','left']" data-hoffset="['210','210','210','210']" 
@@ -485,6 +500,7 @@
             </ul>
         </div>
     </div>
+    -->
     <!-- Revolution Slider Ends -->
     
     <!-- 
@@ -500,7 +516,7 @@
         </div>
     -->
     
-    <div class="bgcolor1 pt-40 pb-10">
+    <div class="bgcolor1 pt-80 pb-10">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
@@ -729,12 +745,12 @@
                     <div class="body">
                         <p>At Just Dental we give you the smile you desire.</p>
                         <br>
-                        <br>
-                        <br>
+                        
+                       
                         <div id="Restorative" class="collapse">
                             <p> Be it cosmetic improvements, overcoming dental injuries or correcting tooth breakages, we are here to help you.
                             </p>
-                            <br>
+                            
                         </div>
                         <button class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#Restorative">Read More</button>                        
                     </div>    
@@ -917,7 +933,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Your First Name" autofocus>
+                                        <input class="form-control" type="text" placeholder="Your First Name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -1064,7 +1080,7 @@
         </div>
     </div>   
     -->
-    <div class="app-download-dark bgcolor1 pt-60 pb-60 mt-80" style="background-image:url(images/iphone-app.jpg)">
+    <div class="app-download-dark bgcolor1 pt-60 pb-60 mt-20" style="background-image:url(images/iphone-app.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 col-sm-offset-5">
@@ -1231,9 +1247,9 @@
                             <h4 class="heading">Helpful Links</h4>
                             <ul>
                                 <li><a href="book-appointment-form.html">Home</a></li>
-                                <li><a href="about.html">About Just Dental</a></li>                                
-                                <li><a href="department-single.html">Our Chain of Clinics</a></li>
-                                <li><a href="contact-1.html">Contact Us</a></li>
+                                <li><a href="/#aboutus">About Just Dental</a></li>                                
+                                <li><a href="html/static/clinics.html">Our Chain of Clinics</a></li>
+                                <li><a href="/#contactus">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1265,7 +1281,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <span>&copy; Copyright © 2017 JustDental. All rights reserved. <a target="_Blank" href="http://www.justdental.in/">JustDental</a></span>
+                        <span>&copy; Copyright © 2017 JustDental. All rights reserved. <a target="_Blank" href="http://www.lab.justdental.in/">JustDental</a></span>
                     </div>
                 </div>
             </div>
@@ -1494,7 +1510,7 @@
     
      <ul id="social_side_appmnt_links">        
         <li>
-            <a  style="color: #f68d11;background-color:white; border: 2px solid;border-radius: 25px;" href="#bookAppointment"><p>     Book Appointment         .</p></a>
+            <a  style="color: #f68d11;background-color:white; border: 2px solid;border-radius: 25px;" href="#bookAppointment"><p>&nbsp;&nbsp;     Book Appointment&nbsp;&nbsp;</p></a>
         </li>       
     </ul>
     

@@ -348,6 +348,7 @@ blockquote footer{
 .mt-60{margin-top:60px;}
 .mt-80{margin-top:80px;}
 .mt-100{margin-top:100px;}
+.mt-110{margin-top:110px;}
 .mt-150{margin-top:150px;}
 
 .mb-20{margin-bottom:20px;}     /* Margin Bottom Classes */
@@ -3973,6 +3974,8 @@ blockquote footer{
   z-index: 99;
   transform: rotate(90deg);
   font-weight: bold;
+    display: none;
+   
 }
 
 #social_side_appmnt_links li a {display: block;}
