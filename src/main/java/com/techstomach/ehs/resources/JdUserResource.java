@@ -66,7 +66,7 @@ public class JdUserResource {
         LOGGER.info("New User registration received for email:" + emailAddress);
         JdUser jdUser = new JdUser();
         JdRole jdRole = new JdRole();
-        jdRole.setRoleId(RoleType.CLINIC_STAFF.getRoleId());
+        jdRole.setRoleId(RoleType.PATIENT.getRoleId());
         jdRole.setRoleName(RoleType.PATIENT.toString());
         Date createDate = new Date();
         jdUser.setDateCreated(createDate);
