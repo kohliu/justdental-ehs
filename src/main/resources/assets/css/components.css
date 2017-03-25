@@ -2507,7 +2507,7 @@ button.list-group-item-danger {
     position: absolute;
     left: 0p;
     top: 0px;
-    background-color: rgba(22,150,231,0.80);
+    //background-color: rgba(22,150,231,0.80);
 }
 
 .modal .close{

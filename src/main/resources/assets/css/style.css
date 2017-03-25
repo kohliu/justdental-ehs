@@ -34,7 +34,8 @@ html,body{
 }
 
 body{
-    color: #585858;
+    color: #585style.css
+        858;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -347,6 +348,8 @@ blockquote footer{
 .mt-60{margin-top:60px;}
 .mt-80{margin-top:80px;}
 .mt-100{margin-top:100px;}
+.mt-110{margin-top:110px;}
+.mt-150{margin-top:150px;}
 
 .mb-20{margin-bottom:20px;}     /* Margin Bottom Classes */
 .mb-40{margin-bottom:40px;}
@@ -3937,3 +3940,60 @@ blockquote footer{
     padding-left: 30px;
     padding-right: 30px;
 }
+
+/* floating div start */
+#social_side_links {
+  position: fixed;
+  bottom: 70px;
+  right: 24px;
+  padding: 0;
+  list-style: none;
+  z-index: 99;
+}
+
+#social_side_links li a {display: block;}
+
+#social_side_links li a img {
+	display: block;
+	max-width:40px;
+  padding: 10px;
+  -webkit-transition:  background .2s ease-in-out;
+  -moz-transition:  background .2s ease-in-out;
+  -o-transition:  background .2s ease-in-out;
+  transition:  background .2s ease-in-out;
+}
+
+#social_side_links li a:hover img {background: rgba(0, 0, 0, .2);}
+
+#social_side_appmnt_links {
+  position: fixed;
+  bottom: 70px;
+  left: -57px;
+  padding: 0;
+  list-style: none;
+  z-index: 99;
+  transform: rotate(90deg);
+  font-weight: bold;  
+}
+
+#social_side_appmnt_links li a {display: block;}
+
+/* floating div end */
+
+/* */
+.btn-round {
+    border-radius: 90px;
+}
+.patient-profile-img{
+    height: 250px;
+    vertical-align: center;
+    width: 400px;
+}
+
+.left-panel-yellow{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid yellow;word-wrap:break-word}
+.left-panel-green{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+.left-panel-orange{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid orange;word-wrap:break-word}
+.left-panel-violet{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid darkviolet;word-wrap:break-word}
+
+
+/* */
