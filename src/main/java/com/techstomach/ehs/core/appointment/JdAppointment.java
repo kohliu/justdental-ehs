@@ -39,64 +39,42 @@ public class JdAppointment {
 	@Column(name = "appointmentStatus", nullable = false)
 	@NotNull
 	@JsonProperty
-    private JdAppointmentStatus appointmentStatus;
+    @Enumerated
+    private JdAppointmentStatus appointmentStatus = JdAppointmentStatus.PENDING_APPROVAL;
 
 	@Column(name = "appointmentTakenBy")
 	@JsonProperty
 	private String appointmentTakenBy;
 
-	@Column(name = "appoitmentStartTime", nullable = false)
-	@NotNull
+    @Column(name = "appointmentStartTime")
+    @NotNull
 	@JsonProperty
-	private Date appoitmentStartTime;
+    private Date appointmentStartTime;
 
     @ManyToOne
     @JoinColumn(name = "clinicId_fk")
 	@JsonProperty
 	private JdClinic clinicId;
 
-	@Column(name = "creationDate", nullable = false)
-	@NotNull
-	@JsonProperty
+    @Column(name = "creationDate")
+    @JsonProperty
 	private Date creationDate;
 
 	@Column(name = "invoiceId_fk")
 	@JsonProperty
 	private Long invoiceId;
 
-	@Column(name = "modifiedBy", nullable = false)
-	@NotNull
-	@JsonProperty
-	private String modifiedBy;
-
-	@Column(name = "modifiedDate")
-	@JsonProperty
-	private Date modifiedDate;
-
-	@Column(name = "slotDuration", nullable = false)
-	@NotNull
-	@JsonProperty
+    @Column(name = "slotDuration")
+    @JsonProperty
 	private Integer slotDuration;
 
-	@Column(name = "slotEndTime", nullable = false)
-	@NotNull
-	@JsonProperty
+    @Column(name = "slotEndTime")
+    @JsonProperty
 	private Date slotEndTime;
 
-	@Column(name = "slotStartTime", nullable = false)
-	@NotNull
-	@JsonProperty
+    @Column(name = "slotStartTime")
+    @JsonProperty
 	private Date slotStartTime;
-
-	@Column(name = "userCheckIn", nullable = false)
-	@NotNull
-	@JsonProperty
-	private Date userCheckIn;
-
-	@Column(name = "userCheckOut", nullable = false)
-	@NotNull
-	@JsonProperty
-	private Date userCheckOut;
 
     @ManyToOne
     @JoinColumn(name = "userId_fk")
@@ -128,11 +106,11 @@ public class JdAppointment {
     }
 
     public Date getAppoitmentStartTime() {
-        return appoitmentStartTime;
+        return appointmentStartTime;
     }
 
     public void setAppoitmentStartTime(Date appoitmentStartTime) {
-        this.appoitmentStartTime = appoitmentStartTime;
+        this.appointmentStartTime = appoitmentStartTime;
     }
 
     public Date getCreationDate() {
@@ -149,22 +127,6 @@ public class JdAppointment {
 
     public void setInvoiceId(Long invoiceIdFk) {
         this.invoiceId= invoiceIdFk;
-    }
-
-    public String getModifiedBy() {
-        return modifiedBy;
-    }
-
-    public void setModifiedBy(String modifiedBy) {
-        this.modifiedBy = modifiedBy;
-    }
-
-    public Date getModifiedDate() {
-        return modifiedDate;
-    }
-
-    public void setModifiedDate(Date modifiedDate) {
-        this.modifiedDate = modifiedDate;
     }
 
     public Integer getSlotDuration() {
@@ -189,22 +151,6 @@ public class JdAppointment {
 
     public void setSlotStartTime(Date slotStartTime) {
         this.slotStartTime = slotStartTime;
-    }
-
-    public Date getUserCheckIn() {
-        return userCheckIn;
-    }
-
-    public void setUserCheckIn(Date userCheckIn) {
-        this.userCheckIn = userCheckIn;
-    }
-
-    public Date getUserCheckOut() {
-        return userCheckOut;
-    }
-
-    public void setUserCheckOut(Date userCheckOut) {
-        this.userCheckOut = userCheckOut;
     }
 
     public Long getAppointmentId() {
