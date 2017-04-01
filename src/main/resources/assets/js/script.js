@@ -694,3 +694,4 @@ function loginUserTypeOnchange()
         document.getElementById('google-login').style.visibility = "visible";
     }
 }
+

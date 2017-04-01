@@ -7,7 +7,7 @@ $(document).ready(function () {
     });
 });
 $(function () {
-
+/*
     Highcharts.chart('container', {
         title: {
             text: 'Clinical Data - By Numbers 2017'
@@ -139,18 +139,52 @@ $(function () {
             ]
         }]
     });
-    
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
+    */
+    //console.log(JSON.stringify($('#calendar')));
+   /* if($('#calendar'))
+    {
+        $('#calendar').fullCalendar({
+            // put your options and callbacks here
+        })
+    }*/
 });
-
+/*
 $(document).ready(function() {
 
     // page is now ready, initialize the calendar...
+    if($('#calendar'))
+    {
+        $('#calendar').fullCalendar({
+            // put your options and callbacks here
+        })
+    }
 
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
+});*/
 
-});
+function subsrcibe(){
+     var emailId = document.getElementById('subscribe-emailid').value;
+    var payload = {       
+        emailAddress: emailId
+    };
+    console.log(SUBSCRIBE, payload, JSON.stringify(payload));
+    
+       fetch(SUBSCRIBE, {
+        method: 'POST'
+        , mode: 'cors'
+        , redirect: 'follow'
+        , credentials: 'include'
+        , headers: {
+            'Accept': 'application/json'
+            , 'Content-Type': 'application/json'
+        }
+        , body: JSON.stringify(payload)
+    }).then(function (response) {
+        toastr.success(emailId+' is subcribed with JUST DENTAL');
+    }).catch(function (err) {
+        // Error :(
+       toastr.error(JSON.stringify(err));
+    });
+    
+   
+    
+}
