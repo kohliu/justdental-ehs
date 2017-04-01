@@ -166,7 +166,7 @@ function subsrcibe(){
     var payload = {       
         emailAddress: emailId
     };
-    console.log(SUBSCRIBE, payload, JSON.stringify(payload));
+   // console.log(SUBSCRIBE, payload, JSON.stringify(payload));
     
        fetch(SUBSCRIBE, {
         method: 'POST'
