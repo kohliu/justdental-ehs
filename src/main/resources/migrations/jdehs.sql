@@ -1,17 +1,19 @@
 --liquibase formatted sql
 
 --changeset techstomach:1
+
+#----------------------------------------------------------------------------------------------------------
+#--------------------------------------------------Tables--------------------------------------------------
+#----------------------------------------------------------------------------------------------------------
+
 DROP TABLE IF EXISTS jd_role;
 
 CREATE TABLE jd_role
 (
 	roleId BIGINT NOT NULL AUTO_INCREMENT,
-	roleName varchar(60) NOT NULL,
-	roleDescription varchar(255) NOT NULL,
+	roleName varchar(60),
+	roleDescription varchar(255),
 	isActive INT NOT NULL DEFAULT 1,
-	dateCreated datetime NOT NULL,
-	dateModified datetime NOT NULL,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
 	PRIMARY KEY (roleId)
 );
 
@@ -182,7 +184,7 @@ CREATE TABLE jd_patient
 	emailAddress varchar(255) NULL,
 	street1 varchar(1000) NULL,
 	street2 varchar(1000) NULL,
-	locality varchar(500) NULL,
+	lcality varchar(500) NULL,
 	city varchar(255) NOT NULL,
 	state varchar(255)NOT NULL,
 	country varchar(255) NOT NULL,

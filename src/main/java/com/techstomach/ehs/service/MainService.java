@@ -1,8 +1,47 @@
+/*
+ * Copyright (c) 2017 Techstomach (TM)
+ *
+ * This software is an intellectual property of Techstomach Solutions Pvt Ltd,India.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.techstomach.ehs.service;
 
-import com.techstomach.ehs.core.*;
-import com.techstomach.ehs.dao.*;
-import com.techstomach.ehs.resources.*;
+import com.techstomach.ehs.core.appointment.JdAppointment;
+import com.techstomach.ehs.core.appointment.JdBookingSlots;
+import com.techstomach.ehs.core.clinic.JdClinic;
+import com.techstomach.ehs.core.clinic.JdClinicRoleMap;
+import com.techstomach.ehs.core.login.JdLoginTracking;
+import com.techstomach.ehs.core.login.JdNativeLogin;
+import com.techstomach.ehs.core.login.JdSsoLogin;
+import com.techstomach.ehs.core.role.JdRole;
+import com.techstomach.ehs.core.role.RoleType;
+import com.techstomach.ehs.core.user.JdUser;
+import com.techstomach.ehs.dao.appointment.JdAppointmentDAO;
+import com.techstomach.ehs.dao.appointment.JdBookingSlotsDAO;
+import com.techstomach.ehs.dao.clinic.JdClinicDAO;
+import com.techstomach.ehs.dao.clinic.JdClinicRoleMapDAO;
+import com.techstomach.ehs.dao.login.JdLoginTrackingDAO;
+import com.techstomach.ehs.dao.login.JdNativeLoginDAO;
+import com.techstomach.ehs.dao.login.JdSsoLoginDAO;
+import com.techstomach.ehs.dao.role.JdRoleDAO;
+import com.techstomach.ehs.dao.user.JdUserDAO;
+import com.techstomach.ehs.dao.user.patient.JdPatientDAO;
+import com.techstomach.ehs.resources.appointment.JdAppointmentResource;
+import com.techstomach.ehs.resources.appointment.JdBookingSlotsResource;
+import com.techstomach.ehs.resources.clinic.JdClinicResource;
+import com.techstomach.ehs.resources.clinic.JdClinicRoleMapResource;
+import com.techstomach.ehs.resources.login.JdLoginTrackingResource;
+import com.techstomach.ehs.resources.login.JdNativeLoginResource;
+import com.techstomach.ehs.resources.login.JdSsoLoginResource;
+import com.techstomach.ehs.resources.role.JdRoleResource;
+import com.techstomach.ehs.resources.user.patient.JdPatientResource;
+import com.techstomach.ehs.resources.user.JdUserResource;
 import com.techstomach.ehs.service.health.DatabaseHealthCheck;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -22,14 +61,12 @@ import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
 import java.util.EnumSet;
 
-/**
- * Created by ujjwal on 2/24/2017.
- */
 public class MainService extends Application<ServiceConfiguration> {
 
     private final HibernateBundle<ServiceConfiguration> hibernate = new HibernateBundle<ServiceConfiguration>
             (
                     JdRole.class,
+                    RoleType.class,
                     JdUser.class,
                     JdNativeLogin.class,
                     JdSsoLogin.class,
@@ -57,7 +94,7 @@ public class MainService extends Application<ServiceConfiguration> {
                 return configuration.getDataSourceFactory();
             }
         });
-        bootstrap.addBundle(new AssetsBundle("/assets/","/","/home-version-2.html"));
+        bootstrap.addBundle(new AssetsBundle("/assets/", "/", "/index.html"));
         bootstrap.addBundle(hibernate);
         bootstrap.addBundle(new SwaggerBundle<ServiceConfiguration>() {
             @Override
