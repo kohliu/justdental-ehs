@@ -427,3 +427,12 @@ CREATE TABLE jd_invoice
 	FOREIGN KEY (appointmentId_fk) REFERENCES jd_appointment(appointmentId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
 );
+
+DROP TABLE IF EXISTS jd_subscribe;
+
+CREATE TABLE jd_subscribe
+(
+	subscriptionId BIGINT NOT NULL AUTO_INCREMENT,
+	emailAddress varchar(200),
+	PRIMARY KEY (subscriptionId)
+);
