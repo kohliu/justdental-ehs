@@ -173,7 +173,7 @@ function bookAppointmentFromHomepage()
    
     payload.appointmentDescription = message;
     payload.creationDate = new Date();
-    payload.appointmentTakenBy = firstName + lastName;
+    payload.appointmentTakenBy = firstName +'  '+ lastName;
     console.log(BOOK_APPNT_HOMEPAGE, JSON.stringify(payload));
     fetch(BOOK_APPNT_HOMEPAGE, {
         method: 'POST'
@@ -186,7 +186,6 @@ function bookAppointmentFromHomepage()
         }
         , body: JSON.stringify(payload)
     }).then(function (response) {
-        toastr.success('Your email id '+ emailId+' is subcribed with JUST DENTAL.');
     }).catch(function (err) {        
        toastr.error(JSON.stringify(err));
     });
