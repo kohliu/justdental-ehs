@@ -186,6 +186,7 @@ function bookAppointmentFromHomepage()
         }
         , body: JSON.stringify(payload)
     }).then(function (response) {
+        toastr.success('Thanks, '+firstName +'  '+ lastName+' We have received your appointment. Our team will get back to you.');
     }).catch(function (err) {        
        toastr.error(JSON.stringify(err));
     });
