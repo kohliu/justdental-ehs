@@ -160,14 +160,42 @@ $(document).ready(function() {
     }
 
 });*/
-
-function subsrcibe(){
-     var emailId = document.getElementById('subscribe-emailid').value;
-    var payload = {       
-        emailAddress: emailId
-    };
-   // console.log(SUBSCRIBE, payload, JSON.stringify(payload));
+function bookAppointmentFromHomepage()
+{  
+    var payload = getBookAppointment4HomepagePayload();
+     var firstName = document.getElementById('home.appmnt.firstName').value;
+     var lastName = document.getElementById('home.appmnt.lastName').value;
+     var phonenumber = document.getElementById('home.appmnt.phonenumber').value;
+     var emailId = document.getElementById('home.appmnt.emailid').value;
+    // var dob = document.getElementById('home.appmnt.dob').value;
+     var message = document.getElementById('home.appmnt.message').value;
     
+   
+    payload.appointmentDescription = message;
+    payload.creationDate = new Date();
+    payload.appointmentTakenBy = firstName + lastName;
+    console.log(BOOK_APPNT_HOMEPAGE, JSON.stringify(payload));
+    fetch(BOOK_APPNT_HOMEPAGE, {
+        method: 'POST'
+        , mode: 'cors'
+        , redirect: 'follow'
+        , credentials: 'include'
+        , headers: {
+            'Accept': 'application/json'
+            , 'Content-Type': 'application/json'
+        }
+        , body: JSON.stringify(payload)
+    }).then(function (response) {
+        toastr.success('Your email id '+ emailId+' is subcribed with JUST DENTAL.');
+    }).catch(function (err) {        
+       toastr.error(JSON.stringify(err));
+    });
+}
+function subscribe(){
+     var emailId = document.getElementById('subscribe-emailid').value;
+        var payload = {       
+            emailAddress: emailId
+        };
        fetch(SUBSCRIBE, {
         method: 'POST'
         , mode: 'cors'
@@ -179,12 +207,9 @@ function subsrcibe(){
         }
         , body: JSON.stringify(payload)
     }).then(function (response) {
-        toastr.success(emailId+' is subcribed with JUST DENTAL');
-    }).catch(function (err) {
-        // Error :(
+        toastr.success('Your email id '+ emailId+' is subcribed with JUST DENTAL.');
+    }).catch(function (err) {        
        toastr.error(JSON.stringify(err));
     });
-    
-   
     
 }

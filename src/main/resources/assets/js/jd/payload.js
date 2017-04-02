@@ -29,6 +29,19 @@ var createLogin = {
  "passwordQuestion": "string"
 };
 
+var bookAppointment4HomePage =  {
+  "appointmentDescription": "string",
+  "appointmentStatus": "PENDING_APPROVAL",
+  "appointmentTakenBy": "string",
+  "appointmentStartTime": "2017-04-02T06:21:56.571Z",
+  "creationDate": "2017-04-02T06:21:56.573Z", 
+  "appoitmentStartTime": "2017-04-02T06:21:56.574Z"
+};
+
+function getBookAppointment4HomepagePayload(){
+    return jQuery.extend(true, {}, bookAppointment4HomePage);
+}
+
 function getCreateLoginPayload(){
     return jQuery.extend(true, {}, createLogin);
 }

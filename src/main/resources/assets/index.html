@@ -336,37 +336,37 @@
                 <div class="col-sm-6 col-sm-offset-6 no-gutter">
                     <div class="quick-appointment-form">
                         <h3 class="heading thin font-2 inverse font30">Book Appointment</h3>
-                        <p class="text-muted">Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+                        <p class="text-muted">Find &amp; book appointments with our doctors.</p>
                         <br/>
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Your First Name">
+                                        <input class="form-control" type="text" id="home.appmnt.firstName" placeholder="Your First Name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Your Last Name">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Your Phone Number">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="number" placeholder="Your Email ID">
+                                        <input class="form-control" type="text" id="home.appmnt.lastName" placeholder="Your Last Name">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control date-select" type="text" placeholder="Your Date of Birth">
+                                        <input class="form-control" type="text" id="home.appmnt.phonenumber" placeholder="Your Phone Number">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="number" id="home.appmnt.emailid" placeholder="Your Email ID">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control date-select" id="" type="text" id="home.appmnt.dob" placeholder="Your Date of Birth">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -381,12 +381,12 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                                        <textarea class="form-control" rows="5" id="home.appmnt.message" placeholder="Your Message"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-black" type="submit"><i class="fa fa-paper-plane"></i> Book Appointment</button>
+                                <button class="btn btn-black" type="button" onclick="bookAppointmentFromHomepage()"><i class="fa fa-paper-plane"></i> Book Appointment</button>
                             </div>
                         </form>
                     </div>
@@ -469,7 +469,7 @@
                         <div class="input-group">
                             <input type="text" id="subscribe-emailid" class="form-control">
                             <span class="input-group-btn">
-                                <button class="btn btn-primary" type="button" onclick="subsrcibe()">Subscribe</button>
+                                <button class="btn btn-primary" type="button" onclick="subscribe()">Subscribe</button>
                             </span>
                         </div>
                     </form>
@@ -481,9 +481,9 @@
     <div id="aboutus" class="container mt-80">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="heading"> About JUST DENTAL<span class="color1"></span></h2>
+                <h2 class="heading">About JUST DENTAL<span class="color1"></span></h2>
                 <p class="justify">JUST DENTAL healthcare Pvt ltd started in the year 2015. Our aim is to provide most efficient and cost effective treatment for Dental aliments to our patients. We also aim to educate and share knowledge to the masses thereby bringing a change and awareness in oral hygiene and general wellbeing.</p>
-                <p class="justify">Vision Our vision is to deliver a comprehensive Dental service, which showcases the highest standards of care and clinical excellence, sufficiently innovative to be appropriate to our society. There shall be an atmosphere of continuous learning and research, conscious of the rights and dignity of our patients. We will work with our employees, dentists, consultants and patients to bring in a culture of care to support the overall health and well-being of our people.</p>
+                <p class="justify">Our vision is to deliver a comprehensive Dental service, which showcases the highest standards of care and clinical excellence, sufficiently innovative to be appropriate to our society. There shall be an atmosphere of continuous learning and research, conscious of the rights and dignity of our patients. We will work with our employees, dentists, consultants and patients to bring in a culture of care to support the overall health and well-being of our people.</p>
                 <div class="row mt-40">
                     <div class="col-sm-6">
                         <h4>Defined Process</h4>
