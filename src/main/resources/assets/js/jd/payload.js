@@ -29,6 +29,14 @@ var createLogin = {
  "passwordQuestion": "string"
 };
 
+var login = {
+    "userIdFk": {
+        "emailAddress": "string"
+    }
+    , "passwordKey": "string"
+    , "uniqueLoginName": "string"
+};
+
 var bookAppointment4HomePage =  {
   "appointmentDescription": "string",
   "appointmentStatus": "PENDING_APPROVAL",
@@ -44,6 +52,10 @@ function getBookAppointment4HomepagePayload(){
 
 function getCreateLoginPayload(){
     return jQuery.extend(true, {}, createLogin);
+}
+
+function getLoginPayload(){
+    return jQuery.extend(true, {}, login);
 }
 
 function getCalendarForReceptionist()

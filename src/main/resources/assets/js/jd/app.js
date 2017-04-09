@@ -213,3 +213,63 @@ function subscribe(){
     });
     
 }
+
+/* Main screen login */
+function login() {
+    console.log("Login called  " + NATIVE_LOGIN);
+    /*fetch(NATIVE_LOGIN, {
+        method: 'get'
+        , mode: 'cors'
+        , redirect: 'follow'
+        , credentials: 'include'
+    }).then(function (response) {
+        console.log(response);
+    }).catch(function (err) {
+        // Error :(
+        console.log(err);
+    });*/
+    /*var loginUserType = document.getElementById('loginUserType').value;
+    console.log(loginUserType);
+    if(loginUserType == 'patient'){
+        window.location.href = "/html/patient/patientlanding.html";
+    } else if (loginUserType == 'receptionist') {
+        window.location.href = "/html/receptionist/receptionistlanding.html";
+    }*/toastr.error(JSON.stringify(err));
+    
+}
+/* Main screen regstration */
+function register() {
+    var loginId = document.getElementById('homepage:username').value;
+    
+    var password = document.getElementById('homepage:password').value;
+    var firstName = document.getElementById('homepage:firstName').value;
+    var lastName = document.getElementById('homepage:lastName').value;
+    var emailId = document.getElementById('homepage:emailId').value;
+    var mobileNumber = document.getElementById('homepage:mobileNumber').value;
+    var payload = getCreateLoginPayload();
+    
+    console.log(JSON.stringify(payload));
+    payload.uniqueLoginName = loginId;
+    payload.passwordKey = password;
+    payload.userIdFk.firstName = firstName;
+    payload.userIdFk.lastName = lastName;
+    payload.userIdFk.emailAddress = emailId;
+   
+    console.log(JSON.stringify(payload));
+    fetch(QUICK_REGISTER, {
+        method: 'POST'
+        , mode: 'cors'
+        , redirect: 'follow'
+        , credentials: 'include'
+        , headers: {
+            'Accept': 'application/json'
+            , 'Content-Type': 'application/json'
+        }
+        , body: JSON.stringify(payload)
+    }).then(function (response) {
+        console.log('suc', response);
+    }).catch(function (err) {
+        // Error :(
+        console.log('err', err);
+    });
+}
