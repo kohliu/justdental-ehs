@@ -160,7 +160,7 @@
 //    @Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)
 //	@Basic( optional = false )
-//	@Column( name = "serviceid", nullable = false  )
+//	@Column( name = "serviceid"  )
 //	public Long getId() {
 //		return this.id;
 //

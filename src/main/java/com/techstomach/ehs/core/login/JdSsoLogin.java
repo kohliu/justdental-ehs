@@ -34,11 +34,11 @@ public class JdSsoLogin {
     @JsonProperty
     private JdUser userIdFk;
 
-    @Column(name = "dateCreated", nullable = false)
+    @Column(name = "dateCreated")
     @JsonProperty
     private Date dateCreated;
 
-    @Column(name = "dateModified", nullable = false)
+    @Column(name = "dateModified")
     @JsonProperty
     private Date dateModified;
 

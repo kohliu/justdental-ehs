@@ -68,7 +68,7 @@
 //	@ManyToOne( cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY )
 //	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 //	@Basic( optional = false )
-//	@JoinColumn(name = "clinicId_fk", nullable = false )
+//	@JoinColumn(name = "clinicId_fk" )
 //	public JdClinic getClinicidFk() {
 //		return this.clinicidFk;
 //
@@ -150,7 +150,7 @@
 //	@ManyToOne( cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY )
 //	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 //	@Basic( optional = false )
-//	@JoinColumn(name = "serviceId_fk", nullable = false )
+//	@JoinColumn(name = "serviceId_fk" )
 //	public JdServices getServiceidFk() {
 //		return this.serviceidFk;
 //

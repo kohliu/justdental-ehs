@@ -36,33 +36,28 @@ public class JdBookingSlots {
     @JsonProperty
 	private JdClinic clinicId;
 
-	@Column(name = "dateCreated", nullable = false)
-	@NotNull
+	@Column(name = "dateCreated")
 	@JsonProperty
 	private Date dateCreated;
 
-	@Column(name = "dateModified", nullable = false)
+	@Column(name = "dateModified")
 	@NotNull
 	@JsonProperty
 	private Date dateModified;
 
-	@Column(name = "modifiedBy", nullable = false)
-	@NotNull
+	@Column(name = "modifiedBy")
 	@JsonProperty
 	private String modifiedBy;
 
-	@Column(name = "slotDuration", nullable = false)
-	@NotNull
+	@Column(name = "slotDuration")
 	@JsonProperty
 	private Integer slotDuration;
 
-	@Column(name = "slotEndTime", nullable = false)
-	@NotNull
+	@Column(name = "slotEndTime")
 	@JsonProperty
 	private Date slotEndTime;
 
-	@Column(name = "slotStartTime", nullable = false)
-	@NotNull
+	@Column(name = "slotStartTime")
 	@JsonProperty
 	private Date slotStartTime;
 

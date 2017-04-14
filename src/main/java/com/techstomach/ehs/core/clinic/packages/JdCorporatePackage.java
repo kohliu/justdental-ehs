@@ -147,7 +147,7 @@
 //    @Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)
 //	@Basic( optional = false )
-//	@Column( name = "packageid", nullable = false  )
+//	@Column( name = "packageid"  )
 //	public Long getId() {
 //		return this.id;
 //

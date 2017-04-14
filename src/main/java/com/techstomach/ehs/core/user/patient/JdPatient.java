@@ -28,86 +28,86 @@ public class JdPatient extends JdUser {
     @JsonProperty
     private String aadharNumber;
 
-    @Column(name = "bloodGroup", nullable = false)
+    @Column(name = "bloodGroup")
     @NotNull
     @JsonProperty
     private String bloodGroup;
 
-    @Column(name = "city", nullable = false)
+    @Column(name = "city")
     @NotNull
     @JsonProperty
     private String city;
 
-    @Column(name = "country", nullable = false)
+    @Column(name = "country")
     @NotNull
     @JsonProperty
     private String country;
 
-    @Column(name = "creationDate", nullable = false)
+    @Column(name = "creationDate")
     @NotNull
     @JsonProperty
     private Date creationDate;
 
-    @Column(name = "dateOfBirth", nullable = false)
+    @Column(name = "dateOfBirth")
     @NotNull
     @JsonProperty
     private Date dateOfBirth;
-    @Column(name = "education", nullable = false)
+    @Column(name = "education")
     @NotNull
     @JsonProperty
     private String education;
     @Column(name = "emailAddress")
     @JsonProperty
     private String emailAddress;
-    @Column(name = "emergencyContactName", nullable = false)
+    @Column(name = "emergencyContactName")
     @NotNull
     @JsonProperty
     private String emergencyContactName;
-    @Column(name = "emergencyContactNumber", nullable = false)
+    @Column(name = "emergencyContactNumber")
     @NotNull
     @JsonProperty
     private String emergencyContactNumber;
-    @Column(name = "emergencyContactRelationship", nullable = false)
+    @Column(name = "emergencyContactRelationship")
     @NotNull
     @JsonProperty
     private String emergencyContactRelationship;
-    @Column(name = "familyHistory", nullable = false)
+    @Column(name = "familyHistory")
     @NotNull
     @JsonProperty
     private String familyHistory;
-    @Column(name = "firstname", nullable = false)
+    @Column(name = "firstname")
     @NotNull
     @JsonProperty
     private String firstname;
-    @Column(name = "gender", nullable = false)
+    @Column(name = "gender")
     @NotNull
     @JsonProperty
     private String gender;
-    @Column(name = "habbits", nullable = false)
+    @Column(name = "habbits")
     @NotNull
     @JsonProperty
     private String habbits;
-    @Column(name = "insuranceExpiration", nullable = false)
+    @Column(name = "insuranceExpiration")
     @NotNull
     @JsonProperty
     private Date insuranceExpiration;
-    @Column(name = "insuranceNumber", nullable = false)
+    @Column(name = "insuranceNumber")
     @NotNull
     @JsonProperty
     private String insuranceNumber;
-    @Column(name = "lastname", nullable = false)
+    @Column(name = "lastname")
     @NotNull
     @JsonProperty
     private String lastname;
-    @Column(name = "lcality", nullable = false)
+    @Column(name = "lcality")
     @NotNull
     @JsonProperty
     private String lcality;
-    @Column(name = "maritalStatus", nullable = false)
+    @Column(name = "maritalStatus")
     @NotNull
     @JsonProperty
     private String maritalStatus;
-    @Column(name = "medicalHistory", nullable = false)
+    @Column(name = "medicalHistory")
     @NotNull
     @JsonProperty
     private String medicalHistory;
@@ -117,54 +117,54 @@ public class JdPatient extends JdUser {
     @Column(name = "modifiedBy")
     @JsonProperty
     private String modifiedBy;
-    @Column(name = "modifiedDate", nullable = false)
+    @Column(name = "modifiedDate")
     @NotNull
     @JsonProperty
     private Date modifiedDate;
-    @Column(name = "occupation", nullable = false)
+    @Column(name = "occupation")
     @NotNull
     @JsonProperty
     private String occupation;
-    @Column(name = "packageId", nullable = false)
+    @Column(name = "packageId")
     @NotNull
     @JsonProperty
     private Long packageId;
-    @Column(name = "patientDisplayId", nullable = false)
+    @Column(name = "patientDisplayId")
     @NotNull
     @JsonProperty
     private String patientDisplayId;
-    @Column(name = "patientNote", nullable = false)
+    @Column(name = "patientNote")
     @NotNull
     @JsonProperty
     private String patientNote;
     @Column(name = "phoneNumber")
     @JsonProperty
     private String phoneNumber;
-    @Column(name = "pincode", nullable = false)
+    @Column(name = "pincode")
     @NotNull
     @JsonProperty
     private Long pincode;
-    @Column(name = "placeOfBirth", nullable = false)
+    @Column(name = "placeOfBirth")
     @NotNull
     @JsonProperty
     private String placeOfBirth;
-    @Column(name = "religion", nullable = false)
+    @Column(name = "religion")
     @NotNull
     @JsonProperty
     private String religion;
-    @Column(name = "socialHistory", nullable = false)
+    @Column(name = "socialHistory")
     @NotNull
     @JsonProperty
     private String socialHistory;
-    @Column(name = "state", nullable = false)
+    @Column(name = "state")
     @NotNull
     @JsonProperty
     private String state;
-    @Column(name = "street1", nullable = false)
+    @Column(name = "street1")
     @NotNull
     @JsonProperty
     private String street1;
-    @Column(name = "street2", nullable = false)
+    @Column(name = "street2")
     @NotNull
     @JsonProperty
     private String street2;

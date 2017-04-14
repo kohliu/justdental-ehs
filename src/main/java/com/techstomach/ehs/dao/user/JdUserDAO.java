@@ -15,6 +15,7 @@ package com.techstomach.ehs.dao.user;
 import com.techstomach.ehs.core.user.JdUser;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
@@ -38,6 +39,10 @@ public class JdUserDAO extends AbstractDAO<JdUser> {
 
     public JdUser findById(long id) {
         return currentSession().get(JdUser.class, id);
+    }
+
+    public List<JdUser> findByEmail(String email) {
+        return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("emailAddress", email)).list();
     }
 
     public void delete(JdUser jdUser) {

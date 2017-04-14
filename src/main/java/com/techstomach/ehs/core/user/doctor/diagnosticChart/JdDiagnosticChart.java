@@ -116,7 +116,7 @@
 //	@ManyToOne( cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY )
 //	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 //	@Basic( optional = false )
-//	@JoinColumn(name = "appointmentId_fk", nullable = false )
+//	@JoinColumn(name = "appointmentId_fk" )
 //	public JdAppointment getAppointmentidFk() {
 //		return this.appointmentidFk;
 //
@@ -139,7 +139,7 @@
 //	@ManyToOne( cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY )
 //	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 //	@Basic( optional = false )
-//	@JoinColumn(name = "clinicId_fk", nullable = false )
+//	@JoinColumn(name = "clinicId_fk" )
 //	public JdClinic getClinicidFk() {
 //		return this.clinicidFk;
 //
@@ -202,7 +202,7 @@
 //    @Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)
 //	@Basic( optional = false )
-//	@Column( name = "procedureid", nullable = false  )
+//	@Column( name = "procedureid"  )
 //	public Long getId() {
 //		return this.id;
 //
@@ -294,7 +294,7 @@
 //	@ManyToOne( cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY )
 //	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 //	@Basic( optional = false )
-//	@JoinColumn(name = "userId_fk", nullable = false )
+//	@JoinColumn(name = "userId_fk" )
 //	public JdUser getUseridFk() {
 //		return this.useridFk;
 //

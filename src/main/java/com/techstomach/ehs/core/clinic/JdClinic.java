@@ -33,19 +33,19 @@ public class JdClinic {
     @JsonProperty
     private Long clinicId;
 
-    @Column(name = "dateCreated", nullable = false)
+    @Column(name = "dateCreated")
     @JsonProperty
     private Date dateCreated;
 
-    @Column(name = "dateModified", nullable = false)
+    @Column(name = "dateModified")
     @JsonProperty
     private Date dateModified;
 
-    @Column(name = "city", nullable = false)
+    @Column(name = "city")
     @JsonProperty
     private String city;
 
-    @Column(name = "clinicName", nullable = false)
+    @Column(name = "clinicName")
     @JsonProperty
     private String clinicName;
 
@@ -53,7 +53,7 @@ public class JdClinic {
     @JsonProperty
     private String clinicType;
 
-    @Column(name = "country", nullable = false)
+    @Column(name = "country")
     @JsonProperty
     private String country;
 
@@ -61,19 +61,19 @@ public class JdClinic {
     @JsonProperty
     private String daysAvailable;
 
-    @Column(name = "gmap", nullable = false)
+    @Column(name = "gmap")
     @JsonProperty
     private String gmap;
 
-    @Column(name = "isActive", nullable = false)
+    @Column(name = "isActive")
     @JsonProperty
 	private Integer isActive;
 
-    @Column(name = "locality", nullable = false)
+    @Column(name = "locality")
     @JsonProperty
     private String locality;
 
-    @Column(name = "modifiedBy", nullable = false)
+    @Column(name = "modifiedBy")
     @JsonProperty
     private String modifiedBy;
 
@@ -85,27 +85,27 @@ public class JdClinic {
     @JsonProperty
     private Long pincode;
 
-    @Column(name = "primaryContactName", nullable = false)
+    @Column(name = "primaryContactName")
     @JsonProperty
     private String primaryContactName;
 
-    @Column(name = "primaryContactNumber", nullable = false)
+    @Column(name = "primaryContactNumber")
     @JsonProperty
     private Long primaryContactNumber;
 
-    @Column(name = "state", nullable = false)
+    @Column(name = "state")
     @JsonProperty
     private String state;
 
-    @Column(name = "street1", nullable = false)
+    @Column(name = "street1")
     @JsonProperty
     private String street1;
 
-    @Column(name = "street2", nullable = false)
+    @Column(name = "street2")
     @JsonProperty
     private String street2;
 
-    @Column(name = "taxNumber", nullable = false)
+    @Column(name = "taxNumber")
     @JsonProperty
 	private String taxNumber;
 

@@ -36,9 +36,8 @@ public class JdAppointment {
 	@JsonProperty
 	private String appointmentDescription;
 
-	@Column(name = "appointmentStatus", nullable = false)
-	@NotNull
-	@JsonProperty
+    @Column(name = "appointmentStatus")
+    @JsonProperty
     @Enumerated
     private JdAppointmentStatus appointmentStatus = JdAppointmentStatus.PENDING_APPROVAL;
 
@@ -47,7 +46,6 @@ public class JdAppointment {
 	private String appointmentTakenBy;
 
     @Column(name = "appointmentStartTime")
-    @NotNull
 	@JsonProperty
     private Date appointmentStartTime;
 

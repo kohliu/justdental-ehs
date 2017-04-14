@@ -45,11 +45,11 @@ public class JdLoginTracking {
     @JsonProperty
     private Integer appId;
 
-    @Column(name = "dateCreated", nullable = false)
+    @Column(name = "dateCreated")
     @JsonProperty
     private Date dateCreated;
 
-    @Column(name = "dateModified", nullable = false)
+    @Column(name = "dateModified")
     @JsonProperty
     private Date dateModified;
 

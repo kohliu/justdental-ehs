@@ -217,7 +217,7 @@
 //	@ManyToOne( cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY )
 //	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 //	@Basic( optional = false )
-//	@JoinColumn(name = "userId_fk", nullable = false )
+//	@JoinColumn(name = "userId_fk" )
 //	public JdUser getUseridFk() {
 //		return this.useridFk;
 //

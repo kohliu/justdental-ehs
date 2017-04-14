@@ -34,19 +34,19 @@ public class JdClinicRoleMap{
 	@JsonProperty
 	private JdClinic clinicId;
 
-	@Column(name = "dateCreated", nullable = false)
+	@Column(name = "dateCreated")
 	@JsonProperty
 	private Date dateCreated;
 
-	@Column(name = "dateModified", nullable = false)
+	@Column(name = "dateModified")
 	@JsonProperty
 	private Date dateModified;
 
-	@Column(name = "isActive", nullable = false)
+	@Column(name = "isActive")
 	@JsonProperty
 	private Integer isActive;
 
-	@Column(name = "modifiedBy", nullable = false)
+	@Column(name = "modifiedBy")
 	@JsonProperty
 	private String modifiedBy;
 
