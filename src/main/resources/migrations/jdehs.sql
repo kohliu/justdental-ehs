@@ -13,10 +13,10 @@ CREATE TABLE jd_role
 	roleId BIGINT NOT NULL AUTO_INCREMENT,
 	roleName varchar(60),
 	roleDescription varchar(255),
-	isActive INT NOT NULL DEFAULT 1,
+	isActive INT,
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (roleId)
 );
 
@@ -30,7 +30,7 @@ DROP TABLE IF EXISTS jd_user;
 CREATE TABLE jd_user
 (
 	userId BIGINT NOT NULL AUTO_INCREMENT,
-	roleId_fk BIGINT NOT NULL,
+-- roleId_fk BIGINT NOT NULL,
 	userType varchar(255),
     uniqueUserId varchar(255),
     userPassword varchar(500),
@@ -44,10 +44,10 @@ CREATE TABLE jd_user
 	phoneNumber varchar(255),
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
-	isActive INT NOT NULL DEFAULT 1,
-	PRIMARY KEY (userId),
-	FOREIGN KEY (roleId_fk) REFERENCES jd_role(roleId)
+	modifiedBy varchar(255),
+	isActive INT,
+	PRIMARY KEY (userId)
+-- FOREIGN KEY (roleId_fk) REFERENCES jd_role(roleId)
 );
 
 DROP TABLE IF EXISTS jd_sso_login;
@@ -61,7 +61,7 @@ CREATE TABLE jd_sso_login
 	tokenExpiryDate datetime,
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (ssoLoginId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
 );
@@ -79,7 +79,7 @@ CREATE TABLE jd_native_login
 	lastPasswordChanged datetime,
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (loginId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
 );
@@ -94,7 +94,7 @@ CREATE TABLE jd_login_tracking
 	appID INT,
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (loginTrackId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
 );
@@ -123,7 +123,7 @@ CREATE TABLE jd_clinic
 	clinicType Varchar(255),
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (clinicId)
 );
 
@@ -134,10 +134,10 @@ CREATE TABLE jd_clinic_role_map
 	clinicRoleId BIGINT NOT NULL AUTO_INCREMENT ,
 	clinicId_fk BIGINT,
 	userId_fk BIGINT,
-	isActive INT NOT NULL DEFAULT 1,
+	isActive INT,
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (clinicRoleId),
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
@@ -155,7 +155,7 @@ CREATE TABLE jd_booking_slots
 	slotEndTime datetime,
 	dateCreated datetime,
 	dateModified datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (slotId),
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
@@ -201,7 +201,7 @@ CREATE TABLE jd_patient
 	patientNote LONGTEXT,
 	creationDate datetime,
 	modifiedDate datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (userId_fk),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
 );
@@ -239,7 +239,7 @@ CREATE TABLE jd_patient_medical_chart
 	comments LONGTEXT NULL,
 	CreationDate datetime NULL,
 	ModifiedDate datetime NULL,
-	ModifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	ModifiedBy varchar(255),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
 );
 
@@ -285,7 +285,7 @@ CREATE TABLE jd_diagnostic_chart
 	validTo datetime NULL,
 	creationDate datetime NULL,
 	modifiedDate datetime NULL,
-	ModifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	ModifiedBy varchar(255),
 	PRIMARY KEY (procedureId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId),
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId),
@@ -307,7 +307,7 @@ CREATE TABLE jd_treatment_plan
 	validTo datetime,
 	creationDate datetime,
 	modifiedDate datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (tratmentId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
 
@@ -327,7 +327,7 @@ CREATE TABLE jd_patient_medication
 	endDate datetime,
 	CreationDate datetime,
 	ModifiedDate datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (patientMedicationId),
 	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId),
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId)
@@ -344,7 +344,7 @@ CREATE TABLE jd_services
 	cost float(14,2),
 	creationDate datetime,
 	modifiedDate datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (serviceId)
 );
 
@@ -356,7 +356,7 @@ CREATE TABLE jd_clinic_service_map
 	serviceId_fk BIGINT NOT NULL,
 	creationDate datetime,
 	modifiedDate datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId),
 	FOREIGN KEY (serviceId_fk) REFERENCES jd_services(serviceId)
 );
@@ -370,7 +370,7 @@ CREATE TABLE jd_clinic_service_cost
     cost Float (14,2),
 	creationDate datetime,
 	modifiedDate datetime,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId),
 	FOREIGN KEY (serviceId_fk) REFERENCES jd_services(serviceId)
 );
@@ -386,7 +386,7 @@ CREATE TABLE jd_corporate_package
 	comments Varchar(500) NULL,
 	creationDate datetime NULL,
 	modifiedDate datetime NULL,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (packageId )
 );
 
@@ -399,7 +399,7 @@ CREATE TABLE jd_corporate_package_clinic_service_map
 	serviceId_fk BIGINT NOT NULL,
 	creationDate datetime NULL,
 	modifiedDate datetime NULL,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255) ,
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId),
 	FOREIGN KEY (serviceId_fk) REFERENCES jd_services(serviceId),
 	FOREIGN KEY (packageId_fk) REFERENCES jd_corporate_package(packageId)
@@ -422,7 +422,7 @@ CREATE TABLE jd_invoice
 	totalAmount float(14,2) NOT NULL,
 	creationDate datetime NULL,
 	modifiedDate datetime NULL,
-	modifiedBy varchar(255) NOT NULL DEFAULT 'adm_jd',
+	modifiedBy varchar(255),
 	PRIMARY KEY (invoiceId),
 	FOREIGN KEY (clinicId_fk) REFERENCES jd_clinic(clinicId),
 	FOREIGN KEY (appointmentId_fk) REFERENCES jd_appointment(appointmentId),
