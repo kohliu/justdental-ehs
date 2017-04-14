@@ -444,6 +444,9 @@ blockquote footer{
 
 .header-1 .topbar{
     background-color: #1696e7;
+    -webkit-box-shadow: #666 0px 3px 9px;
+	-moz-box-shadow: #666 0px 3px 9px;
+	box-shadow: #666 0px 3px 9px;
 }
 
 .header-1 .topbar .contact{
@@ -3967,7 +3970,7 @@ blockquote footer{
 
 #social_side_appmnt_links {
   position: fixed;
-  bottom: 70px;
+  bottom: 81px;
   left: -57px;
   padding: 0;
   list-style: none;
@@ -3997,6 +4000,10 @@ blockquote footer{
 .left-panel-orange{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid orange;word-wrap:break-word}
 .left-panel-violet{line-height:1.4;width:auto;padding:8px 12px;border-left:4px solid darkviolet;word-wrap:break-word}
 
-
+. shadow-border{
+    -webkit-box-shadow: #666 0px 3px 9px;
+	-moz-box-shadow: #666 0px 3px 9px;
+	box-shadow: #666 0px 3px 9px;
+}
 
 /* */
