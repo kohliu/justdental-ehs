@@ -34,102 +34,82 @@ public class JdClinic {
     private Long clinicId;
 
     @Column(name = "dateCreated", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateCreated;
 
     @Column(name = "dateModified", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateModified;
 
     @Column(name = "city", nullable = false)
-    @NotNull
     @JsonProperty
     private String city;
 
     @Column(name = "clinicName", nullable = false)
-    @NotNull
     @JsonProperty
     private String clinicName;
 
     @Column(name = "clinicType")
-    @NotNull
     @JsonProperty
     private String clinicType;
 
     @Column(name = "country", nullable = false)
-    @NotNull
     @JsonProperty
     private String country;
 
     @Column(name = "daysAvailable")
-    @NotNull
     @JsonProperty
     private String daysAvailable;
 
     @Column(name = "gmap", nullable = false)
-    @NotNull
     @JsonProperty
     private String gmap;
 
     @Column(name = "isActive", nullable = false)
-    @NotNull
     @JsonProperty
 	private Integer isActive;
 
     @Column(name = "locality", nullable = false)
-    @NotNull
     @JsonProperty
     private String locality;
 
     @Column(name = "modifiedBy", nullable = false)
-    @NotNull
     @JsonProperty
     private String modifiedBy;
 
     @Column(name = "notification")
-    @NotNull
     @JsonProperty
     private String notification;
 
     @Column(name = "pincode")
-    @NotNull
     @JsonProperty
     private Long pincode;
 
     @Column(name = "primaryContactName", nullable = false)
-    @NotNull
     @JsonProperty
     private String primaryContactName;
 
     @Column(name = "primaryContactNumber", nullable = false)
-    @NotNull
     @JsonProperty
     private Long primaryContactNumber;
 
     @Column(name = "state", nullable = false)
-    @NotNull
     @JsonProperty
     private String state;
 
     @Column(name = "street1", nullable = false)
-    @NotNull
     @JsonProperty
     private String street1;
 
     @Column(name = "street2", nullable = false)
-    @NotNull
     @JsonProperty
     private String street2;
 
     @Column(name = "taxNumber", nullable = false)
-    @NotNull
     @JsonProperty
 	private String taxNumber;
 
     @Column(name = "workingHours")
-    @NotNull
     @JsonProperty
     private String workingHours;
 

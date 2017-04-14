@@ -1,10 +1,20 @@
 server:
   applicationConnectors:
     - type: http
-      port: 9000
+      port: 8080
+    - type: https
+      port: 8081
+      keyStorePath: C:\Users\ujjwa\cacerts
+      keyStorePassword: justdental
+      validateCerts: false
   adminConnectors:
     - type: http
-      port: 9001
+      port: 8082
+#    - type: https
+#      port: 8083
+#      keyStorePath: C:\Users\ujjwa\example2.jks
+#      keyStorePassword: example2
+#      validateCerts: false
   rootPath: /api/*
   applicationContextPath: /
 

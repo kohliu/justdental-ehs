@@ -33,57 +33,54 @@ public class JdUser {
     private Long userId;
 
     @Column(name = "dateCreated", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateCreated;
 
     @Column(name = "dateModified", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateModified;
 
     @Column(name = "emailAddress", nullable = false)
-    @NotNull
     @JsonProperty
     private String emailAddress;
 
+    @Column(name = "uniqueUserId", nullable = false)
+    @JsonProperty
+    private String uniqueUserId;
+
+    @Column(name = "userPassword", nullable = false)
+    @JsonProperty
+    private String userPassword;
+
     @Column(name = "firstName", nullable = false)
-    @NotNull
     @JsonProperty
     private String firstName;
 
     @Column(name = "isActive", nullable = false)
-    @NotNull
     @JsonProperty
     private Integer isActive;
 
     @Column(name = "lastName", nullable = false)
-    @NotNull
     @JsonProperty
     private String lastName;
 
     @Column(name = "licenseNumber", nullable = false)
-    @NotNull
     @JsonProperty
     private String licenseNumber;
 
     @Column(name = "middleName", nullable = false)
-    @NotNull
     @JsonProperty
     private String middleName;
 
     @Column(name = "modifiedBy", nullable = false)
-    @NotNull
     @JsonProperty
     private String modifiedBy;
 
     @Column(name = "phoneNumber", nullable = false)
-    @NotNull
     @JsonProperty
     private String phoneNumber;
 
     @Column(name = "qualification", nullable = false)
-    @NotNull
     @JsonProperty
     private String qualification;
 
@@ -93,12 +90,10 @@ public class JdUser {
     private JdRole roleId;
 
     @Column(name = "specialization", nullable = false)
-    @NotNull
     @JsonProperty
     private String specialization;
 
     @Column(name = "userType", nullable = false)
-    @NotNull
     @JsonProperty
     private String userType;
 
@@ -222,4 +217,19 @@ public class JdUser {
         this.userType = userType;
     }
 
+    public String getUniqueUserId() {
+        return uniqueUserId;
+    }
+
+    public void setUniqueUserId(String uniqueUserId) {
+        this.uniqueUserId = uniqueUserId;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
 }

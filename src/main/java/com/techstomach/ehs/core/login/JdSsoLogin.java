@@ -35,27 +35,22 @@ public class JdSsoLogin {
     private JdUser userIdFk;
 
     @Column(name = "dateCreated", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateCreated;
 
     @Column(name = "dateModified", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateModified;
 
     @Column(name = "providerUniqueId")
-    @NotNull
     @JsonProperty
     private String providerUniqueId;
 
     @Column(name = "tokenExpiryDate")
-    @NotNull
     @JsonProperty
     private Date tokenExpiryDate;
 
     @Column(name = "tokenId")
-    @NotNull
     @JsonProperty
     private String tokenId;
 

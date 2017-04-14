@@ -30,7 +30,7 @@ public class JdRole {
 
     @Column(name = "isActive")
     @JsonProperty
-    private Integer isActive = 0;
+    private Integer isActive = 1;
 
     @Column(name = "roleDescription")
     @JsonProperty

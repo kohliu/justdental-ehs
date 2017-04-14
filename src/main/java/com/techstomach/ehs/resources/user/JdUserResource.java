@@ -72,12 +72,12 @@ public class JdUserResource {
     @UnitOfWork
     @ApiOperation(value = "post new Just Dental registration user", notes = "post new Just Dental registration user", response = JdUser.class)
     public JdUser register(@FormParam("firstName") String firstName, @FormParam("lastName") String lastName,
-                           @FormParam("emailAddress") String emailAddress, @FormParam("mobileNumber") String mobileNumber) {
+                           @FormParam("emailAddress") String emailAddress, @FormParam("mobileNumber") String mobileNumber, @FormParam("password") String password) {
 
         LOGGER.info("New User registration received for email:" + emailAddress);
         JdUser jdUser = new JdUser();
-        JdRole jdRole = new JdRole();
-        jdRole.setRoleId(jdRoleDAO.findRoleIdByName(RoleType.PATIENT));
+//        JdRole jdRole = new JdRole();
+//        jdRole.setRoleId(jdRoleDAO.findRoleIdByName(RoleType.PATIENT));
         Date createDate = new Date();
         jdUser.setDateCreated(createDate);
         jdUser.setDateModified(createDate);
@@ -85,15 +85,15 @@ public class JdUserResource {
         jdUser.setPhoneNumber(mobileNumber);
         jdUser.setFirstName(firstName);
         jdUser.setLastName(lastName);
-        jdUser.setModifiedBy(emailAddress);
-        jdUser.setIsActive(1);
-        jdUser.setLicenseNumber("");
-        jdUser.setQualification("");
-        jdUser.setRoleId(jdRole);
-        jdUser.setUserType(RoleType.PATIENT.toString());
-        jdUser.setSpecialization("");
-        jdUser.setLastName("");
-        jdUser.setMiddleName("");
+        jdUser.setUserPassword(password);
+//        jdUser.setModifiedBy(emailAddress);
+//        jdUser.setIsActive(1);
+//        jdUser.setLicenseNumber("");
+//        jdUser.setQualification("");
+//        jdUser.setRoleId(jdRole);
+//        jdUser.setUserType(RoleType.PATIENT.toString());
+//        jdUser.setSpecialization("");
+//        jdUser.setMiddleName("");
         return jdUserDAO.insert(jdUser);
     }
 

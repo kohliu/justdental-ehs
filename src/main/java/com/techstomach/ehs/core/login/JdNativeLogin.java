@@ -36,42 +36,34 @@ public class JdNativeLogin {
     private JdUser userIdFk;
 
     @Column(name = "uniqueLoginName", nullable = false)
-    @NotNull
     @JsonProperty
     private String uniqueLoginName;
 
     @Column(name = "dateCreated", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateCreated;
 
     @Column(name = "dateModified", nullable = false)
-    @NotNull
     @JsonProperty
     private Date dateModified;
 
     @Column(name = "lastPasswordChanged", nullable = false)
-    @NotNull
     @JsonProperty
     private Date lastPasswordChanged;
 
     @Column(name = "modifiedBy", nullable = false)
-    @NotNull
     @JsonProperty
     private String modifiedBy;
 
     @Column(name = "passwordAnswer", nullable = false)
-    @NotNull
     @JsonProperty
     private String passwordAnswer;
 
     @Column(name = "passwordKey", nullable = false)
-    @NotNull
     @JsonProperty
     private String passwordKey;
 
     @Column(name = "passwordQuestion", nullable = false)
-    @NotNull
     @JsonProperty
     private String passwordQuestion;
 
