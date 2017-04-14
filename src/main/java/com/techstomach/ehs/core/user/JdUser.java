@@ -18,10 +18,11 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.techstomach.ehs.core.role.JdRole;
+import com.techstomach.ehs.core.role.RoleType;
 
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+//@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "jd_user", catalog = "jdehs_dev")
 public class JdUser {
 
@@ -32,78 +33,78 @@ public class JdUser {
     @JsonProperty
     private Long userId;
 
-    @Column(name = "dateCreated", nullable = false)
+    @Column(name = "dateCreated")
     @JsonProperty
     private Date dateCreated;
 
-    @Column(name = "dateModified", nullable = false)
+    @Column(name = "dateModified")
     @JsonProperty
     private Date dateModified;
 
-    @Column(name = "emailAddress", nullable = false)
+    @Column(name = "emailAddress")
     @JsonProperty
     private String emailAddress;
 
-    @Column(name = "uniqueUserId", nullable = false)
+    @Column(name = "uniqueUserId")
     @JsonProperty
     private String uniqueUserId;
 
-    @Column(name = "userPassword", nullable = false)
+    @Column(name = "userPassword")
     @JsonProperty
     private String userPassword;
 
-    @Column(name = "firstName", nullable = false)
+    @Column(name = "firstName")
     @JsonProperty
     private String firstName;
 
-    @Column(name = "isActive", nullable = false)
+    @Column(name = "isActive")
     @JsonProperty
     private Integer isActive;
 
-    @Column(name = "lastName", nullable = false)
+    @Column(name = "lastName")
     @JsonProperty
     private String lastName;
 
-    @Column(name = "licenseNumber", nullable = false)
+    @Column(name = "licenseNumber")
     @JsonProperty
     private String licenseNumber;
 
-    @Column(name = "middleName", nullable = false)
+    @Column(name = "middleName")
     @JsonProperty
     private String middleName;
 
-    @Column(name = "modifiedBy", nullable = false)
+    @Column(name = "modifiedBy")
     @JsonProperty
     private String modifiedBy;
 
-    @Column(name = "phoneNumber", nullable = false)
+    @Column(name = "phoneNumber")
     @JsonProperty
     private String phoneNumber;
 
-    @Column(name = "qualification", nullable = false)
+    @Column(name = "qualification")
     @JsonProperty
     private String qualification;
 
-    @ManyToOne
-    @JoinColumn(name = "roleId_fk")
-    @JsonProperty
-    private JdRole roleId;
+//    @ManyToOne
+//    @JoinColumn(name = "roleId_fk")
+//    @JsonProperty
+//    private JdRole roleId;
 
-    @Column(name = "specialization", nullable = false)
+    @Column(name = "specialization")
     @JsonProperty
     private String specialization;
 
-    @Column(name = "userType", nullable = false)
+    @Column(name = "userType")
     @JsonProperty
     private String userType;
 
-    public JdRole getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(JdRole roleId) {
-        this.roleId = roleId;
-    }
+//    public JdRole getRoleId() {
+//        return roleId;
+//    }
+//
+//    public void setRoleId(JdRole roleId) {
+//        this.roleId = roleId;
+//    }
 
     public Long getUserId() {
         return userId;

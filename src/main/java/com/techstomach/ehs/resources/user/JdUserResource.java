@@ -90,7 +90,6 @@ public class JdUserResource {
 //        jdUser.setIsActive(1);
 //        jdUser.setLicenseNumber("");
 //        jdUser.setQualification("");
-//        jdUser.setRoleId(jdRole);
 //        jdUser.setUserType(RoleType.PATIENT.toString());
 //        jdUser.setSpecialization("");
 //        jdUser.setMiddleName("");
