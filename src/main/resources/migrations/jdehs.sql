@@ -437,4 +437,4 @@ CREATE TABLE jd_subscribe
 	subscriptionId BIGINT NOT NULL AUTO_INCREMENT,
 	emailAddress varchar(200),
 	PRIMARY KEY (subscriptionId)
-);
+);;

@@ -217,43 +217,56 @@ function subscribe(){
 /* Main screen login */
 function login() {
     console.log("Login called  " + NATIVE_LOGIN);
-    /*fetch(NATIVE_LOGIN, {
-        method: 'get'
+
+    var loginId = document.getElementById('homepage:login:username').value;
+    var password = document.getElementById('homepage:login:password').value;
+
+    var payload = {};
+
+    payload.emailAddress = loginId;
+    payload.userPassword = password;
+
+    fetch(NATIVE_LOGIN, {
+        method: 'POST'
         , mode: 'cors'
         , redirect: 'follow'
         , credentials: 'include'
-    }).then(function (response) {
-        console.log(response);
-    }).catch(function (err) {
-        // Error :(
-        console.log(err);
-    });*/
-    /*var loginUserType = document.getElementById('loginUserType').value;
-    console.log(loginUserType);
-    if(loginUserType == 'patient'){
-        window.location.href = "/html/patient/patientlanding.html";
-    } else if (loginUserType == 'receptionist') {
-        window.location.href = "/html/receptionist/receptionistlanding.html";
-    }*/toastr.error(JSON.stringify(err));
-    
+        , headers: {
+            'Accept': 'application/json'
+            , 'Content-Type': 'application/json'
+        }
+        , body: JSON.stringify(payload)
+    }).then(function(response) {
+              if (!response.ok) {
+              console.log(response);
+                throw Error(response)
+              }
+              return response;
+          }).then(function(response) {
+              window.location.href = '/html/admin/adminlanding.html';
+          }).catch(function(error) {
+              toastr.error('User already Exists!');
+          });
 }
+
+
 /* Main screen regstration */
 function register() {
-    var loginId = document.getElementById('homepage:username').value;
-    
+    var loginId = document.getElementById('homepage:emailId').value;
     var password = document.getElementById('homepage:password').value;
     var firstName = document.getElementById('homepage:firstName').value;
     var lastName = document.getElementById('homepage:lastName').value;
     var emailId = document.getElementById('homepage:emailId').value;
     var mobileNumber = document.getElementById('homepage:mobileNumber').value;
-    var payload = getCreateLoginPayload();
+
+    var payload = {};
     
     console.log(JSON.stringify(payload));
-    payload.uniqueLoginName = loginId;
-    payload.passwordKey = password;
-    payload.userIdFk.firstName = firstName;
-    payload.userIdFk.lastName = lastName;
-    payload.userIdFk.emailAddress = emailId;
+    payload.emailAddress = loginId;
+    payload.userPassword = password;
+    payload.firstName = firstName;
+    payload.lastName = lastName;
+    payload.phoneNumber = mobileNumber;
    
     console.log(JSON.stringify(payload));
     fetch(QUICK_REGISTER, {
@@ -266,10 +279,19 @@ function register() {
             , 'Content-Type': 'application/json'
         }
         , body: JSON.stringify(payload)
-    }).then(function (response) {
-        console.log('suc', response);
-    }).catch(function (err) {
-        // Error :(
-        console.log('err', err);
-    });
+    }).then(function(response) {
+              if (!response.ok) {
+              console.log(response);
+                throw Error(response)
+              }
+              return response;
+          }).then(function(response) {
+              console.log("ok");
+              toastr.success('Congrats '+ firstName+'! Welcome to JUST DENTAL family.');
+              toastr.success('Please login to view your profile!');
+              $('.nav-tabs a[href="#login"]').tab('show');
+          }).catch(function(error) {
+              console.log(error);
+              toastr.error('User already Exists!');
+          });
 }

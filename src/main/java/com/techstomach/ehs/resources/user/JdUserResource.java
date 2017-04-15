@@ -24,6 +24,7 @@ import io.swagger.annotations.ApiOperation;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
@@ -70,10 +71,29 @@ public class JdUserResource {
     @POST
     @UnitOfWork
     @ApiOperation(value = "post new Just Dental Users", notes = "post new Just Dental Users", response = JdUser.class)
-    public JdUser add(@Valid JdUser jdUser) {
-        return jdUserDAO.insert(jdUser);
+    public Response add(@Valid JdUser jdUser) {
+        //check if user exists
+        if (!jdUserDAO.findByEmail(jdUser.getEmailAddress()).isEmpty()) {
+            return Response.serverError().entity("User is already Registered!").build();
+        }
+        return Response.ok(jdUserDAO.insert(jdUser)).build();
     }
 
+    @POST
+    @Path("/login")
+    @UnitOfWork
+    @ApiOperation(value = "post new Just Dental Users", notes = "post new Just Dental Users", response = JdUser.class)
+    public Response login(@Valid JdUser jdUser) {
+        // if login user name exists - if not then send jduser back
+        //if user exists check password
+        List<JdUser> jdUsers = jdUserDAO.validateUser(jdUser.getEmailAddress(), jdUser.getUserPassword());
+        if (!jdUsers.isEmpty()) {
+            return Response.ok(jdUsers.get(0)).build();
+        }
+        return Response.serverError().entity("User Login failed!").build();
+    }
+
+    @Deprecated
     @POST
     @Path("/register")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -92,6 +112,7 @@ public class JdUserResource {
         jdUser.setFirstName(firstName);
         jdUser.setLastName(lastName);
         jdUser.setUserPassword(password);
+        System.out.println(jdUser.getEmailAddress());
         return jdUserDAO.insert(jdUser);
     }
 

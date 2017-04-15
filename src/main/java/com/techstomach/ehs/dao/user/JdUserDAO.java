@@ -45,6 +45,11 @@ public class JdUserDAO extends AbstractDAO<JdUser> {
         return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("emailAddress", email)).list();
     }
 
+    public List<JdUser> validateUser(String email, String password) {
+        return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("emailAddress", email))
+                .add(Restrictions.eq("userPassword", password)).list();
+    }
+
     public void delete(JdUser jdUser) {
         currentSession().delete(jdUser);
     }
