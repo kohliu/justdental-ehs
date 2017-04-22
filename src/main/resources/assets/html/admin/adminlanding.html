@@ -38,9 +38,11 @@
     <link href="../../../slider-revolution/css/settings.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../slider-revolution/css/layers.css">
     <link rel="stylesheet" type="text/css" href="../../slider-revolution/css/navigation.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400,400i" rel="stylesheet">
+   
     <!-- Respond.js and HTML shiv provide HTML5 support in older browsers like IE9 and 8 -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -67,122 +69,42 @@
         <!-- Loader -->
         <div class="loader"> </div>
     </div>
-    <header class="header-2">
-        <!-- Header Style 2 -->
-        <div class="topbar">
-            <!-- Topbar -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <ul class="social">
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href=""><i class="fa fa-vimeo"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="contact">
-                            <li><span>Call Us : </span>+91-9986426673</li>
-                        </ul>
-                        <ul class="contact">
-                            <li><span>Email Us : </span>enquire@justdental.in</li>
-                        </ul>
-                    </div>
+    <header class="header-1">           <!-- Header Style 2 -->
+         <!-- Navigation Bar -->
+        <nav class="navbar navbar-default shadow-border">        
+            <div class="container">            
+                <div class="navbar-header shadow-border">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                        <span class="sr-only">Toggle Menu</span>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="../../index.html">
+                        <img src="../../images/JD_logo.png" alt="" height="50px" width="50px">
+                    </a>
+                    <a class="navbar-brand" href="../../index.html">
+                        <div style="color: #303b41;font-weight: 800;font-size: 35px;letter-spacing: 1px;background-color: transparent;
+                                    z-index: 1;vertical-align:top;">Just Dental</div>
+                        <br>                        
+                        <div style="color: #303b41;font-weight: 400;font-size: 16px;letter-spacing: 1px;background-color: transparent;
+                                    z-index: 1;vertical-align:top;">Explore a new world of dentistry</div>
+                    </a>
                 </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-default">
-            <!-- Navigation Bar -->
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false"> <span class="sr-only">Toggle Menu</span> <i class="fa fa-bars"></i> </button>
-                    <a class="navbar-brand" href="home-version-1.html">
-                        <!-- Replace with your Logo --><img src="../../images/jd-logo1.png" alt="" height="60px" width="60px"> </a>
-                </div>
-                <div class="collapse navbar-collapse" id="main-navigation">
-                    <!-- Main Menu -->
+                
+                <div class="collapse navbar-collapse" id="main-navigation">         <!-- Main Menu -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <!-- Sub Menu -->
-                                <li><a href="home-version-1.html">Home Version 1 <span class="badge">Appointment Form</span> </a></li>
-                                <li><a href="home-version-2.html">Home Version 2 <span class="badge">Slider Revolution</span> </a></li>
-                                <li><a href="home-version-3.html">Home Version 3 <span class="badge">Video Background</span> </a></li>
-                            </ul>
-                        </li>
-                        <li class="mega-sub-menu"><a href="#">Pages</a>
-                            <!-- Mega Menu -->
-                            <ul class="mega-dropdown row">
-                                <li class="col-sm-3">
-                                    <ul class="mega-menu-items">
-                                        <li class="heading">Doctor Grid</li>
-                                        <li><a href="doctors-style-1.html">Doctor Style 1</a></li>
-                                        <li><a href="doctors-style-2.html">Doctor Style 2</a></li>
-                                        <li><a href="doctors-mini.html">Doctor Mini</a></li>
-                                        <li class="hr"></li>
-                                        <li class="heading">Doctor Profile</li>
-                                        <li><a href="doctor-single.html">Doctor Single</a></li>
-                                        <li><a href="doctor-single-sidebar.html">Doctor Single with Sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li class="col-sm-3">
-                                    <ul class="mega-menu-items">
-                                        <li class="heading">Department Grid</li>
-                                        <li><a href="departments-style-1.html">Department Style 1</a></li>
-                                        <li><a href="departments-style-2.html">Department Style 2</a></li>
-                                        <li><a href="departments-mini.html">Department Mini</a></li>
-                                        <li><a href="departments-list.html">Department List</a></li>
-                                        <li class="hr"></li>
-                                        <li class="heading">Department Details</li>
-                                        <li><a href="department-single.html">Department Single</a></li>
-                                        <li><a href="department-single-sidebar.html">Department Single with Sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li class="col-sm-3">
-                                    <ul class="mega-menu-items">
-                                        <li class="heading">Appointments</li>
-                                        <li><a href="appointment-advanced.html">Appointment Advanced</a></li>
-                                        <li><a href="appointment-basic.html">Appointment Basic</a></li>
-                                        <li><a href="book-appointment-form.html">Book Appointment Form</a></li>
-                                        <li class="hr"></li>
-                                        <li class="heading">About Medwise</li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="why-us.html">Why Us</a></li>
-                                        <li><a href="process.html">Process</a></li>
-                                        <li><a href="features.html">Features</a></li>
-                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="careers.html">Careers</a></li>
-                                    </ul>
-                                </li>
-                                <li class="col-sm-3">
-                                    <ul class="mega-menu-items">
-                                        <li class="heading">Other Pages</li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="events.html">Events</a></li>
-                                        <li><a href="download-app.html">Download App</a></li>
-                                        <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                                        <li><a href="offers.html">Offers</a></li>
-                                        <li><a href="dos-donts.html">Dos &amp; Donts</a></li>
-                                        <li><a href="question-answer.html">Q and A</a></li>
-                                        <li><a href="policies.html">Policies</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li><a href="404.html">404-Not Found</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#ourclinics">Our Clinics</a>
-                            <li><a href="#aboutus">About us</a>
-                                <li><a href="#contactus">Contact us</a> </li>
-                                <li></li>
+                        <li class="active"><a href="../../index.html">Home</a>                            
+                        </li>                                            
+                        <li><a href="/html/static/clinics.html">Our Clinics</a>
+                        <li><a href="../../index.html#aboutus">About us</a> 
+                        <li><a href="../../index.html#contactus" >Contact us</a>                            
+                        </li>                        
                     </ul>
                 </div>
-            </div>
+            </div>            
         </nav>
-    </header>
+	</header>
     
-    <div class="container mt-150">
+    <div class="container mt-20">
         <div class="row top90">
             <div class="col-md-3" style="height:300px">
                 <div class="row ">
@@ -196,9 +118,9 @@
                 <div class="row top5">
                     <div class="col-md-12">
                         <blockquote>
-                            <p>Mr. Santhosh Kumar</p> <small>
-                        <cite title="Source Title">35 / Male - Bengaluru <i class="glyphicon glyphicon-map-marker"></i></cite>
-                    </small> </blockquote>
+                            <p>Mr. Santhosh Kumar</p> <!--  <small>
+                        <cite title="Source Title">35 / Male - Bengaluru <i class="glyphicon glyphicon-map-marker"></i></cite> 
+                    </small> --></blockquote>
                     </div>
                 </div>
                 <div class="row">
@@ -217,12 +139,12 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="a2heading2">
                                 <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body2" aria-expanded="true" aria-controls="a2body1">
+                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body2" aria-expanded="false" aria-controls="a2body1">
                                         Quick Links
                                     </a>
                                 </h4>
                             </div>
-                            <div id="a2body2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading2">
+                            <div id="a2body2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading2">
                                 <div class="panel-body">
                                     <ul class="list-styled">
                                         <li>Past Digital Reports</li>
@@ -244,14 +166,194 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="nav nav-tabs list-group">
-                            <li class="active"><a data-toggle="tab" href="#appointments">Appointments</a></li>
+                            <li class="active"><a data-toggle="tab" href="#clinics">Clinics</a></li>
+                            <li><a data-toggle="tab" href="#doctors">Doctors</a></li>
+                            <li><a data-toggle="tab" href="#appointments">Appointments</a></li>                            
                             <li><a data-toggle="tab" href="#reports">Reports</a></li>
                             <li><a data-toggle="tab" href="#bills">Bills</a></li>
                             <li><a data-toggle="tab" href="#prescription">Prescription</a></li>
                             <li><a data-toggle="tab" href="#conversations">Conversations</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div id="appointments" class="tab-pane fade in active">
+                            <div id="clinics" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="col-md-4 pull-right">
+                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#addClinicModal"> Add Clinic</button>
+                                    </div>
+                                </div>
+                                <div class="row mt-20">
+                                    <div class="col-md-12">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sno #</th>
+                                                    <th>Description</th>
+                                                    <th>Consulting Doctor</th>
+                                                    <th>Clinic Name</th>
+                                                    <th>Date</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>RC - #1</td>
+                                                    <td>Dr Sumanth</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-default">20/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>RC - #2</td>
+                                                    <td>Dr Sumanth</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-default">20/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>RC - #3</td>
+                                                    <td>Dr Sumanth</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-default">21/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Crown Measurement</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-warning">24/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>7</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>8</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>                                                 
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="doctors" class="tab-pane fade in">
+                                <div class="row">
+                                    <div class="col-md-4 pull-right">
+                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#addDoctorModal"> Add Doctor</button>
+                                    </div>
+                                </div>
+                                <div class="row mt-20">
+                                    <div class="col-md-12">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sno #</th>
+                                                    <th>Description</th>
+                                                    <th>Consulting Doctor</th>
+                                                    <th>Clinic Name</th>
+                                                    <th>Date</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>RC - #1</td>
+                                                    <td>Dr Sumanth</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-default">20/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>RC - #2</td>
+                                                    <td>Dr Sumanth</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-default">20/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>RC - #3</td>
+                                                    <td>Dr Sumanth</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-default">21/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Crown Measurement</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-warning">24/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>7</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>8</td>
+                                                    <td>Crown Fitting</td>
+                                                    <td>Dr Suresh</td>
+                                                    <td>Rukmini Clinic</td>
+                                                    <td><span class="label label-success">28/Jan/2017</span></td>
+                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                                </tr>                                                 
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="appointments" class="tab-pane fade in">
                                 <div class="row">
                                     <div class="col-md-4 pull-right">
                                         <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="fa fa-calendar"></i> Book Appointment </button>
@@ -667,6 +769,315 @@
                 </div>
             </div>
         </div>
+        <!-- Add Clinic -->
+        <div class="modal fade" id="addClinicModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                            <h3 class="heading">Add New Clinic</h3>
+                                    </div>
+                                </div>
+                                <div class="accordion-2">
+                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="addClinicBasicInfoHeader">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#addClinicBasicInfoBody" aria-expanded="true" aria-controls="addClinicBasicInfoBody">
+                                                        Clinic Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="addClinicBasicInfoBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="addClinicBasicInfoHeader">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Clinic Name" data-toggle="tooltip" title="Clinic Name" id="adminlanding:addclinic:clinicname">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Tax Number" id="adminlanding:addclinic:taxnumber">
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Primary Contact Name" data-toggle="tooltip" title="Primary Contact Name" id="adminlanding:addclinic:primarycontactname">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Primary Contact Number" id="adminlanding:addclinic:primarycontactnumber">
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <select  id="adminlanding:addclinic:workingday">
+                                                                  <option value="">Working Days</option>
+                                                                  <option value="alldays">All Days</option>
+                                                                  <option value="weekdays">Week Days</option>
+                                                                  <option value="Weekedns">Weekends Days</option>
+                                                                </select>  
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" id="adminlanding:addclinic:clinictype">
+                                                                <select >
+                                                                  <option value="">Clinic Type</option>
+                                                                  <option value="saab">PM</option>
+                                                                </select>  
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <select  id="adminlanding:addclinic:fromhour">
+                                                                  <option value="9">9</option>
+                                                                  <option value="saab">Saab</option>
+                                                                  <option value="fiat">Fiat</option>
+                                                                  <option value="audi">Audi</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <select  id="adminlanding:addclinic:fromminutes">
+                                                                  <option value="15">15</option>
+                                                                  <option value="30">30</option>
+                                                                  <option value="45">45</option>
+                                                                  <option value="00">00</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <div class="form-group">
+                                                              <select  id="adminlanding:addclinic:fromtimezone">
+                                                                  <option value="AM">AM</option>
+                                                                  <option value="PM">PM</option>
+                                                                </select>                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1 col-md-offset-1">
+                                                            <div class="form-group">
+                                                              <label>Till</label>                                                             
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <div class="form-group">
+                                                              <select  id="adminlanding:addclinic:tohour">
+                                                                  <option value="9">9</option>
+                                                                  <option value="saab">Saab</option>
+                                                                  <option value="fiat">Fiat</option>
+                                                                  <option value="audi">Audi</option>
+                                                                </select>                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group1">
+                                                              <select  id="adminlanding:addclinic:tominutes">
+                                                                  <option value="15">15</option>
+                                                                  <option value="30">30</option>
+                                                                  <option value="45">45</option>
+                                                                  <option value="00">00</option>
+                                                                </select>                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <select id="adminlanding:addclinic:totimezone">
+                                                                    <option value="AM">AM</option>
+                                                                  <option value="PM">PM</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="gMap" data-toggle="tooltip" title="Clinic Name" id="adminlanding:addclinic:gmap">
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Notification" data-toggle="tooltip" title="Clinic Name" id="adminlanding:addclinic:notification">
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="addClinicAddressHeader">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#addClinicAddressBody" aria-expanded="false" aria-controls="addClinicAddressBody">
+                                                      Contact Address Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="addClinicAddressBody" class="panel-collapse collapse" role="tabpanel" aria-labelledby="addClinicAddressHeader">
+                                                <div class="panel-body">
+                                                   <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Street # 1" id="adminlanding:addclinic:street1">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Street # 2" id="adminlanding:addclinic:street2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Locality" id="adminlanding:addclinic:locality">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="City" value="" id="adminlanding:addclinic:city">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Pincode" id="adminlanding:addclinic:pincode" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select id="adminlanding:addclinic:state">
+                                                                    <option>Select State</option>
+                                                                    <option>Karnataka</option>
+                                                                    <option>Tamilnade</option>
+                                                                    <option>Kerala</option>
+                                                                    <option>...</option>    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary pull-right" type="button" onclick="addClinicFromAdminLanding()"><i class="fa fa-paper-plane"></i>Add New Clinic</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <!-- Add Doctor -->
+        <div class="modal fade" id="addDoctorModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                            <h3 class="heading">Add New Doctor</h3>
+                                    </div>
+                                </div>
+                                <div class="accordion-2">
+                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="addDoctorBasicInfoHeader">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#addDoctorBasicInfoBody" aria-expanded="true" aria-controls="addDoctorBasicInfoBody">
+                                                        Doctor Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="addDoctorBasicInfoBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="addDoctorBasicInfoHeader">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="First Name" data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:firstname'>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Middle Name" id='adminlanding:adddoctor:middlename'>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Last Name" id='adminlanding:adddoctor:lastname'>
+                                                            </div>
+                                                        </div> 
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Email Address" data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:emailid'>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Qualification" id='adminlanding:adddoctor:qualification'>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select id='adminlanding:adddoctor:gender'>
+                                                                    <option>Gender</option>
+                                                                    <option>Male</option>
+                                                                    <option>Female</option>
+                                                                </select>                                                                
+                                                            </div>
+                                                        </div>                                                      
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Specialization" id='adminlanding:adddoctor:specialization'>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Phone number"id='adminlanding:adddoctor:phonenumber' >
+                                                            </div>
+                                                        </div>       
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="License Number" data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:licensenumber'>
+                                                            </div>
+                                                        </div> 
+                                                    </div>                                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary pull-right" type="button" onclick="addDoctorFromAdminLanding()"><i class="fa fa-paper-plane"></i>Add New Doctor</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
     </div>
     <!-- JQuery Version 3.1.0 -->
     <script src="../../js/jquery.min.js" type="text/javascript"></script>
@@ -693,7 +1104,10 @@
     <script src="../../config/url.config.js" type="text/javascript"></script>
     <!-- Custom JS -->
     <script src="../../../../js/script.js" type="text/javascript"></script>
-    <script src="../../js/jd/misc.js" type="text/javascript"></script>
+    <script src="../../js/jd/misc.js" type="text/javascript"></script>    
+    
+    <script src="/js/jd/app.js" type="text/javascript"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
 </body>
 
 </html>
