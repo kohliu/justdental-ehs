@@ -68,6 +68,14 @@ public class JdUserResource {
         return jdUserDAO.findByEmail(email);
     }
 
+    @GET
+    @Path("/userType/{userType}")
+    @UnitOfWork
+    @ApiOperation(value = "get specific Just Dental Users", notes = "get specific Just Dental Users", response = JdUser.class)
+    public List<JdUser> getUserType(@PathParam("userType") String userType) {
+        return jdUserDAO.findByUserType(userType);
+    }
+
     @POST
     @UnitOfWork
     @ApiOperation(value = "post new Just Dental Users", notes = "post new Just Dental Users", response = JdUser.class)
