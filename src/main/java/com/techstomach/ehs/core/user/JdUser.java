@@ -98,6 +98,10 @@ public class JdUser {
     @JsonProperty
     private String userType;
 
+    @Column(name = "gender")
+    @JsonProperty
+    private String gender;
+
 //    public JdRole getRoleId() {
 //        return roleId;
 //    }
@@ -232,5 +236,13 @@ public class JdUser {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
