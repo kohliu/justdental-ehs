@@ -75,11 +75,11 @@
             <artifactId>dropwizard-swagger</artifactId>
             <version>1.0.6-1</version>
         </dependency>
-        <dependency>
-            <groupId>io.dropwizard-bundles</groupId>
-            <artifactId>dropwizard-redirect-bundle</artifactId>
-            <version>1.0.5</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.dropwizard-bundles</groupId>-->
+            <!--<artifactId>dropwizard-redirect-bundle</artifactId>-->
+            <!--<version>1.0.5</version>-->
+        <!--</dependency>-->
         <!-- Test -->
         <dependency>
             <groupId>junit</groupId>
