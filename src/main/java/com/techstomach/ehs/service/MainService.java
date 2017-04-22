@@ -48,8 +48,6 @@ import com.techstomach.ehs.resources.user.JdUserResource;
 import com.techstomach.ehs.service.health.DatabaseHealthCheck;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
-import io.dropwizard.bundles.redirect.HttpsRedirect;
-import io.dropwizard.bundles.redirect.RedirectBundle;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.db.PooledDataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
@@ -95,9 +93,9 @@ public class MainService extends Application<ServiceConfiguration> {
     @Override
     public void initialize(Bootstrap<ServiceConfiguration> bootstrap) {
 
-        bootstrap.addBundle(new RedirectBundle(
-                new HttpsRedirect()
-        ));
+//        bootstrap.addBundle(new RedirectBundle(
+//                new HttpsRedirect()
+//        ));
         bootstrap.addBundle(new MigrationsBundle<ServiceConfiguration>() {
             @Override
             public PooledDataSourceFactory getDataSourceFactory(final ServiceConfiguration configuration) {
