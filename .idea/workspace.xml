@@ -5,15 +5,6 @@
     <list default="true" id="93da8132-e22f-466e-b949-82a8a12608fd" name="CORS changes" comment="Jd appointment api updates">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_dropwizard_bundles_dropwizard_redirect_bundle_1_0_5.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.yml" afterPath="$PROJECT_DIR$/main.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/assembly/mod.xml" afterPath="$PROJECT_DIR$/src/main/assembly/mod.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/core/user/JdUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/core/user/JdUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/dao/user/JdUserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/dao/user/JdUserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/resources/user/JdUserResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/resources/user/JdUserResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/service/MainService.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/service/MainService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/migrations/jdehs.sql" afterPath="$PROJECT_DIR$/src/main/resources/migrations/jdehs.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/techstomach-ehs.iml" afterPath="$PROJECT_DIR$/techstomach-ehs.iml" />
     </list>
     <ignored path="ts-service.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1068,7 +1059,77 @@
       <option name="project" value="LOCAL" />
       <updated>1492858742761</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Jd appointment api updates">
+      <created>1492858770337</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1492858770337</updated>
+    </task>
+    <task id="LOCAL-00022" summary="user search by userType&#10;">
+      <created>1492858804808</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1492858804808</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Jd appointment api updates">
+      <created>1492858856435</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1492858856435</updated>
+    </task>
+    <task id="LOCAL-00024" summary="user search by userType&#10;">
+      <created>1492858897318</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1492858897318</updated>
+    </task>
+    <task id="LOCAL-00025" summary="user search by userType&#10;">
+      <created>1492858977282</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1492858977282</updated>
+    </task>
+    <task id="LOCAL-00026" summary="user search by userType&#10;">
+      <created>1492859098055</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1492859098055</updated>
+    </task>
+    <task id="LOCAL-00027" summary="user search by userType&#10;">
+      <created>1492859161393</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1492859161393</updated>
+    </task>
+    <task id="LOCAL-00028" summary="user search by userType&#10;">
+      <created>1492859198862</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1492859198862</updated>
+    </task>
+    <task id="LOCAL-00029" summary="user search by userType&#10;">
+      <created>1492859233673</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1492859233673</updated>
+    </task>
+    <task id="LOCAL-00030" summary="user search by userType&#10;">
+      <created>1492859254386</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1492859254386</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1137,12 +1198,13 @@
     <MESSAGE value="application context path updated" />
     <MESSAGE value="Jd subscription api" />
     <MESSAGE value="minify cores-2 image which take 9sec to load." />
-    <MESSAGE value="Jd appointment api updates" />
     <MESSAGE value="sql file update" />
     <MESSAGE value="index html font update" />
     <MESSAGE value="remove @NotNull constraints" />
     <MESSAGE value="Jd appointment api updates - Abhishek" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jd appointment api updates - Abhishek" />
+    <MESSAGE value="Jd appointment api updates" />
+    <MESSAGE value="user search by userType&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="user search by userType&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
