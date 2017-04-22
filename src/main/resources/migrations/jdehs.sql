@@ -38,6 +38,7 @@ CREATE TABLE jd_user
 	middleName varchar(255),
 	lastName   varchar(255),
 	emailAddress varchar(255),
+	gender varchar(255),
 	qualification varchar(255),
 	specialization varchar(255),
 	licenseNumber varchar(255),
