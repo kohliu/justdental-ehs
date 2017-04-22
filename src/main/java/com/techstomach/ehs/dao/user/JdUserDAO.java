@@ -44,7 +44,9 @@ public class JdUserDAO extends AbstractDAO<JdUser> {
     public List<JdUser> findByEmail(String email) {
         return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("emailAddress", email)).list();
     }
-
+    public List<JdUser> findByUserType(String userType) {
+        return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("userType", userType)).list();
+    }
     public List<JdUser> validateUser(String email, String password) {
         return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("emailAddress", email))
                 .add(Restrictions.eq("userPassword", password)).list();
