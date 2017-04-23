@@ -1,3 +1,24 @@
+
+function ValidateEmail(mail) 
+{
+     var isValidEmail = false;
+     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+      {
+        isValidEmail = true;
+      }   
+    console.log(isValidEmail, mail);
+     return isValidEmail;
+}
+
+function phonenumber(phonenumber) {
+    var isValidNumber = false;
+    var phoneno = /^\d{10}$/;
+    if ((phonenumber.match(phoneno)) {
+           isValidNumber = true;
+    }
+    return isValidNumber;
+}
+
 $(document).ready(function () {
     $('.forgot-pass').click(function (event) {
         $(".pr-wrap").toggleClass("show-pass-reset");
@@ -313,11 +334,18 @@ function register() {
    if( firstName.trim() == '' ) {
          errorMessages.push('<li>Firstname is mandatory</li>');
    }
-    if( emailId.trim() == '' ) {
+   if( emailId.trim() == '' ) {
          errorMessages.push('<li>email id is mandatory.</li>');
+   } else if (!ValidateEmail(emailId))
+   {
+        errorMessages.push('<li>Invalid emailId entered.</li>');
    }
    if( mobileNumber.trim() == '' ) {
          errorMessages.push('<li>Mobilenumber is mandatory</li>');
+   }
+   else if(!phonenumber(mobileNumber.trim()))
+   {
+       errorMessages.push('<li>Mobilenumber is not valid</li>');
    }
    
    errorMessages.push('</ui>');
@@ -397,7 +425,10 @@ function addDoctorFromAdminLanding()
     }
     if (emailid.trim() == '') {
         errorMessages.push('<li>Emailid is mandatory.</li>');
-    }
+    } else if (!ValidateEmail(emailId))
+       {
+            errorMessages.push('<li>Invalid emailId entered.</li>');
+       }
     if (qualification.trim() == '') {
         errorMessages.push('<li>Qualification is mandatory.</li>');
     }
@@ -409,6 +440,10 @@ function addDoctorFromAdminLanding()
     }
     if (phonenumber.trim() == '') {
         errorMessages.push('<li>Phonenumber is mandatory.</li>');
+    }
+    else if(!phonenumber(phonenumber.trim()))
+    {
+       errorMessages.push('<li>Mobilenumber is not valid</li>');
     }
     if (licensenumber.trim() == '') {
         errorMessages.push('<li>Licensenumber is mandatory.</li>');
