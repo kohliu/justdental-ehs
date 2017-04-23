@@ -1,25 +1,20 @@
-
-function ValidateEmail(mail) 
-{
-     var isValidEmail = false;
-     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
-      {
+function ValidateEmail(mail) {
+    var isValidEmail = false;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         isValidEmail = true;
-      }   
+    }
     console.log(isValidEmail, mail);
-     return isValidEmail;
+    return isValidEmail;
 }
 
-function phonenumber(phonenumber)
-{
+function validatePhonenumber(phonenumber) {
     var isValidNumber = false;
     var phoneno = /^\d{10}$/;
-    if (phoneno.match(phonenumber)) {
-           isValidNumber = true;
+    if (phoneno.test(phonenumber)) {
+        isValidNumber = true;
     }
     return isValidNumber;
 }
-
 $(document).ready(function () {
     $('.forgot-pass').click(function (event) {
         $(".pr-wrap").toggleClass("show-pass-reset");
@@ -30,146 +25,146 @@ $(document).ready(function () {
     //$.getScript("messageUtil.js");
 });
 $(function () {
-/*
-    Highcharts.chart('container', {
-        title: {
-            text: 'Clinical Data - By Numbers 2017'
-            , x: -20 //center
-        }
-        , subtitle: {
-            text: ''
-            , x: -20
-        }
-        , xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'
-                , 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        }
-        , yAxis: {
+    /*
+        Highcharts.chart('container', {
             title: {
-                text: 'People'
+                text: 'Clinical Data - By Numbers 2017'
+                , x: -20 //center
             }
-            , plotLines: [{
-                value: 0
-                , width: 1
-                , color: '#808080'
+            , subtitle: {
+                text: ''
+                , x: -20
+            }
+            , xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'
+                    , 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            }
+            , yAxis: {
+                title: {
+                    text: 'People'
+                }
+                , plotLines: [{
+                    value: 0
+                    , width: 1
+                    , color: '#808080'
+                }]
+            }
+            , tooltip: {
+                formatter: function () {
+                    return 'There are <b>' + this.y + '</b> '+this.series.name + ' registered in <b>'+ this.x + '</b>';
+                }
+            }
+            , legend: {
+                layout: 'vertical'
+                , align: 'right'
+                , verticalAlign: 'middle'
+                , borderWidth: 0
+            }
+            , series: [{
+                name: 'New Patients'
+                , data: [7, 6, 9, 14, 29, 49, 82, 126, 55, 70, 88, 102]
+            }, {
+                name: 'Total Patients'
+                , data: [1, 22, 35, 48, 73, 91, 125, 166, 184, 200, 220, 250]
+            }, {
+                name: 'Corporate Patients'
+                , data: [1, 6, 29, 8, 48, 2, 35, 55, 53, 78, 90, 90]
             }]
-        }
-        , tooltip: {
-            formatter: function () {
-                return 'There are <b>' + this.y + '</b> '+this.series.name + ' registered in <b>'+ this.x + '</b>';
-            }
-        }
-        , legend: {
-            layout: 'vertical'
-            , align: 'right'
-            , verticalAlign: 'middle'
-            , borderWidth: 0
-        }
-        , series: [{
-            name: 'New Patients'
-            , data: [7, 6, 9, 14, 29, 49, 82, 126, 55, 70, 88, 102]
-        }, {
-            name: 'Total Patients'
-            , data: [1, 22, 35, 48, 73, 91, 125, 166, 184, 200, 220, 250]
-        }, {
-            name: 'Corporate Patients'
-            , data: [1, 6, 29, 8, 48, 2, 35, 55, 53, 78, 90, 90]
-        }]
-    });
+        });
 
 
-    
-    Highcharts.chart('appointmentChart', {
-        chart: {
-            type: 'pie',
-            options3d: {
-                enabled: true,
-                alpha: 45
-            }
-        },
-        title: {
-            text: 'Appointments'
-        },        
-        plotOptions: {
-            pie: {
-                innerSize: 100,
-                depth: 45
-            }
-        },
-        series: [{
-            name: 'appointments',
-            data: [
-                ['Consulted', 90],
-                ['Cancelled', 10]
-            ]
-        }]
-    });
-    
-    Highcharts.chart('patientChart', {
-        chart: {
-            type: 'pie',
-            options3d: {
-                enabled: true,
-                alpha: 45
-            }
-        },
-        title: {
-            text: 'Patient details'
-        },        
-        plotOptions: {
-            pie: {
-                innerSize: 100,
-                depth: 45
-            }
-        },
-        series: [{
-            name: 'patient(s)',
-            data: [
-                ['New', 90],
-                ['Already registered', 10]
-            ]
-        }]
-    });
-    
-    
-   
-    
-    Highcharts.chart('doctorChart', {
-        chart: {
-            type: 'pie',
-            options3d: {
-                enabled: true,
-                alpha: 45
-            }
-        },
-        title: {
-            text: 'Specialization'
-        },        
-        plotOptions: {
-            pie: {
-                innerSize: 100,
-                depth: 45
-            }
-        },
-        series: [{
-            name: 'specialist',
-            data: [
-                ['Dentist', 35],
-                ['Prosthodontist', 20],
-                ['Orthodontist', 10],
-                ['Endodontist', 20],
-                ['Implantologist', 10]
-            ]
-        }]
-    });
-    */
+        
+        Highcharts.chart('appointmentChart', {
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45
+                }
+            },
+            title: {
+                text: 'Appointments'
+            },        
+            plotOptions: {
+                pie: {
+                    innerSize: 100,
+                    depth: 45
+                }
+            },
+            series: [{
+                name: 'appointments',
+                data: [
+                    ['Consulted', 90],
+                    ['Cancelled', 10]
+                ]
+            }]
+        });
+        
+        Highcharts.chart('patientChart', {
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45
+                }
+            },
+            title: {
+                text: 'Patient details'
+            },        
+            plotOptions: {
+                pie: {
+                    innerSize: 100,
+                    depth: 45
+                }
+            },
+            series: [{
+                name: 'patient(s)',
+                data: [
+                    ['New', 90],
+                    ['Already registered', 10]
+                ]
+            }]
+        });
+        
+        
+       
+        
+        Highcharts.chart('doctorChart', {
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45
+                }
+            },
+            title: {
+                text: 'Specialization'
+            },        
+            plotOptions: {
+                pie: {
+                    innerSize: 100,
+                    depth: 45
+                }
+            },
+            series: [{
+                name: 'specialist',
+                data: [
+                    ['Dentist', 35],
+                    ['Prosthodontist', 20],
+                    ['Orthodontist', 10],
+                    ['Endodontist', 20],
+                    ['Implantologist', 10]
+                ]
+            }]
+        });
+        */
     //console.log(JSON.stringify($('#calendar')));
-   /* if($('#calendar'))
-    {
-        $('#calendar').fullCalendar({
-            // put your options and callbacks here
-        })
-    }*/
+    /* if($('#calendar'))
+     {
+         $('#calendar').fullCalendar({
+             // put your options and callbacks here
+         })
+     }*/
 });
 /*
 $(document).ready(function() {
@@ -183,20 +178,17 @@ $(document).ready(function() {
     }
 
 });*/
-function bookAppointmentFromHomepage()
-{  
+function bookAppointmentFromHomepage() {
     var payload = getBookAppointment4HomepagePayload();
-     var firstName = document.getElementById('home.appmnt.firstName').value;
-     var lastName = document.getElementById('home.appmnt.lastName').value;
-     var phonenumber = document.getElementById('home.appmnt.phonenumber').value;
-     var emailId = document.getElementById('home.appmnt.emailid').value;
+    var firstName = document.getElementById('home.appmnt.firstName').value;
+    var lastName = document.getElementById('home.appmnt.lastName').value;
+    var phonenumber = document.getElementById('home.appmnt.phonenumber').value;
+    var emailId = document.getElementById('home.appmnt.emailid').value;
     // var dob = document.getElementById('home.appmnt.dob').value;
-     var message = document.getElementById('home.appmnt.message').value;
-    
-   
+    var message = document.getElementById('home.appmnt.message').value;
     payload.appointmentDescription = message;
     payload.creationDate = new Date();
-    payload.appointmentTakenBy = firstName +'  '+ lastName;
+    payload.appointmentTakenBy = firstName + '  ' + lastName;
     console.log(BOOK_APPNT_HOMEPAGE, JSON.stringify(payload));
     fetch(BOOK_APPNT_HOMEPAGE, {
         method: 'POST'
@@ -209,17 +201,18 @@ function bookAppointmentFromHomepage()
         }
         , body: JSON.stringify(payload)
     }).then(function (response) {
-        toastr.success('Thanks, '+firstName +'  '+ lastName+' We have received your appointment. Our team will get back to you.');
-    }).catch(function (err) {        
-       toastr.error(JSON.stringify(err));
+        toastr.success('Thanks, ' + firstName + '  ' + lastName + ' We have received your appointment. Our team will get back to you.');
+    }).catch(function (err) {
+        toastr.error(JSON.stringify(err));
     });
 }
-function subscribe(){
-     var emailId = document.getElementById('subscribe-emailid').value;
-        var payload = {       
-            emailAddress: emailId
-        };
-       fetch(SUBSCRIBE, {
+
+function subscribe() {
+    var emailId = document.getElementById('subscribe-emailid').value;
+    var payload = {
+        emailAddress: emailId
+    };
+    fetch(SUBSCRIBE, {
         method: 'POST'
         , mode: 'cors'
         , redirect: 'follow'
@@ -230,135 +223,126 @@ function subscribe(){
         }
         , body: JSON.stringify(payload)
     }).then(function (response) {
-        toastr.success('Your email id '+ emailId+' is subcribed with JUST DENTAL.');
-    }).catch(function (err) {        
-       toastr.error(JSON.stringify(err));
+        toastr.success('Your email id ' + emailId + ' is subcribed with JUST DENTAL.');
+    }).catch(function (err) {
+        toastr.error(JSON.stringify(err));
     });
-    
 }
-
 /* Main screen login */
 function login() {
     console.log("Login called  " + NATIVE_LOGIN);
-
     var loginId = document.getElementById('homepage:login:username').value;
     var password = document.getElementById('homepage:login:password').value;
-
     var payload = {};
-
-    payload.emailAddress = loginId;
+    payload.uniqueUserId = loginId;
     payload.userPassword = password;
-    
     var errorMessages = [];
     var consolidateErrorMessage = '';
     errorMessages.push('<ui>');
-   
-   if( loginId.trim() == '' ) {
-         errorMessages.push('<li>Username / Mobile Number is mandatory.</li>');
-   }
-   if( password.trim() == '' ) {
-         errorMessages.push('<li>Password is mandatory</li>');
-   }
-   
-   errorMessages.push('</ui>');
-   errorMessages.forEach(function(currentMsg){
-       consolidateErrorMessage += '<br/>'+currentMsg;
-   });
+    if (loginId.trim() == '') {
+        errorMessages.push('<li>Username / Mobile Number is mandatory.</li>');
+    }
+    if (password.trim() == '') {
+        errorMessages.push('<li>Password is mandatory</li>');
+    }
+    errorMessages.push('</ui>');
+    errorMessages.forEach(function (currentMsg) {
+        consolidateErrorMessage += '<br/>' + currentMsg;
+    });
     console.log(consolidateErrorMessage);
-    if( errorMessages.length > 2 ) {
-         toastr.error(consolidateErrorMessage);
+    if (errorMessages.length > 2) {
+        toastr.error(consolidateErrorMessage);
         return;
-   } else {
-       fetch(NATIVE_LOGIN, {
-        method: 'POST'
-        , mode: 'cors'
-        , redirect: 'follow'
-        , credentials: 'include'
-        , headers: {
-            'Accept': 'application/json'
-            , 'Content-Type': 'application/json'
-        }
-        , body: JSON.stringify(payload)
-    }).then(function(response) {
-          if (!response.ok) {
-          console.log(response);
-            throw Error(response)
-          }
-           console.log(response);
-          return response;
-      }).then(function(response) {
-           console.log(response);
-           $('#loginModal').modal('hide');
-          window.location.href = '/html/admin/adminlanding.html';
-      }).catch(function(error) {
-           console.log('Error occured while logging', error);
-          toastr.error('Error occured while logging');
-      });
-   }
-    
+    }
+    else {
+        fetch(NATIVE_LOGIN, {
+            method: 'POST'
+            , mode: 'cors'
+            , redirect: 'follow'
+            , credentials: 'include'
+            , headers: {
+                'Accept': 'application/json'
+                , 'Content-Type': 'application/json'
+            }
+            , body: JSON.stringify(payload)
+        }).then(function (response) {
+            if (!response.ok) {
+                console.log(response);
+                if (response.status == 401) {
+                    toastr.error('Unauthorized, Please check login details.');
+                }
+                else {
+                    throw Error(response)
+                }
+            }
+            else {
+                 console.log(response);
+                $('#loginModal').modal('hide');
+               // window.location.href = '/html/admin/adminlanding.html';
+            }
+            console.log(response);
+            return response;
+        }).catch(function (error) {
+            console.log('Error occured while logging', error);
+            toastr.error('Error occured while logging');
+        });
+    }
 }
-
-
 /* Main screen regstration */
 function register() {
-    var loginId = document.getElementById('homepage:emailId').value;
+    var loginId = document.getElementById('homepage:username').value;
     var password = document.getElementById('homepage:password').value;
     var firstName = document.getElementById('homepage:firstName').value;
     var lastName = document.getElementById('homepage:lastName').value;
     var emailId = document.getElementById('homepage:emailId').value;
     var mobileNumber = document.getElementById('homepage:mobileNumber').value;
-
     var payload = {};
     //var errorMesages = [];
     //validateMandatoryField();
-    
     console.log(JSON.stringify(payload));
-    payload.emailAddress = loginId;
+    payload.emailAddress = emailId;
+    payload.uniqueUserId = loginId;
     payload.userPassword = password;
     payload.firstName = firstName;
     payload.lastName = lastName;
     payload.phoneNumber = mobileNumber;
-    
-     var errorMessages = [];
-   var consolidateErrorMessage = '';
+    var errorMessages = [];
+    var consolidateErrorMessage = '';
     errorMessages.push('<ui>');
-   
-   if( loginId.trim() == '' ) {
-         errorMessages.push('<li>Username / Mobile Number is mandatory.</li>');
-   }
-   if( password.trim() == '' ) {
-         errorMessages.push('<li>Password is mandatory</li>');
-   }
-    if( lastName.trim() == '' ) {
-         errorMessages.push('<li>Lastname is mandatory.</li>');
-   }
-   if( firstName.trim() == '' ) {
-         errorMessages.push('<li>Firstname is mandatory</li>');
-   }
-   if( emailId.trim() == '' ) {
-         errorMessages.push('<li>email id is mandatory.</li>');
-   } else if (!ValidateEmail(emailId))
-   {
+    if (loginId.trim() == '') {
+        errorMessages.push('<li>Username / Mobile Number is mandatory.</li>');
+    }
+    if (password.trim() == '') {
+        errorMessages.push('<li>Password is mandatory</li>');
+    }
+    if (lastName.trim() == '') {
+        errorMessages.push('<li>Lastname is mandatory.</li>');
+    }
+    if (firstName.trim() == '') {
+        errorMessages.push('<li>Firstname is mandatory</li>');
+    }
+    if (emailId.trim() == '') {
+        errorMessages.push('<li>email id is mandatory.</li>');
+    }
+    else if (!ValidateEmail(emailId)) {
         errorMessages.push('<li>Invalid emailId entered.</li>');
-   }
-   if( mobileNumber.trim() == '' ) {
-         errorMessages.push('<li>Mobilenumber is mandatory</li>');
-   }
-   else if(!phonenumber(mobileNumber.trim()))
-   {
-       errorMessages.push('<li>Mobilenumber is not valid</li>');
-   }
-   
-   errorMessages.push('</ui>');
-   errorMessages.forEach(function(currentMsg){
-       consolidateErrorMessage += '<br/>'+currentMsg;
-   });
+    }
+    if (mobileNumber.trim() == '') {
+        errorMessages.push('<li>Mobilenumber is mandatory</li>');
+    }
+    else if (!validatePhonenumber(mobileNumber.trim())) {
+        errorMessages.push('<li>Mobilenumber is not valid</li>');
+    }
+    errorMessages.push('</ui>');
+    errorMessages.forEach(function (currentMsg) {
+        consolidateErrorMessage += '<br/>' + currentMsg;
+    });
     console.log(consolidateErrorMessage);
-   
-    if( errorMessages.length > 2 ) {
-         toastr.error(consolidateErrorMessage);
+    if (errorMessages.length > 2) {
+        toastr.error(consolidateErrorMessage);
         return;
-   } else {
+    }
+    else {
         fetch(QUICK_REGISTER, {
             method: 'POST'
             , mode: 'cors'
@@ -369,67 +353,64 @@ function register() {
                 , 'Content-Type': 'application/json'
             }
             , body: JSON.stringify(payload)
-        }).then(function(response) {
-                  if (!response.ok) {
-                  console.log(response);
-                    throw Error(response)
-                  }
-                  return response;
-              }).then(function(response) {
-                  console.log("ok");
-                  toastr.success('Congrats '+ firstName+', Welcome to JUST DENTAL family.');
-                  toastr.success('Please login to view your profile!');
-                  $('.nav-tabs a[href="#login"]').tab('show');
-              }).catch(function(error) {
-                  console.log(error);
-                  toastr.error('User already Exists!');
-              });
-   }
+        }).then(function (response) {
+            if (!response.ok) {
+                console.log(response);
+                throw Error(response)
+            }
+            return response;
+        }).then(function (response) {
+            console.log("ok");
+            toastr.success('Congrats ' + firstName + ', Welcome to JUST DENTAL family.');
+            toastr.success('Please login to view your profile!');
+            $('.nav-tabs a[href="#login"]').tab('show');
+        }).catch(function (error) {
+            console.log(error);
+            toastr.error('User already Exists!');
+        });
+    }
 }
 
-function addDoctorFromAdminLanding()
-{
-     console.log('addDoctorFromAdminLanding');  
-     var firstname = document.getElementById('adminlanding:adddoctor:firstname').value;
-     var middlename = document.getElementById('adminlanding:adddoctor:middlename').value;
-     var lastname = document.getElementById('adminlanding:adddoctor:lastname').value;
-     var emailid = document.getElementById('adminlanding:adddoctor:emailid').value;
-     var qualification = document.getElementById('adminlanding:adddoctor:qualification').value;
-     var gender = document.getElementById('adminlanding:adddoctor:gender').value;
-     var specialization = document.getElementById('adminlanding:adddoctor:specialization').value;
-     var phonenumber = document.getElementById('adminlanding:adddoctor:phonenumber').value;
-     var licensenumber = document.getElementById('adminlanding:adddoctor:licensenumber').value;
-    
+function addDoctorFromAdminLanding() {
+    console.log('addDoctorFromAdminLanding');
+    var firstname = document.getElementById('adminlanding:adddoctor:firstname').value;
+    var middlename = document.getElementById('adminlanding:adddoctor:middlename').value;
+    var lastname = document.getElementById('adminlanding:adddoctor:lastname').value;
+    var emailid = document.getElementById('adminlanding:adddoctor:emailid').value;
+    var qualification = document.getElementById('adminlanding:adddoctor:qualification').value;
+    var gender = document.getElementById('adminlanding:adddoctor:gender').value;
+    var specialization = document.getElementById('adminlanding:adddoctor:specialization').value;
+    var phonenumber = document.getElementById('adminlanding:adddoctor:phonenumber').value;
+    var licensenumber = document.getElementById('adminlanding:adddoctor:licensenumber').value;
     var payload = {
-      'dateCreated': new Date(),  
-      'emailAddress': emailid,  
-      'firstName': firstname,  
-      'lastName': lastname,  
-      'middleName': middlename,  
-      'phoneNumber': phonenumber,
-      'qualification': qualification,
-      'specialization': specialization,
-      'userType': 'Doctor',
-      'licenseNumber': licensenumber    
+        'dateCreated': new Date()
+        , 'emailAddress': emailid
+        , 'firstName': firstname
+        , 'lastName': lastname
+        , 'middleName': middlename
+        , 'phoneNumber': phonenumber
+        , 'qualification': qualification
+        , 'specialization': specialization
+        , 'userType': 'Doctor'
+        , 'licenseNumber': licensenumber,
+        'gender': gender
     };
-    
     console.log(JSON.stringify(payload));
-     var errorMessages = [];
+    var errorMessages = [];
     var consolidateErrorMessage = '';
     errorMessages.push('<ui>');
-   
     if (firstname.trim() == '') {
         errorMessages.push('<li>Firstname is mandatory.</li>');
-    }    
+    }
     if (lastname.trim() == '') {
         errorMessages.push('<li>lastname is mandatory.</li>');
     }
     if (emailid.trim() == '') {
         errorMessages.push('<li>Emailid is mandatory.</li>');
-    } else if (!ValidateEmail(emailId))
-       {
-            errorMessages.push('<li>Invalid emailId entered.</li>');
-       }
+    }
+    else if (!ValidateEmail(emailid)) {
+        errorMessages.push('<li>Invalid emailId entered.</li>');
+    }
     if (qualification.trim() == '') {
         errorMessages.push('<li>Qualification is mandatory.</li>');
     }
@@ -442,25 +423,28 @@ function addDoctorFromAdminLanding()
     if (phonenumber.trim() == '') {
         errorMessages.push('<li>Phonenumber is mandatory.</li>');
     }
-    else if(!phonenumber(phonenumber.trim()))
-    {
-       errorMessages.push('<li>Mobilenumber is not valid</li>');
+    else if (!validatePhonenumber(phonenumber.trim())) {
+        errorMessages.push('<li>Mobilenumber is not valid</li>');
     }
+    
+    /*else if (!phonenumber(mobileNumber.trim())) {
+        errorMessages.push('<li>Mobilenumber is not valid</li>');
+    }*/
+    
     if (licensenumber.trim() == '') {
         errorMessages.push('<li>Licensenumber is mandatory.</li>');
     }
-    
     errorMessages.push('</ui>');
-   errorMessages.forEach(function(currentMsg){
-       consolidateErrorMessage += '<br/>'+currentMsg;
-   });
+    errorMessages.forEach(function (currentMsg) {
+        consolidateErrorMessage += '<br/>' + currentMsg;
+    });
     console.log(consolidateErrorMessage);
-   
-    if( errorMessages.length > 2 ) {
-         toastr.error(consolidateErrorMessage);
+    if (errorMessages.length > 2) {
+        toastr.error(consolidateErrorMessage);
         return;
-   } else {    
-         fetch(ADD_DOCTOR_ADMIN_LANDING, {
+    }
+    else {
+        fetch(ADD_DOCTOR_ADMIN_LANDING, {
             method: 'POST'
             , mode: 'cors'
             , redirect: 'follow'
@@ -470,21 +454,21 @@ function addDoctorFromAdminLanding()
                 , 'Content-Type': 'application/json'
             }
             , body: JSON.stringify(payload)
-        }).then(function(response) {
-                  if (!response.ok) {
-                  console.log(response);
-                    throw Error(response)
-                  }
-                  return response;
-              }).then(function(response) {
-                  console.log("ok", response);
-                  toastr.success('Congrats '+ firstname+' '+lastname+', Welcome to JUST DENTAL family.');    
-              $('#addDoctorModal').modal('hide');
-              }).catch(function(error) {
-                  console.log(error);
-                  toastr.error('Error while registering Doctor ', JSON.stringify(error));
-              });
-   }
+        }).then(function (response) {
+            if (!response.ok) {
+                console.log(response);
+                throw Error(response)
+            }
+            return response;
+        }).then(function (response) {
+            console.log("ok", response);
+            toastr.success('Congrats ' + firstname + ' ' + lastname + ', Welcome to JUST DENTAL family.');
+            $('#addDoctorModal').modal('hide');
+        }).catch(function (error) {
+            console.log(error);
+            toastr.error('Error while registering Doctor ', JSON.stringify(error));
+        });
+    }
 }
 
 function addClinicFromAdminLanding() {
@@ -515,7 +499,7 @@ function addClinicFromAdminLanding() {
         , 'clinicName': clinicname
         , 'clinicType': clinictype
         , 'country': 'India'
-        , 'daysAvailable': 'string'
+        , 'daysAvailable': workingday
         , 'gmap': gmap
         , 'locality': city
         , 'notification': notification
@@ -568,7 +552,6 @@ function addClinicFromAdminLanding() {
     if (state.trim() == '') {
         errorMessages.push('<li>State is mandatory.</li>');
     }
-    
     errorMessages.push('</ui>');
     errorMessages.forEach(function (currentMsg) {
         consolidateErrorMessage += '<br/>' + currentMsg;
@@ -597,8 +580,8 @@ function addClinicFromAdminLanding() {
             return response;
         }).then(function (response) {
             console.log("ok", response);
-            toastr.success('Congrats '+ clinicname+' is successfully added, Welcome to JUST DENTAL family.');
-             $('#addClinicModal').modal('hide');
+            toastr.success('Congrats ' + clinicname + ' is successfully added, Welcome to JUST DENTAL family.');
+            $('#addClinicModal').modal('hide');
             //toastr.success('Please login to view your profile!');
             // $('.nav-tabs a[href="#login"]').tab('show');
         }).catch(function (error) {
