@@ -10,10 +10,11 @@ function ValidateEmail(mail)
      return isValidEmail;
 }
 
-function phonenumber(phonenumber) {
+function phonenumber(phonenumber)
+{
     var isValidNumber = false;
     var phoneno = /^\d{10}$/;
-    if ((phonenumber.match(phoneno)) {
+    if (phoneno.match(phonenumber)) {
            isValidNumber = true;
     }
     return isValidNumber;
