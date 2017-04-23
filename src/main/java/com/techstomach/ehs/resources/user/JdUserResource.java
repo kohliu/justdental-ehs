@@ -12,9 +12,7 @@
 
 package com.techstomach.ehs.resources.user;
 
-import com.techstomach.ehs.core.role.JdRole;
 import com.techstomach.ehs.core.user.JdUser;
-import com.techstomach.ehs.core.role.RoleType;
 import com.techstomach.ehs.dao.role.JdRoleDAO;
 import com.techstomach.ehs.dao.user.JdUserDAO;
 import io.dropwizard.hibernate.UnitOfWork;
@@ -94,10 +92,21 @@ public class JdUserResource {
     public Response login(@Valid JdUser jdUser) {
         // if login user name exists - if not then send jduser back
         //if user exists check password
-        List<JdUser> jdUsers = jdUserDAO.validateUser(jdUser.getEmailAddress(), jdUser.getUserPassword());
-        if (!jdUsers.isEmpty()) {
-            return Response.ok(jdUsers.get(0)).build();
+        try
+        {
+            LOGGER.info("Login: searching user with phone = " + jdUser.getPhoneNumber() + " and password = ****");
+            List<JdUser> jdUsers = jdUserDAO.validateUserByPhone(jdUser.getPhoneNumber(), jdUser.getUserPassword());
+            if (!jdUsers.isEmpty()) {
+                LOGGER.info("Login: users found with matching phoneNumber and password");
+                return Response.ok(jdUsers.get(0)).build();
+            }
         }
+        catch (Exception e) {
+            e.printStackTrace();
+            return Response.serverError().entity("User Login failed because of exception: " + e.toString()).build();
+        }
+
+        LOGGER.info("Login: no users found with matching phoneNumber and password");
         return Response.serverError().entity("User Login failed!").build();
     }
 

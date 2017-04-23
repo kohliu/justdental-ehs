@@ -18,12 +18,13 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created by ujjwal on 2/25/2017.
  */
 public class JdUserDAO extends AbstractDAO<JdUser> {
-
+    private final static Logger LOGGER = Logger.getLogger(JdUserDAO.class.getName());
     /**
      * Creates a new DAO with a given session provider.
      *
@@ -47,11 +48,15 @@ public class JdUserDAO extends AbstractDAO<JdUser> {
     public List<JdUser> findByUserType(String userType) {
         return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("userType", userType)).list();
     }
-    public List<JdUser> validateUser(String email, String password) {
+    public List<JdUser> validateUserByEmail(String email, String password) {
         return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("emailAddress", email))
                 .add(Restrictions.eq("userPassword", password)).list();
     }
-
+    public List<JdUser> validateUserByPhone(String phoneNumber, String password) {
+        LOGGER.info("Login: validating user with phone number " + phoneNumber + " and password = ****");
+        return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("phoneNumber", phoneNumber))
+                .add(Restrictions.eq("userPassword", password)).list();
+    }
     public void delete(JdUser jdUser) {
         currentSession().delete(jdUser);
     }
