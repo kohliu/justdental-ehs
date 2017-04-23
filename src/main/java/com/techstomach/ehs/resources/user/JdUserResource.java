@@ -97,8 +97,17 @@ public class JdUserResource {
             LOGGER.info("Login: searching user with phone = " + jdUser.getPhoneNumber() + " and password = ****");
             List<JdUser> jdUsers = jdUserDAO.validateUserByPhone(jdUser.getPhoneNumber(), jdUser.getUserPassword());
             if (!jdUsers.isEmpty()) {
-                LOGGER.info("Login: users found with matching phoneNumber and password");
+                LOGGER.info("Login: user found with matching phoneNumber and password");
                 return Response.ok(jdUsers.get(0)).build();
+            }
+            else
+            {
+                LOGGER.info("Login: user not found with matching phoneNumber and password. trying with username...");
+                jdUsers = jdUserDAO.validateUserByUserName(jdUser.getUniqueUserId(), jdUser.getUserPassword());
+                if (!jdUsers.isEmpty()) {
+                    LOGGER.info("Login: user found with matching username and password");
+                    return Response.ok(jdUsers.get(0)).build();
+                }
             }
         }
         catch (Exception e) {
@@ -106,7 +115,7 @@ public class JdUserResource {
             return Response.serverError().entity("User Login failed because of exception: " + e.toString()).build();
         }
 
-        LOGGER.info("Login: no users found with matching phoneNumber and password");
+        LOGGER.info("Login: no user found with matching phoneNumber/username and password");
         return Response.status(Response.Status.UNAUTHORIZED).build();
     }
 
