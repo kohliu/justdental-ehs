@@ -107,7 +107,7 @@ public class JdUserResource {
         }
 
         LOGGER.info("Login: no users found with matching phoneNumber and password");
-        return Response.serverError().entity("User Login failed!").build();
+        return Response.status(Response.Status.UNAUTHORIZED).build();
     }
 
     @Deprecated
