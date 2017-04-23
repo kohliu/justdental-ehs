@@ -228,7 +228,7 @@ function login() {
     payload.userPassword = password;
     
     var errorMessages = [];
-   var consolidateErrorMessage = '';
+    var consolidateErrorMessage = '';
     errorMessages.push('<ui>');
    
    if( loginId.trim() == '' ) {
@@ -266,9 +266,11 @@ function login() {
           return response;
       }).then(function(response) {
            console.log(response);
-         // window.location.href = '/html/admin/adminlanding.html';
+           $('#loginModal').modal('hide');
+          window.location.href = '/html/admin/adminlanding.html';
       }).catch(function(error) {
-          toastr.error('User already Exists!');
+           console.log('Error occured while logging', error);
+          toastr.error('Error occured while logging');
       });
    }
     
@@ -294,33 +296,66 @@ function register() {
     payload.firstName = firstName;
     payload.lastName = lastName;
     payload.phoneNumber = mobileNumber;
+    
+     var errorMessages = [];
+   var consolidateErrorMessage = '';
+    errorMessages.push('<ui>');
    
-    console.log(JSON.stringify(payload));
-    fetch(QUICK_REGISTER, {
-        method: 'POST'
-        , mode: 'cors'
-        , redirect: 'follow'
-        , credentials: 'include'
-        , headers: {
-            'Accept': 'application/json'
-            , 'Content-Type': 'application/json'
-        }
-        , body: JSON.stringify(payload)
-    }).then(function(response) {
-              if (!response.ok) {
-              console.log(response);
-                throw Error(response)
-              }
-              return response;
-          }).then(function(response) {
-              console.log("ok");
-              toastr.success('Congrats '+ firstName+', Welcome to JUST DENTAL family.');
-              toastr.success('Please login to view your profile!');
-              $('.nav-tabs a[href="#login"]').tab('show');
-          }).catch(function(error) {
-              console.log(error);
-              toastr.error('User already Exists!');
-          });
+   if( loginId.trim() == '' ) {
+         errorMessages.push('<li>Username / Mobile Number is mandatory.</li>');
+   }
+   if( password.trim() == '' ) {
+         errorMessages.push('<li>Password is mandatory</li>');
+   }
+    if( lastName.trim() == '' ) {
+         errorMessages.push('<li>Lastname is mandatory.</li>');
+   }
+   if( firstName.trim() == '' ) {
+         errorMessages.push('<li>Firstname is mandatory</li>');
+   }
+    if( emailId.trim() == '' ) {
+         errorMessages.push('<li>email id is mandatory.</li>');
+   }
+   if( mobileNumber.trim() == '' ) {
+         errorMessages.push('<li>Mobilenumber is mandatory</li>');
+   }
+   
+   errorMessages.push('</ui>');
+   errorMessages.forEach(function(currentMsg){
+       consolidateErrorMessage += '<br/>'+currentMsg;
+   });
+    console.log(consolidateErrorMessage);
+   
+    if( errorMessages.length > 2 ) {
+         toastr.error(consolidateErrorMessage);
+        return;
+   } else {
+        fetch(QUICK_REGISTER, {
+            method: 'POST'
+            , mode: 'cors'
+            , redirect: 'follow'
+            , credentials: 'include'
+            , headers: {
+                'Accept': 'application/json'
+                , 'Content-Type': 'application/json'
+            }
+            , body: JSON.stringify(payload)
+        }).then(function(response) {
+                  if (!response.ok) {
+                  console.log(response);
+                    throw Error(response)
+                  }
+                  return response;
+              }).then(function(response) {
+                  console.log("ok");
+                  toastr.success('Congrats '+ firstName+', Welcome to JUST DENTAL family.');
+                  toastr.success('Please login to view your profile!');
+                  $('.nav-tabs a[href="#login"]').tab('show');
+              }).catch(function(error) {
+                  console.log(error);
+                  toastr.error('User already Exists!');
+              });
+   }
 }
 
 function addDoctorFromAdminLanding()
@@ -350,38 +385,74 @@ function addDoctorFromAdminLanding()
     };
     
     console.log(JSON.stringify(payload));
+     var errorMessages = [];
+    var consolidateErrorMessage = '';
+    errorMessages.push('<ui>');
+   
+    if (firstname.trim() == '') {
+        errorMessages.push('<li>Firstname is mandatory.</li>');
+    }    
+    if (lastname.trim() == '') {
+        errorMessages.push('<li>lastname is mandatory.</li>');
+    }
+    if (emailid.trim() == '') {
+        errorMessages.push('<li>Emailid is mandatory.</li>');
+    }
+    if (qualification.trim() == '') {
+        errorMessages.push('<li>Qualification is mandatory.</li>');
+    }
+    if (gender.trim() == '') {
+        errorMessages.push('<li>Gender is mandatory.</li>');
+    }
+    if (specialization.trim() == '') {
+        errorMessages.push('<li>Specialization is mandatory.</li>');
+    }
+    if (phonenumber.trim() == '') {
+        errorMessages.push('<li>Phonenumber is mandatory.</li>');
+    }
+    if (licensenumber.trim() == '') {
+        errorMessages.push('<li>Licensenumber is mandatory.</li>');
+    }
     
-     fetch(ADD_DOCTOR_ADMIN_LANDING, {
-        method: 'POST'
-        , mode: 'cors'
-        , redirect: 'follow'
-        , credentials: 'include'
-        , headers: {
-            'Accept': 'application/json'
-            , 'Content-Type': 'application/json'
-        }
-        , body: JSON.stringify(payload)
-    }).then(function(response) {
-              if (!response.ok) {
-              console.log(response);
-                throw Error(response)
-              }
-              return response;
-          }).then(function(response) {
-              console.log("ok", response);
-              toastr.success('Congrats '+ firstname+', Welcome to JUST DENTAL family.');
-              //toastr.success('Please login to view your profile!');
-             // $('.nav-tabs a[href="#login"]').tab('show');
-          }).catch(function(error) {
-              console.log(error);
-              //toastr.error('User already Exists!');
-          });
+    errorMessages.push('</ui>');
+   errorMessages.forEach(function(currentMsg){
+       consolidateErrorMessage += '<br/>'+currentMsg;
+   });
+    console.log(consolidateErrorMessage);
+   
+    if( errorMessages.length > 2 ) {
+         toastr.error(consolidateErrorMessage);
+        return;
+   } else {    
+         fetch(ADD_DOCTOR_ADMIN_LANDING, {
+            method: 'POST'
+            , mode: 'cors'
+            , redirect: 'follow'
+            , credentials: 'include'
+            , headers: {
+                'Accept': 'application/json'
+                , 'Content-Type': 'application/json'
+            }
+            , body: JSON.stringify(payload)
+        }).then(function(response) {
+                  if (!response.ok) {
+                  console.log(response);
+                    throw Error(response)
+                  }
+                  return response;
+              }).then(function(response) {
+                  console.log("ok", response);
+                  toastr.success('Congrats '+ firstname+' '+lastname+', Welcome to JUST DENTAL family.');    
+              $('#addDoctorModal').modal('hide');
+              }).catch(function(error) {
+                  console.log(error);
+                  toastr.error('Error while registering Doctor ', JSON.stringify(error));
+              });
+   }
 }
 
-function addClinicFromAdminLanding()
-{
-    console.log('addClinicFromAdminLanding');  
-   
+function addClinicFromAdminLanding() {
+    console.log('addClinicFromAdminLanding');
     var clinicname = document.getElementById('adminlanding:addclinic:clinicname').value;
     var taxnumber = document.getElementById('adminlanding:addclinic:taxnumber').value;
     var primarycontactname = document.getElementById('adminlanding:addclinic:primarycontactname').value;
@@ -401,52 +472,102 @@ function addClinicFromAdminLanding()
     var city = document.getElementById('adminlanding:addclinic:city').value;
     var pincode = document.getElementById('adminlanding:addclinic:pincode').value;
     var state = document.getElementById('adminlanding:addclinic:state').value;
-                                          
-     var payload = {      
-      'dateCreated': new Date(),      
-      'city': city,
-      'clinicName': clinicname,
-      'clinicType': clinictype,
-      'country': 'India',
-      'daysAvailable': 'string',
-      'gmap': gmap,      
-      'locality': city,      
-      'notification': notification,
-      'pincode': pincode,
-      'primaryContactName': primarycontactname,
-      'primaryContactNumber': primarycontactnumber,
-      'state': state,
-      'street1': street1,
-      'street2': street2,
-      'taxNumber': taxnumber,
-      "workingHours": fromhour + ':' + fromminutes + ' ' + fromtimezone + ' - ' + tohour + ':' + tominutes +' ' + totimezone
+    var workingHours = fromhour + ':' + fromminutes + ' ' + fromtimezone + ' - ' + tohour + ':' + tominutes + ' ' + totimezone;
+    var payload = {
+        'dateCreated': new Date()
+        , 'city': city
+        , 'clinicName': clinicname
+        , 'clinicType': clinictype
+        , 'country': 'India'
+        , 'daysAvailable': 'string'
+        , 'gmap': gmap
+        , 'locality': city
+        , 'notification': notification
+        , 'pincode': pincode
+        , 'primaryContactName': primarycontactname
+        , 'primaryContactNumber': primarycontactnumber
+        , 'state': state
+        , 'street1': street1
+        , 'street2': street2
+        , 'taxNumber': taxnumber
+        , "workingHours": workingHours
     };
-    
     console.log(JSON.stringify(payload));
+    var errorMessages = [];
+    var consolidateErrorMessage = '';
+    errorMessages.push('<ui>');
+    if (clinicname.trim() == '') {
+        errorMessages.push('<li>Clinicname is mandatory.</li>');
+    }
+    if (taxnumber.trim() == '') {
+        errorMessages.push('<li>Taxnumber is mandatory.</li>');
+    }
+    if (primarycontactname.trim() == '') {
+        errorMessages.push('<li>primarycontactname is mandatory.</li>');
+    }
+    if (primarycontactnumber.trim() == '') {
+        errorMessages.push('<li>Primarycontactnumber is mandatory.</li>');
+    }
+    if (workingday.trim() == '') {
+        errorMessages.push('<li>Workingday is mandatory.</li>');
+    }
+    if (clinictype.trim() == '') {
+        errorMessages.push('<li>Clinictype is mandatory.</li>');
+    }
+    if (gmap.trim() == '') {
+        errorMessages.push('<li>Google Map location is mandatory.</li>');
+    }
+    if (street1.trim() == '') {
+        errorMessages.push('<li>Street1 is mandatory.</li>');
+    }
+    if (street2.trim() == '') {
+        errorMessages.push('<li>Street2 is mandatory.</li>');
+    }
+    if (city.trim() == '') {
+        errorMessages.push('<li>City is mandatory.</li>');
+    }
+    if (pincode.trim() == '') {
+        errorMessages.push('<li>Pincode is mandatory.</li>');
+    }
+    if (state.trim() == '') {
+        errorMessages.push('<li>State is mandatory.</li>');
+    }
     
-     fetch(ADD_CLIINC_ADMIN_LANDING, {
-        method: 'POST'
-        , mode: 'cors'
-        , redirect: 'follow'
-        , credentials: 'include'
-        , headers: {
-            'Accept': 'application/json'
-            , 'Content-Type': 'application/json'
-        }
-        , body: JSON.stringify(payload)
-    }).then(function(response) {
-              if (!response.ok) {
-              console.log(response);
+    errorMessages.push('</ui>');
+    errorMessages.forEach(function (currentMsg) {
+        consolidateErrorMessage += '<br/>' + currentMsg;
+    });
+    console.log(consolidateErrorMessage);
+    if (errorMessages.length > 2) {
+        toastr.error(consolidateErrorMessage);
+        return;
+    }
+    else {
+        fetch(ADD_CLIINC_ADMIN_LANDING, {
+            method: 'POST'
+            , mode: 'cors'
+            , redirect: 'follow'
+            , credentials: 'include'
+            , headers: {
+                'Accept': 'application/json'
+                , 'Content-Type': 'application/json'
+            }
+            , body: JSON.stringify(payload)
+        }).then(function (response) {
+            if (!response.ok) {
+                console.log(response);
                 throw Error(response)
-              }
-              return response;
-          }).then(function(response) {
-              console.log("ok", response);
-              //toastr.success('Congrats '+ firstName+', Welcome to JUST DENTAL family.');
-              //toastr.success('Please login to view your profile!');
-             // $('.nav-tabs a[href="#login"]').tab('show');
-          }).catch(function(error) {
-              console.log(error);
-              //toastr.error('User already Exists!');
-          });
+            }
+            return response;
+        }).then(function (response) {
+            console.log("ok", response);
+            toastr.success('Congrats '+ clinicname+' is successfully added, Welcome to JUST DENTAL family.');
+             $('#addClinicModal').modal('hide');
+            //toastr.success('Please login to view your profile!');
+            // $('.nav-tabs a[href="#login"]').tab('show');
+        }).catch(function (error) {
+            console.log(error);
+            toastr.error('Error while adding clinic ', JSON.stringify(error));
+        });
+    }
 }
