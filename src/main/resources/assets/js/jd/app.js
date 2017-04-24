@@ -278,7 +278,7 @@ function login() {
             else {
                  console.log(response);
                 $('#loginModal').modal('hide');
-               // window.location.href = '/html/admin/adminlanding.html';
+               window.location.href = '/html/admin/adminlanding.html';
             }
             console.log(response);
             return response;
