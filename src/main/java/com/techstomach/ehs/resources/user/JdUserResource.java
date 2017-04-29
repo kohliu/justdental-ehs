@@ -25,6 +25,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -78,10 +79,17 @@ public class JdUserResource {
     @UnitOfWork
     @ApiOperation(value = "post new Just Dental Users", notes = "post new Just Dental Users", response = JdUser.class)
     public Response add(@Valid JdUser jdUser) {
-        //check if user exists
-        if (!jdUserDAO.findByEmail(jdUser.getEmailAddress()).isEmpty()) {
-            return Response.serverError().entity("User is already Registered!").build();
+        LOGGER.info("User Add: adding user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
+        if (!jdUserDAO.findByUserName(jdUser.getUniqueUserId()).isEmpty()) {
+            LOGGER.log(Level.WARNING, "User Add: user's email address is already registered, username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"user's email address is already registered\"}").build();
         }
+        if (!jdUserDAO.findByPhoneNumber(jdUser.getPhoneNumber()).isEmpty()) {
+            LOGGER.log(Level.WARNING, "User Add: user's phone number is already registered, username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"user's phone number is already registered\"}").build();
+        }
+
+        LOGGER.info("User Add: sucessfully added user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
         return Response.ok(jdUserDAO.insert(jdUser)).build();
     }
 
@@ -94,29 +102,33 @@ public class JdUserResource {
         //if user exists check password
         try
         {
-            LOGGER.info("Login: searching user with phone = " + jdUser.getPhoneNumber() + " and password = ****");
-            List<JdUser> jdUsers = jdUserDAO.validateUserByPhone(jdUser.getPhoneNumber(), jdUser.getUserPassword());
+            LOGGER.info("Login: searching user with username = " + jdUser.getUniqueUserId() + " and password = ****");
+            List<JdUser> jdUsers = jdUserDAO.validateUserByUserName(jdUser.getUniqueUserId(), jdUser.getUserPassword());
             if (!jdUsers.isEmpty()) {
-                LOGGER.info("Login: user found with matching phoneNumber and password");
+                LOGGER.info("Login: user found with matching username and password");
                 return Response.ok(jdUsers.get(0)).build();
             }
             else
             {
-                LOGGER.info("Login: user not found with matching phoneNumber and password. trying with username...");
-                jdUsers = jdUserDAO.validateUserByUserName(jdUser.getUniqueUserId(), jdUser.getUserPassword());
+                LOGGER.info("Login: user not found with matching username and password. trying with phoneNumber ...");
+                jdUsers = jdUserDAO.validateUserByPhone(jdUser.getPhoneNumber(), jdUser.getUserPassword());
                 if (!jdUsers.isEmpty()) {
-                    LOGGER.info("Login: user found with matching username and password");
+                    LOGGER.info("Login: user found with matching phoneNumber and password");
                     return Response.ok(jdUsers.get(0)).build();
                 }
             }
         }
         catch (Exception e) {
             e.printStackTrace();
-            return Response.serverError().entity("User Login failed because of exception: " + e.toString()).build();
+            return Response.serverError()
+                    .entity("{\"error\": \"login failed because of exception: " + e.toString() + "\"}")
+                    .build();
         }
 
         LOGGER.info("Login: no user found with matching phoneNumber/username and password");
-        return Response.status(Response.Status.UNAUTHORIZED).build();
+        return Response.status(Response.Status.UNAUTHORIZED)
+                .entity("{\"error\": \"user is not authorized\"}")
+                .build();
     }
 
     @Deprecated

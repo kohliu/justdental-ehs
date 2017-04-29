@@ -42,8 +42,14 @@ public class JdUserDAO extends AbstractDAO<JdUser> {
         return currentSession().get(JdUser.class, id);
     }
 
+    public List<JdUser> findByUserName(String userName) {
+        return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("uniqueUserId", userName)).list();
+    }
     public List<JdUser> findByEmail(String email) {
         return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("emailAddress", email)).list();
+    }
+    public List<JdUser> findByPhoneNumber(String phoneNumber) {
+        return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("phoneNumber", phoneNumber)).list();
     }
     public List<JdUser> findByUserType(String userType) {
         return (List<JdUser>) currentSession().createCriteria(JdUser.class).add(Restrictions.eq("userType", userType)).list();
