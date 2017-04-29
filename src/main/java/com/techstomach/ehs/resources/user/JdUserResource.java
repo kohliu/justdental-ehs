@@ -80,6 +80,19 @@ public class JdUserResource {
     @ApiOperation(value = "post new Just Dental Users", notes = "post new Just Dental Users", response = JdUser.class)
     public Response add(@Valid JdUser jdUser) {
         LOGGER.info("User Add: adding user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
+        Date date = new Date();
+
+        if(jdUser.getPhoneNumber() == null || jdUser.getPhoneNumber().length() == 0)
+        {
+            LOGGER.log(Level.WARNING, "User Add: invalid request. user's phone number is not provided");
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"invalid request. user's phone number is not provided\"}").build();
+        }
+        if(jdUser.getUniqueUserId() == null || jdUser.getUniqueUserId().length() == 0)
+        {
+            LOGGER.log(Level.WARNING, "User Add: invalid request. user's email address is not provided");
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"invalid request. user's email address is not provided\"}").build();
+        }
+
         if (!jdUserDAO.findByUserName(jdUser.getUniqueUserId()).isEmpty()) {
             LOGGER.log(Level.WARNING, "User Add: user's email address is already registered, username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
             return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"user's email address is already registered\"}").build();
@@ -90,6 +103,7 @@ public class JdUserResource {
         }
 
         LOGGER.info("User Add: sucessfully added user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
+        jdUser.setDateCreated(date);
         return Response.ok(jdUserDAO.insert(jdUser)).build();
     }
 
@@ -159,7 +173,13 @@ public class JdUserResource {
     @UnitOfWork
     @ApiOperation(value = "update existing Just Dental Users", notes = "update existing Just Dental Users", response = JdUser.class)
     public JdUser update(@PathParam("id") Long id, @Valid JdUser jdUser) {
+
+        LOGGER.info("User Update: updating user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
+        Date date = new Date();
+
         jdUser.setUserId(id);
+        jdUser.setDateModified(date);
+
         jdUserDAO.update(jdUser);
         return jdUser;
     }
