@@ -102,7 +102,7 @@ public class JdUserResource {
             return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"user's phone number is already registered\"}").build();
         }
 
-        LOGGER.info("User Add: sucessfully added user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
+        LOGGER.info("User Add: successfully added user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
         jdUser.setDateCreated(date);
         return Response.ok(jdUserDAO.insert(jdUser)).build();
     }
@@ -135,7 +135,7 @@ public class JdUserResource {
         catch (Exception e) {
             e.printStackTrace();
             return Response.serverError()
-                    .entity("{\"error\": \"login failed because of exception: " + e.toString() + "\"}")
+                    .entity("{\"error\": \"user login failed because of exception: " + e.toString() + "\"}")
                     .build();
         }
 
