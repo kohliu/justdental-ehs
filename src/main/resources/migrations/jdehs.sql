@@ -190,7 +190,7 @@ CREATE TABLE jd_patient
 	emailAddress varchar(255),
 	street1 varchar(1000),
 	street2 varchar(1000),
-	lcality varchar(500),
+	locality varchar(500),
 	city varchar(255),
 	state varchar(255),
 	country varchar(255),
