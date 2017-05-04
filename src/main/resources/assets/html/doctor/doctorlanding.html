@@ -128,8 +128,8 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage my patients <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">                    
-                    <li><a href="#">Add Patient Information</a></li>                    
-                    <li><a href="#">Search / Update Patient</a></li>                    
+                    <li><a href="#" onclick="toggleDoctorSidebar('#addPatient')">Add Patient Information</a></li>                    
+                    <li><a href="#" onclick="toggleDoctorSidebar('#searchAndEditPatient')">Search / Update Patient</a></li>                    
                   </ul>
                 </li>
                 <li class="dropdown">
@@ -189,10 +189,299 @@
                                 </div>
                             </div>                             
                         </div>
-                        <div id="editProfile" style="display:none">
-                            <h1>Prfoile......</h1>
-                            High lights will e displayed here  
+                        <div id="editProfile" style="display:none">                          
+                            <div class="container-fluid">
+                                    <form>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                            <h3 class="heading">Update Profile</h3>
+                                    </div>
+                                </div>
+                                <div class="accordion-2">
+                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="addDoctorBasicInfoHeader">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#addDoctorBasicInfoBody" aria-expanded="true" aria-controls="addDoctorBasicInfoBody">
+                                                        Doctor Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="addDoctorBasicInfoBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="addDoctorBasicInfoHeader">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="First Name" data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:firstname'>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Middle Name" data-toggle="tooltip" title="Please enter middle name"id='adminlanding:adddoctor:middlename'>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Last Name" data-toggle="tooltip" title="Please enter lastname" id='adminlanding:adddoctor:lastname'>
+                                                            </div>
+                                                        </div> 
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Email Address" data-toggle="tooltip" title="Please enter email id" id='adminlanding:adddoctor:emailid'>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Qualification" data-toggle="tooltip" title="Please enter qualification" id='adminlanding:adddoctor:qualification'>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select id='adminlanding:adddoctor:gender' data-toggle="tooltip" title="Please enter gender">
+                                                                    <option>Gender</option>
+                                                                    <option>Male</option>
+                                                                    <option>Female</option>
+                                                                </select>                                                                
+                                                            </div>
+                                                        </div>                                                      
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Specialization" id='adminlanding:adddoctor:specialization' data-toggle="tooltip" title="Please enter specialization">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" data-toggle="tooltip" title="Please enter phonenumber" placeholder="Phone number"id='adminlanding:adddoctor:phonenumber' >
+                                                            </div>
+                                                        </div>       
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="License Number" data-toggle="tooltip" title="Please enter license number"data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:licensenumber'>
+                                                            </div>
+                                                        </div> 
+                                                    </div>                                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary pull-right" type="button" onclick="addDoctorFromAdminLanding()"><i class="fa fa-paper-plane"></i>Update Profile</button>
+                                </div>
+                            </form>
+                        
+                            </div>
                         </div>                 
+                        <div id="addPatient" style="display:none">
+                            <div class="accordion-2">
+                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading1">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body1" aria-expanded="true" aria-controls="a2body1">
+                                                        Basic Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading1">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Firstname" value="Santhosh">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Middlename" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="email id" value="drsantoshkumarr@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Phone number" value="+91 7892317589">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Marital Status</option>
+                                                                    <option>Single</option>
+                                                                    <option>Married</option>                                                                    
+                                                                    <option>Dont want to disclose</option>                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Gender</option>
+                                                                    <option>Male</option>
+                                                                    <option>Female</option>                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select blood Group</option>
+                                                                    <option>A+</option>
+                                                                    <option>A-</option>
+                                                                    <option>B+</option>
+                                                                    <option>B-</option>
+                                                                    <option>O+</option>
+                                                                    <option>O-</option>
+                                                                    <option>AB+</option>
+                                                                    <option>AB-</option>
+                                                                    <option>Not Sure</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading20">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body20" aria-expanded="false" aria-controls="a2body20">
+                                                      Contact Address Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading20">
+                                                <div class="panel-body">
+                                                   <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Street # 1" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Street # 2" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Locality">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="City" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Pincode" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select State</option>
+                                                                    <option>Karnataka</option>
+                                                                    <option>Tamilnade</option>
+                                                                    <option>Kerala</option>
+                                                                    <option>...</option>                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading30">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body30" aria-expanded="false" aria-controls="a2body30">
+                                                      Emergency Contact Information
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading30">
+                                                <div class="panel-body">
+                                                   <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person Name" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person relationship" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Phone number" value="Kumar">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="a2heading40">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body40" aria-expanded="false" aria-controls="a2body40">
+                                                      Medical history
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="a2body40" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading40">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" rows="5" placeholder="Medical History"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" rows="5" placeholder="Family History"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" rows="5" placeholder="Social History"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Add new patient</button>
+                                </div>
+                        </div>
+                        <div id="searchAndEditPatient">
+                        </div>
                     </div>
                 </div>
             </div>
