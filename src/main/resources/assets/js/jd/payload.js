@@ -62,3 +62,19 @@ function getCalendarForReceptionist()
 {
     
 }
+
+
+function getAllDoctorsAppmntByClinic()
+{
+    
+}
+
+function getAllDoctorsAppmntByStatus()
+{
+    
+}
+
+function getAllDoctorsAppmntByTiming()
+{
+    
+}

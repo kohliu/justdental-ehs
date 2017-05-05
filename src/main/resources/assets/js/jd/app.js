@@ -166,7 +166,7 @@ $(function () {
          })
      }*/
 });
-/*
+
 $(document).ready(function() {
 
     // page is now ready, initialize the calendar...
@@ -177,7 +177,7 @@ $(document).ready(function() {
         })
     }
 
-});*/
+});
 function bookAppointmentFromHomepage() {
     var payload = getBookAppointment4HomepagePayload();
     var firstName = document.getElementById('home.appmnt.firstName').value;
@@ -589,4 +589,137 @@ function addClinicFromAdminLanding() {
             toastr.error('Error while adding clinic ', JSON.stringify(error));
         });
     }
+}
+
+/** Doctor Landing Page **/
+
+/** init sidebar**/
+$(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay');
+     isClosed = false;
+   
+
+    trigger.click(function () {
+      hamburger_cross();      
+    });
+    
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+    });
+
+    function hamburger_cross() {
+      if (trigger.attr('class') == 'hamburger is-open') {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      }
+        else if(trigger.attr('class') == 'hamburger is-closed')
+      {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }        
+  }  
+    
+    if($("#appointmentChart").length != 0) {       
+        Highcharts.chart('appointmentChart', {
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Appointment Status',
+                     margin: 0
+                },        
+                plotOptions: {
+                    pie: {
+                        
+                          size:120
+                    }
+                },
+                series: [{
+                    name: 'appointments',
+                    data: [
+                        ['Consulted', 90],
+                        ['Cancelled', 10]
+                    ]
+                }]
+            }); 
+        
+        Highcharts.chart('clinicChart', {
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Appointments by Clinic',
+                     margin: 0
+                },        
+                plotOptions: {
+                    pie: {
+                        
+                          size:120
+                    }
+                },
+                series: [{
+                    name: 'appointments',
+                    data: [
+                        ['Vagus', 70],
+                        ['Rukmini', 20],
+                        ['Aditi', 10]
+                    ]
+                }]
+            }); 
+        
+        Highcharts.chart('timingChart', {
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Appointments by Time',
+                     margin: 0
+                },        
+                plotOptions: {
+                    pie: {
+                        
+                          size:120
+                    }
+                },
+                series: [{
+                    name: 'appointments',
+                    data: [
+                        ['Morning', 10],
+                        ['evening', 90]
+                    ]
+                }]
+            }); 
+    }
+    
+});
+
+function toggleDoctorSidebar(pageBookmark){
+    var trigger = $('.hamburger'), overlay = $('.overlay');
+   
+    if(trigger.attr('class') == 'hamburger is-closed')
+    {
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+    }
+    else if(trigger.attr('class') == 'hamburger is-open')
+    {
+         overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+    }
+    $('#wrapper').toggleClass('toggled');
+    toggleDoctorMainContent(pageBookmark);
+}
+
+function toggleDoctorMainContent(pageBookmark)
+{    
+     $(doctorPageBookmark).toggle();   
+     $(pageBookmark).toggle();
+     doctorPageBookmark = pageBookmark;
 }
