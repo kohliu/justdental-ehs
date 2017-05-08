@@ -236,6 +236,8 @@ function login() {
     var payload = {};
     payload.uniqueUserId = loginId;
     payload.userPassword = password;
+    payload.emailAddress = loginId;
+    payload.phoneNumber = loginId;
     var errorMessages = [];
     var consolidateErrorMessage = '';
     errorMessages.push('<ui>');

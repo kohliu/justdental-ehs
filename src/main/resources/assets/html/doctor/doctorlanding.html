@@ -34,6 +34,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css" type="text/css" rel="stylesheet">
     
     <link href="../../../css/vendors.css" type="text/css" rel="stylesheet">
+    <link href="../../css/jquery.typeahead.min.css" type="text/css" rel="stylesheet">
     <link href="../../../css/style.css" type="text/css" rel="stylesheet" id="style">
     <link href="../../../css/components.css" type="text/css" rel="stylesheet" id="components">
     <!--Slider Revolution -->
@@ -129,7 +130,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage my patients <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">                    
                     <li><a href="#" onclick="toggleDoctorSidebar('#addPatient')">Add Patient Information</a></li>                    
-                    <li><a href="#" onclick="toggleDoctorSidebar('#searchAndEditPatient')">Search / Update Patient</a></li>                    
+                    <li><a href="#" onclick="toggleDoctorSidebar('#searchAndEditPatient')">Search / Update Patient</a></li>                   
                   </ul>
                 </li>
                 <li class="dropdown">
@@ -277,6 +278,11 @@
                             </div>
                         </div>                 
                         <div id="addPatient" style="display:none">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                        <h3 class="heading">Add new patient</h3>
+                                </div>
+                            </div>
                             <div class="accordion-2">
                                     <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
                                         <div class="panel panel-default">
@@ -292,7 +298,7 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Firstname" value="Santhosh">
+                                                                <input class="form-control" type="text" placeholder="Firstname" value="">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
@@ -302,19 +308,19 @@
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
+                                                                <input class="form-control" type="text" placeholder="Lastname" value="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="email id" value="drsantoshkumarr@gmail.com">
+                                                                <input class="form-control" type="text" placeholder="email id" >
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Phone number" value="+91 7892317589">
+                                                                <input class="form-control" type="text" placeholder="Phone number">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
@@ -480,7 +486,25 @@
                                     <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Add new patient</button>
                                 </div>
                         </div>
-                        <div id="searchAndEditPatient">
+                        <div id="searchAndEditPatient" style="display:none">
+                            <div clas="row">
+                                <div class="col-md-12">
+                                    <div id="custom-search-input">
+                                        <div class="input-group col-md-12">
+                                            <input type="text" class="form-control input-lg" placeholder="Search patients" />
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-info btn-lg" type="button">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div clas="row">
+                                <div class="col-md-12">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1142,6 +1166,7 @@
     </div>
     <!-- JQuery Version 3.1.0 -->
     <script src="../../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/jquery.typeahead.min.js" type="text/javascript"></script>
     <!-- Bootstrap Version 3.3.7 -->
     <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
     <!--Slider Revolution version 5.0
