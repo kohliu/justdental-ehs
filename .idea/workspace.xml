@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="e67906a7-6980-4904-993d-c4f26def3fce" name="Default" comment="" />
-    <list default="true" id="93da8132-e22f-466e-b949-82a8a12608fd" name="CORS changes" comment="Jd user and patient api updates">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/dao/user/doctor/JdDoctorDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/resources/user/doctor/JdDoctorResource.java" />
+    <list default="true" id="93da8132-e22f-466e-b949-82a8a12608fd" name="CORS changes" comment="Jd user, patient, doctor api updates">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/core/user/doctor/JdDoctor.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/core/user/doctor/JdDoctor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/dao/user/patient/JdPatientDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/dao/user/patient/JdPatientDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/resources/user/patient/JdPatientResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/resources/user/patient/JdPatientResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/service/MainService.java" afterPath="$PROJECT_DIR$/src/main/java/com/techstomach/ehs/service/MainService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/migrations/jdehs.sql" afterPath="$PROJECT_DIR$/src/main/resources/migrations/jdehs.sql" />
     </list>
     <ignored path="ts-service.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1720,7 +1713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494661689412</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Jd user, patient, doctor api updates">
+      <created>1494664333155</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1494664333155</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1796,7 +1796,8 @@
     <MESSAGE value="Jd appointment api updates" />
     <MESSAGE value="user search by userType&#10;" />
     <MESSAGE value="Jd user and patient api updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jd user and patient api updates" />
+    <MESSAGE value="Jd user, patient, doctor api updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jd user, patient, doctor api updates" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
