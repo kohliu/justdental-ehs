@@ -22,10 +22,10 @@ import com.techstomach.ehs.core.role.RoleType;
 
 
 @Entity
-//@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "jd_user", catalog = "jdehs_dev")
+@Inheritance(strategy=InheritanceType.JOINED)
+//@DiscriminatorColumn(name = "roleId_fk")
 public class JdUser {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,10 +65,6 @@ public class JdUser {
     @JsonProperty
     private String lastName;
 
-    @Column(name = "licenseNumber")
-    @JsonProperty
-    private String licenseNumber;
-
     @Column(name = "middleName")
     @JsonProperty
     private String middleName;
@@ -85,11 +81,6 @@ public class JdUser {
     @JsonProperty
     private String qualification;
 
-//    @ManyToOne
-//    @JoinColumn(name = "roleId_fk")
-//    @JsonProperty
-//    private JdRole roleId;
-
     @Column(name = "specialization")
     @JsonProperty
     private String specialization;
@@ -101,14 +92,6 @@ public class JdUser {
     @Column(name = "gender")
     @JsonProperty
     private String gender;
-
-//    public JdRole getRoleId() {
-//        return roleId;
-//    }
-//
-//    public void setRoleId(JdRole roleId) {
-//        this.roleId = roleId;
-//    }
 
     public Long getUserId() {
         return userId;
@@ -164,14 +147,6 @@ public class JdUser {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getLicenseNumber() {
-        return licenseNumber;
-    }
-
-    public void setLicenseNumber(String licenseNumber) {
-        this.licenseNumber = licenseNumber;
     }
 
     public String getMiddleName() {

@@ -12,10 +12,42 @@
 
 package com.techstomach.ehs.core.user.doctor;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.techstomach.ehs.core.user.JdUser;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * Created by ujjwal on 3/25/2017.
  */
+@Entity
+@Table(name = "jd_doctor", catalog = "jdehs_dev")
 public class JdDoctor extends JdUser {
+
+    @Column(name = "licenseNumber")
+    @JsonProperty
+    private String licenseNumber;
+
+    @Column(name = "licenseExpiryDate")
+    @JsonProperty
+    private Date licenseExpiryDate;
+
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
+
+    public void setLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
+    }
+
+    public Date getLicenseExpiryDate() {
+        return licenseExpiryDate;
+    }
+
+    public void setLicenseExpiryDate(Date licenseExpiryDate) {
+        this.licenseExpiryDate = licenseExpiryDate;
+    }
 }

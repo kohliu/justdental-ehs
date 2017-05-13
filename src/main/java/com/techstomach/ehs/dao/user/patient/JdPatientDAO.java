@@ -15,6 +15,7 @@ package com.techstomach.ehs.dao.user.patient;
 import com.techstomach.ehs.core.user.patient.JdPatient;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
@@ -50,5 +51,13 @@ public class JdPatientDAO extends AbstractDAO<JdPatient> {
 
     public JdPatient insert(JdPatient jdPatient) {
         return persist(jdPatient);
+    }
+
+    public List<JdPatient> findByPhoneNumber(String phoneNumber) {
+        return (List<JdPatient>) currentSession().createCriteria(JdPatient.class).add(Restrictions.eq("phoneNumber", phoneNumber)).list();
+    }
+
+    public List<JdPatient> findByUserName(String userName) {
+        return (List<JdPatient>) currentSession().createCriteria(JdPatient.class).add(Restrictions.eq("uniqueUserId", userName)).list();
     }
 }
