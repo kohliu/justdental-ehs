@@ -195,6 +195,15 @@ CREATE TABLE jd_patient
 	patientNote LONGTEXT
 );
 
+DROP TABLE IF EXISTS jd_doctor;
+
+CREATE TABLE jd_doctor
+(
+    userId BIGINT NOT NULL,
+	licenseNumber VARCHAR(255),
+	licenseExpiryDate datetime
+	);
+
 DROP TABLE IF EXISTS jd_appointment;
 
 CREATE TABLE jd_appointment

@@ -23,6 +23,7 @@ import com.techstomach.ehs.core.role.JdRole;
 import com.techstomach.ehs.core.role.RoleType;
 import com.techstomach.ehs.core.subscribe.JdSubscription;
 import com.techstomach.ehs.core.user.JdUser;
+import com.techstomach.ehs.core.user.doctor.JdDoctor;
 import com.techstomach.ehs.core.user.patient.JdPatient;
 import com.techstomach.ehs.dao.appointment.JdAppointmentDAO;
 import com.techstomach.ehs.dao.appointment.JdBookingSlotsDAO;
@@ -34,6 +35,7 @@ import com.techstomach.ehs.dao.login.JdSsoLoginDAO;
 import com.techstomach.ehs.dao.role.JdRoleDAO;
 import com.techstomach.ehs.dao.subscribe.JdSubscriptionDAO;
 import com.techstomach.ehs.dao.user.JdUserDAO;
+import com.techstomach.ehs.dao.user.doctor.JdDoctorDAO;
 import com.techstomach.ehs.dao.user.patient.JdPatientDAO;
 import com.techstomach.ehs.resources.appointment.JdAppointmentResource;
 import com.techstomach.ehs.resources.appointment.JdBookingSlotsResource;
@@ -44,6 +46,7 @@ import com.techstomach.ehs.resources.login.JdNativeLoginResource;
 import com.techstomach.ehs.resources.login.JdSsoLoginResource;
 import com.techstomach.ehs.resources.role.JdRoleResource;
 import com.techstomach.ehs.resources.subscribe.JdSubscriptionResource;
+import com.techstomach.ehs.resources.user.doctor.JdDoctorResource;
 import com.techstomach.ehs.resources.user.patient.JdPatientResource;
 import com.techstomach.ehs.resources.user.JdUserResource;
 import com.techstomach.ehs.service.health.DatabaseHealthCheck;
@@ -73,6 +76,7 @@ public class MainService extends Application<ServiceConfiguration> {
                     RoleType.class,
                     JdUser.class,
                     JdPatient.class,
+                    JdDoctor.class,
                     JdNativeLogin.class,
                     JdSsoLogin.class,
                     JdLoginTracking.class,
@@ -173,6 +177,10 @@ public class MainService extends Application<ServiceConfiguration> {
         final JdPatientDAO jdPatientDAO = new JdPatientDAO(hibernate.getSessionFactory());
         final JdPatientResource jdPatientResource = new JdPatientResource(jdPatientDAO);
         environment.jersey().register(jdPatientResource);
+
+        final JdDoctorDAO jdDoctorDAO = new JdDoctorDAO(hibernate.getSessionFactory());
+        final JdDoctorResource jdDoctorResource = new JdDoctorResource(jdDoctorDAO);
+        environment.jersey().register(jdDoctorResource);
 
         final JdSubscriptionDAO jdSubscriptionDAO = new JdSubscriptionDAO(hibernate.getSessionFactory());
         final JdSubscriptionResource jdSubscriptionResource = new JdSubscriptionResource(jdSubscriptionDAO);

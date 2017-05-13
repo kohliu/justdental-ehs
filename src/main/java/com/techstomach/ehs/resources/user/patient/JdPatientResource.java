@@ -21,7 +21,11 @@ import io.swagger.annotations.ApiOperation;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by ujjwal on 3/2/2017.
@@ -31,6 +35,7 @@ import java.util.List;
 @Produces({MediaType.APPLICATION_JSON})
 @Api(value = "/jdpatient", description = "Just Dental Patient")
 public class JdPatientResource {
+    private final static Logger LOGGER = Logger.getLogger(JdPatientResource.class.getName());
 
     JdPatientDAO jdPatientDAO;
 
@@ -56,9 +61,34 @@ public class JdPatientResource {
     @POST
     @UnitOfWork
     @ApiOperation(value = "post new Just Dental Patients", notes = "post new Just Dental Patients", response = JdPatient.class)
-    public JdPatient add(@Valid JdPatient jdPatient) {
-        JdPatient newJdPatient = jdPatientDAO.insert(jdPatient);
-        return newJdPatient;
+    public Response add(@Valid JdPatient jdPatient) {
+        LOGGER.info("User Add: adding user with username = " + jdPatient.getUniqueUserId() + " and phone number = " + jdPatient.getPhoneNumber());
+        Date date = new Date();
+
+        if(jdPatient.getPhoneNumber() == null || jdPatient.getPhoneNumber().length() == 0)
+        {
+            LOGGER.log(Level.WARNING, "User Add: invalid request. user's phone number is not provided");
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"invalid request. user's phone number is not provided\"}").build();
+        }
+        if(jdPatient.getUniqueUserId() == null || jdPatient.getUniqueUserId().length() == 0)
+        {
+            LOGGER.log(Level.WARNING, "User Add: invalid request. user's email address is not provided");
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"invalid request. user's email address is not provided\"}").build();
+        }
+
+        if (!jdPatientDAO.findByUserName(jdPatient.getUniqueUserId()).isEmpty()) {
+            LOGGER.log(Level.WARNING, "User Add: user's email address is already registered, username = " + jdPatient.getUniqueUserId() + " and phone number = " + jdPatient.getPhoneNumber());
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"user's email address is already registered\"}").build();
+        }
+        if (!jdPatientDAO.findByPhoneNumber(jdPatient.getPhoneNumber()).isEmpty()) {
+            LOGGER.log(Level.WARNING, "User Add: user's phone number is already registered, username = " + jdPatient.getUniqueUserId() + " and phone number = " + jdPatient.getPhoneNumber());
+            return Response.status(Response.Status.BAD_REQUEST).entity("{\"error\": \"user's phone number is already registered\"}").build();
+        }
+
+        LOGGER.info("User Add: sucessfully added user with username = " + jdPatient.getUniqueUserId() + " and phone number = " + jdPatient.getPhoneNumber());
+        jdPatient.setDateCreated(date);
+
+        return Response.ok(jdPatientDAO.insert(jdPatient)).build();
     }
 
     @PUT
