@@ -39,114 +39,94 @@ public class JdPatient extends JdUser {
     @JsonProperty
     private String country;
 
-//    @Column(name = "creationDate")
-//    @NotNull
-//    @JsonProperty
-//    private Date creationDate;
-
     @Column(name = "dateOfBirth")
     @JsonProperty
     private Date dateOfBirth;
+
     @Column(name = "education")
     @JsonProperty
     private String education;
 
-//    @Column(name = "emailAddress")
-//    @JsonProperty
-//    private String emailAddress;
-
     @Column(name = "emergencyContactName")
     @JsonProperty
     private String emergencyContactName;
+
     @Column(name = "emergencyContactNumber")
     @JsonProperty
     private String emergencyContactNumber;
+
     @Column(name = "emergencyContactRelationship")
     @JsonProperty
     private String emergencyContactRelationship;
+
     @Column(name = "familyHistory", columnDefinition="LONGTEXT")
     @JsonProperty
     private String familyHistory;
 
-//    @Column(name = "firstname")
-//    @NotNull
-//    @JsonProperty
-//    private String firstname;
-//
-//    @Column(name = "gender")
-//    @NotNull
-//    @JsonProperty
-//    private String gender;
-
     @Column(name = "habbits", columnDefinition="TEXT")
     @JsonProperty
     private String habbits;
+
     @Column(name = "insuranceExpiration")
     @JsonProperty
     private Date insuranceExpiration;
+
     @Column(name = "insuranceNumber")
     @JsonProperty
     private String insuranceNumber;
 
-//    @Column(name = "lastname")
-//    @NotNull
-//    @JsonProperty
-//    private String lastname;
-
     @Column(name = "locality")
     @JsonProperty
     private String locality;
+
     @Column(name = "maritalStatus")
     @JsonProperty
     private String maritalStatus;
+
     @Column(name = "medicalHistory", columnDefinition="LONGTEXT")
     @JsonProperty
     private String medicalHistory;
 
-//    @Column(name = "middleName")
-//    @JsonProperty
-//    private String middleName;
-
-//    @Column(name = "modifiedBy")
-//    @JsonProperty
-//    private String modifiedBy;
-//    @Column(name = "modifiedDate")
-//    @NotNull
-//    @JsonProperty
-//    private Date modifiedDate;
     @Column(name = "occupation")
     @JsonProperty
     private String occupation;
+
     @Column(name = "packageId_fk")
     @JsonProperty
     private Long packageId;
+
     @Column(name = "patientDisplayId")
     @JsonProperty
     private String patientDisplayId;
+
     @Column(name = "patientNote", columnDefinition="LONGTEXT")
     @JsonProperty
     private String patientNote;
-//    @Column(name = "phoneNumber")
-//    @JsonProperty
-//    private String phoneNumber;
+
     @Column(name = "pincode")
     @JsonProperty
     private Long pincode;
+
     @Column(name = "placeOfBirth")
     @JsonProperty
     private String placeOfBirth;
+
     @Column(name = "religion")
     @JsonProperty
     private String religion;
+
     @Column(name = "socialHistory", columnDefinition="LONGTEXT")
     @JsonProperty
     private String socialHistory;
+
     @Column(name = "state")
     @JsonProperty
     private String state;
+
     @Column(name = "street1")
     @JsonProperty
     private String street1;
+
     @Column(name = "street2")
     @JsonProperty
     private String street2;
@@ -183,14 +163,6 @@ public class JdPatient extends JdUser {
         this.country = country;
     }
 
-//    public Date getCreationDate() {
-//        return creationDate;
-//    }
-//
-//    public void setCreationDate(Date creationDate) {
-//        this.creationDate = creationDate;
-//    }
-
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
@@ -206,16 +178,6 @@ public class JdPatient extends JdUser {
     public void setEducation(String education) {
         this.education = education;
     }
-//
-//    @Override
-//    public String getEmailAddress() {
-//        return emailAddress;
-//    }
-//
-//    @Override
-//    public void setEmailAddress(String emailAddress) {
-//        this.emailAddress = emailAddress;
-//    }
 
     public String getEmergencyContactName() {
         return emergencyContactName;
@@ -249,22 +211,6 @@ public class JdPatient extends JdUser {
         this.familyHistory = familyHistory;
     }
 
-//    public String getFirstname() {
-//        return firstname;
-//    }
-//
-//    public void setFirstname(String firstname) {
-//        this.firstname = firstname;
-//    }
-//
-//    public String getGender() {
-//        return gender;
-//    }
-//
-//    public void setGender(String gender) {
-//        this.gender = gender;
-//    }
-
     public String getHabbits() {
         return habbits;
     }
@@ -288,14 +234,6 @@ public class JdPatient extends JdUser {
     public void setInsuranceNumber(String insuranceNumber) {
         this.insuranceNumber = insuranceNumber;
     }
-//
-//    public String getLastname() {
-//        return lastname;
-//    }
-//
-//    public void setLastname(String lastname) {
-//        this.lastname = lastname;
-//    }
 
     public String getLcality() {
         return locality;
@@ -320,34 +258,6 @@ public class JdPatient extends JdUser {
     public void setMedicalHistory(String medicalHistory) {
         this.medicalHistory = medicalHistory;
     }
-
-//    @Override
-//    public String getMiddleName() {
-//        return middleName;
-//    }
-//
-//    @Override
-//    public void setMiddleName(String middleName) {
-//        this.middleName = middleName;
-//    }
-//
-//    @Override
-//    public String getModifiedBy() {
-//        return modifiedBy;
-//    }
-//
-//    @Override
-//    public void setModifiedBy(String modifiedBy) {
-//        this.modifiedBy = modifiedBy;
-//    }
-//
-//    public Date getModifiedDate() {
-//        return modifiedDate;
-//    }
-//
-//    public void setModifiedDate(Date modifiedDate) {
-//        this.modifiedDate = modifiedDate;
-//    }
 
     public String getOccupation() {
         return occupation;
@@ -380,16 +290,6 @@ public class JdPatient extends JdUser {
     public void setPatientNote(String patientNote) {
         this.patientNote = patientNote;
     }
-
-//    @Override
-//    public String getPhoneNumber() {
-//        return phoneNumber;
-//    }
-//
-//    @Override
-//    public void setPhoneNumber(String phoneNumber) {
-//        this.phoneNumber = phoneNumber;
-//    }
 
     public Long getPincode() {
         return pincode;

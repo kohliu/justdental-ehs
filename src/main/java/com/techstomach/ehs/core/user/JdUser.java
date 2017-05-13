@@ -64,10 +64,6 @@ public class JdUser {
     @Column(name = "lastName")
     @JsonProperty
     private String lastName;
-//
-//    @Column(name = "licenseNumber")
-//    @JsonProperty
-//    private String licenseNumber;
 
     @Column(name = "middleName")
     @JsonProperty
@@ -85,11 +81,6 @@ public class JdUser {
     @JsonProperty
     private String qualification;
 
-//    @OneToOne
-//    @JoinColumn(name = "roleId_fk")
-//    @JsonProperty
-//    private JdRole roleId;
-
     @Column(name = "specialization")
     @JsonProperty
     private String specialization;
@@ -101,14 +92,6 @@ public class JdUser {
     @Column(name = "gender")
     @JsonProperty
     private String gender;
-
-//    public JdRole getRoleId() {
-//        return roleId;
-//    }
-//
-//    public void setRoleId(JdRole roleId) {
-//        this.roleId = roleId;
-//    }
 
     public Long getUserId() {
         return userId;
@@ -165,14 +148,6 @@ public class JdUser {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-//    public String getLicenseNumber() {
-//        return licenseNumber;
-//    }
-//
-//    public void setLicenseNumber(String licenseNumber) {
-//        this.licenseNumber = licenseNumber;
-//    }
 
     public String getMiddleName() {
         return middleName;
