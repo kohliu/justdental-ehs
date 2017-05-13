@@ -23,6 +23,7 @@ import com.techstomach.ehs.core.role.JdRole;
 import com.techstomach.ehs.core.role.RoleType;
 import com.techstomach.ehs.core.subscribe.JdSubscription;
 import com.techstomach.ehs.core.user.JdUser;
+import com.techstomach.ehs.core.user.patient.JdPatient;
 import com.techstomach.ehs.dao.appointment.JdAppointmentDAO;
 import com.techstomach.ehs.dao.appointment.JdBookingSlotsDAO;
 import com.techstomach.ehs.dao.clinic.JdClinicDAO;
@@ -71,6 +72,7 @@ public class MainService extends Application<ServiceConfiguration> {
                     JdRole.class,
                     RoleType.class,
                     JdUser.class,
+                    JdPatient.class,
                     JdNativeLogin.class,
                     JdSsoLogin.class,
                     JdLoginTracking.class,

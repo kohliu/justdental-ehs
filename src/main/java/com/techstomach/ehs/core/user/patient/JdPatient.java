@@ -20,7 +20,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@PrimaryKeyJoinColumn(name = "userid_fk")
 @Table(name = "jd_patient", catalog = "jdehs_dev")
 public class JdPatient extends JdUser {
 
@@ -29,143 +28,126 @@ public class JdPatient extends JdUser {
     private String aadharNumber;
 
     @Column(name = "bloodGroup")
-    @NotNull
     @JsonProperty
     private String bloodGroup;
 
     @Column(name = "city")
-    @NotNull
     @JsonProperty
     private String city;
 
     @Column(name = "country")
-    @NotNull
     @JsonProperty
     private String country;
 
-    @Column(name = "creationDate")
-    @NotNull
-    @JsonProperty
-    private Date creationDate;
+//    @Column(name = "creationDate")
+//    @NotNull
+//    @JsonProperty
+//    private Date creationDate;
 
     @Column(name = "dateOfBirth")
-    @NotNull
     @JsonProperty
     private Date dateOfBirth;
     @Column(name = "education")
-    @NotNull
     @JsonProperty
     private String education;
-    @Column(name = "emailAddress")
-    @JsonProperty
-    private String emailAddress;
+
+//    @Column(name = "emailAddress")
+//    @JsonProperty
+//    private String emailAddress;
+
     @Column(name = "emergencyContactName")
-    @NotNull
     @JsonProperty
     private String emergencyContactName;
     @Column(name = "emergencyContactNumber")
-    @NotNull
     @JsonProperty
     private String emergencyContactNumber;
     @Column(name = "emergencyContactRelationship")
-    @NotNull
     @JsonProperty
     private String emergencyContactRelationship;
-    @Column(name = "familyHistory")
-    @NotNull
+    @Column(name = "familyHistory", columnDefinition="LONGTEXT")
     @JsonProperty
     private String familyHistory;
-    @Column(name = "firstname")
-    @NotNull
-    @JsonProperty
-    private String firstname;
-    @Column(name = "gender")
-    @NotNull
-    @JsonProperty
-    private String gender;
-    @Column(name = "habbits")
-    @NotNull
+
+//    @Column(name = "firstname")
+//    @NotNull
+//    @JsonProperty
+//    private String firstname;
+//
+//    @Column(name = "gender")
+//    @NotNull
+//    @JsonProperty
+//    private String gender;
+
+    @Column(name = "habbits", columnDefinition="TEXT")
     @JsonProperty
     private String habbits;
     @Column(name = "insuranceExpiration")
-    @NotNull
     @JsonProperty
     private Date insuranceExpiration;
     @Column(name = "insuranceNumber")
-    @NotNull
     @JsonProperty
     private String insuranceNumber;
-    @Column(name = "lastname")
-    @NotNull
+
+//    @Column(name = "lastname")
+//    @NotNull
+//    @JsonProperty
+//    private String lastname;
+
+    @Column(name = "locality")
     @JsonProperty
-    private String lastname;
-    @Column(name = "lcality")
-    @NotNull
-    @JsonProperty
-    private String lcality;
+    private String locality;
     @Column(name = "maritalStatus")
-    @NotNull
     @JsonProperty
     private String maritalStatus;
-    @Column(name = "medicalHistory")
-    @NotNull
+    @Column(name = "medicalHistory", columnDefinition="LONGTEXT")
     @JsonProperty
     private String medicalHistory;
-    @Column(name = "middleName")
-    @JsonProperty
-    private String middleName;
-    @Column(name = "modifiedBy")
-    @JsonProperty
-    private String modifiedBy;
-    @Column(name = "modifiedDate")
-    @NotNull
-    @JsonProperty
-    private Date modifiedDate;
+
+//    @Column(name = "middleName")
+//    @JsonProperty
+//    private String middleName;
+
+//    @Column(name = "modifiedBy")
+//    @JsonProperty
+//    private String modifiedBy;
+//    @Column(name = "modifiedDate")
+//    @NotNull
+//    @JsonProperty
+//    private Date modifiedDate;
     @Column(name = "occupation")
-    @NotNull
     @JsonProperty
     private String occupation;
-    @Column(name = "packageId")
-    @NotNull
+    @Column(name = "packageId_fk")
     @JsonProperty
     private Long packageId;
     @Column(name = "patientDisplayId")
-    @NotNull
     @JsonProperty
     private String patientDisplayId;
-    @Column(name = "patientNote")
-    @NotNull
+    @Column(name = "patientNote", columnDefinition="LONGTEXT")
     @JsonProperty
     private String patientNote;
-    @Column(name = "phoneNumber")
-    @JsonProperty
-    private String phoneNumber;
+//    @Column(name = "phoneNumber")
+//    @JsonProperty
+//    private String phoneNumber;
     @Column(name = "pincode")
-    @NotNull
     @JsonProperty
     private Long pincode;
     @Column(name = "placeOfBirth")
-    @NotNull
     @JsonProperty
     private String placeOfBirth;
     @Column(name = "religion")
-    @NotNull
     @JsonProperty
     private String religion;
-    @Column(name = "socialHistory")
-    @NotNull
+    @Column(name = "socialHistory", columnDefinition="LONGTEXT")
     @JsonProperty
     private String socialHistory;
     @Column(name = "state")
-    @NotNull
     @JsonProperty
     private String state;
     @Column(name = "street1")
-    @NotNull
     @JsonProperty
     private String street1;
     @Column(name = "street2")
-    @NotNull
     @JsonProperty
     private String street2;
 
@@ -201,13 +183,13 @@ public class JdPatient extends JdUser {
         this.country = country;
     }
 
-    public Date getCreationDate() {
-        return creationDate;
-    }
-
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
-    }
+//    public Date getCreationDate() {
+//        return creationDate;
+//    }
+//
+//    public void setCreationDate(Date creationDate) {
+//        this.creationDate = creationDate;
+//    }
 
     public Date getDateOfBirth() {
         return dateOfBirth;
@@ -224,16 +206,16 @@ public class JdPatient extends JdUser {
     public void setEducation(String education) {
         this.education = education;
     }
-
-    @Override
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    @Override
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+//
+//    @Override
+//    public String getEmailAddress() {
+//        return emailAddress;
+//    }
+//
+//    @Override
+//    public void setEmailAddress(String emailAddress) {
+//        this.emailAddress = emailAddress;
+//    }
 
     public String getEmergencyContactName() {
         return emergencyContactName;
@@ -267,21 +249,21 @@ public class JdPatient extends JdUser {
         this.familyHistory = familyHistory;
     }
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+//    public String getFirstname() {
+//        return firstname;
+//    }
+//
+//    public void setFirstname(String firstname) {
+//        this.firstname = firstname;
+//    }
+//
+//    public String getGender() {
+//        return gender;
+//    }
+//
+//    public void setGender(String gender) {
+//        this.gender = gender;
+//    }
 
     public String getHabbits() {
         return habbits;
@@ -306,21 +288,21 @@ public class JdPatient extends JdUser {
     public void setInsuranceNumber(String insuranceNumber) {
         this.insuranceNumber = insuranceNumber;
     }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
+//
+//    public String getLastname() {
+//        return lastname;
+//    }
+//
+//    public void setLastname(String lastname) {
+//        this.lastname = lastname;
+//    }
 
     public String getLcality() {
-        return lcality;
+        return locality;
     }
 
     public void setLcality(String lcality) {
-        this.lcality = lcality;
+        this.locality = lcality;
     }
 
     public String getMaritalStatus() {
@@ -339,33 +321,33 @@ public class JdPatient extends JdUser {
         this.medicalHistory = medicalHistory;
     }
 
-    @Override
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    @Override
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    @Override
-    public String getModifiedBy() {
-        return modifiedBy;
-    }
-
-    @Override
-    public void setModifiedBy(String modifiedBy) {
-        this.modifiedBy = modifiedBy;
-    }
-
-    public Date getModifiedDate() {
-        return modifiedDate;
-    }
-
-    public void setModifiedDate(Date modifiedDate) {
-        this.modifiedDate = modifiedDate;
-    }
+//    @Override
+//    public String getMiddleName() {
+//        return middleName;
+//    }
+//
+//    @Override
+//    public void setMiddleName(String middleName) {
+//        this.middleName = middleName;
+//    }
+//
+//    @Override
+//    public String getModifiedBy() {
+//        return modifiedBy;
+//    }
+//
+//    @Override
+//    public void setModifiedBy(String modifiedBy) {
+//        this.modifiedBy = modifiedBy;
+//    }
+//
+//    public Date getModifiedDate() {
+//        return modifiedDate;
+//    }
+//
+//    public void setModifiedDate(Date modifiedDate) {
+//        this.modifiedDate = modifiedDate;
+//    }
 
     public String getOccupation() {
         return occupation;
@@ -399,15 +381,15 @@ public class JdPatient extends JdUser {
         this.patientNote = patientNote;
     }
 
-    @Override
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    @Override
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+//    @Override
+//    public String getPhoneNumber() {
+//        return phoneNumber;
+//    }
+//
+//    @Override
+//    public void setPhoneNumber(String phoneNumber) {
+//        this.phoneNumber = phoneNumber;
+//    }
 
     public Long getPincode() {
         return pincode;

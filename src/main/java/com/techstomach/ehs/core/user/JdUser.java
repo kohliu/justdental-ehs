@@ -22,10 +22,10 @@ import com.techstomach.ehs.core.role.RoleType;
 
 
 @Entity
-//@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "jd_user", catalog = "jdehs_dev")
+@Inheritance(strategy=InheritanceType.JOINED)
+//@DiscriminatorColumn(name = "roleId_fk")
 public class JdUser {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,10 +64,10 @@ public class JdUser {
     @Column(name = "lastName")
     @JsonProperty
     private String lastName;
-
-    @Column(name = "licenseNumber")
-    @JsonProperty
-    private String licenseNumber;
+//
+//    @Column(name = "licenseNumber")
+//    @JsonProperty
+//    private String licenseNumber;
 
     @Column(name = "middleName")
     @JsonProperty
@@ -85,7 +85,7 @@ public class JdUser {
     @JsonProperty
     private String qualification;
 
-//    @ManyToOne
+//    @OneToOne
 //    @JoinColumn(name = "roleId_fk")
 //    @JsonProperty
 //    private JdRole roleId;
@@ -166,13 +166,13 @@ public class JdUser {
         this.lastName = lastName;
     }
 
-    public String getLicenseNumber() {
-        return licenseNumber;
-    }
-
-    public void setLicenseNumber(String licenseNumber) {
-        this.licenseNumber = licenseNumber;
-    }
+//    public String getLicenseNumber() {
+//        return licenseNumber;
+//    }
+//
+//    public void setLicenseNumber(String licenseNumber) {
+//        this.licenseNumber = licenseNumber;
+//    }
 
     public String getMiddleName() {
         return middleName;

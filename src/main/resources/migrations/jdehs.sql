@@ -41,7 +41,6 @@ CREATE TABLE jd_user
 	gender varchar(255),
 	qualification varchar(255),
 	specialization varchar(255),
-	licenseNumber varchar(255),
 	phoneNumber varchar(255),
 	dateCreated datetime,
 	dateModified datetime,
@@ -166,16 +165,11 @@ DROP TABLE IF EXISTS jd_patient;
 
 CREATE TABLE jd_patient
 (
-	userId_fk BIGINT NOT NULL,
+    userId BIGINT NOT NULL,
 	packageId_fk BIGINT,
 	patientDisplayId Varchar(255),
-	firstName varchar(255),
-	middleName varchar(255),
-	lastName varchar(255),
-	gender varchar(100),
 	dateOfBirth datetime ,
 	placeOfBirth varchar(255),
-	phoneNumber varchar(255),
 	maritalStatus varchar(100),
 	bloodGroup varchar(100),
 	religion varchar(100),
@@ -187,7 +181,6 @@ CREATE TABLE jd_patient
 	emergencyContactRelationship varchar(255),
 	emergencyContactNumber varchar(255),
 	aadharNumber Varchar(255),
-	emailAddress varchar(255),
 	street1 varchar(1000),
 	street2 varchar(1000),
 	locality varchar(500),
@@ -199,12 +192,7 @@ CREATE TABLE jd_patient
 	medicalHistory LONGTEXT,
 	familyHistory LONGTEXT,
 	socialHistory LONGTEXT,
-	patientNote LONGTEXT,
-	creationDate datetime,
-	modifiedDate datetime,
-	modifiedBy varchar(255),
-	PRIMARY KEY (userId_fk),
-	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
+	patientNote LONGTEXT
 );
 
 DROP TABLE IF EXISTS jd_appointment;
