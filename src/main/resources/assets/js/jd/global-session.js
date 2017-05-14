@@ -4,3 +4,5 @@
 */
 var debug = true;
 var doctorPageBookmark = '#doctorDefault';
+var loginUserFullName = 'Login';
+var userProfiles= [];
