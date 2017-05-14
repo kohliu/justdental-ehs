@@ -267,9 +267,9 @@ function login() {
                 , 'Content-Type': 'application/json'
             }
             , body: JSON.stringify(payload)
-        }).then(function (response) {
+        }).then(function (response, kkk) {
             if (!response.ok) {
-                console.log(response);
+                console.log(response.json());
                 if (response.status == 401) {
                     toastr.error('Unauthorized, Please check login details.');
                 }
@@ -277,10 +277,16 @@ function login() {
                     throw Error(response)
                 }
             }
-            else {
-                 console.log(response);
+            else {                 
+                response.json().then(function(data) 
+                {
+                    $('logout').toggle();  
+                    console.log(data);
+                    loginUserFullName = data.firstName +"   "+data.lastName+"( "+data.userType+" )";
+                    displayLoggedinUsername();
+                });
                 $('#loginModal').modal('hide');
-               window.location.href = '/html/admin/adminlanding.html';
+                window.location.href = '/html/misc/multi-profile.html';
             }
             console.log(response);
             return response;
@@ -290,9 +296,15 @@ function login() {
         });
     }
 }
+                
+function displayLoggedinUsername()
+{
+    console.log('displayLoggedinUsername   ', loginUserFullName);
+    document.getElementById('userLogin').innerHTML = loginUserFullName;
+}
 /* Main screen regstration */
 function register() {
-    var loginId = document.getElementById('homepage:username').value;
+    //var loginId = document.getElementById('homepage:username').value;
     var password = document.getElementById('homepage:password').value;
     var firstName = document.getElementById('homepage:firstName').value;
     var lastName = document.getElementById('homepage:lastName').value;
@@ -302,8 +314,9 @@ function register() {
     //var errorMesages = [];
     //validateMandatoryField();
     console.log(JSON.stringify(payload));
+    payload.uniqueUserId = emailId;
     payload.emailAddress = emailId;
-    payload.uniqueUserId = loginId;
+    //payload.uniqueUserId = loginId;
     payload.userPassword = password;
     payload.firstName = firstName;
     payload.lastName = lastName;
@@ -311,9 +324,9 @@ function register() {
     var errorMessages = [];
     var consolidateErrorMessage = '';
     errorMessages.push('<ui>');
-    if (loginId.trim() == '') {
+    /*if (loginId.trim() == '') {
         errorMessages.push('<li>Username / Mobile Number is mandatory.</li>');
-    }
+    }*/
     if (password.trim() == '') {
         errorMessages.push('<li>Password is mandatory</li>');
     }
@@ -724,4 +737,179 @@ function toggleDoctorMainContent(pageBookmark)
      $(doctorPageBookmark).toggle();   
      $(pageBookmark).toggle();
      doctorPageBookmark = pageBookmark;
+     loadContentForSelectedContent(pageBookmark);
+}
+
+function addPatientFromDoctorLanding()
+{
+   
+      /*
+
+      "dateOfBirth": "2017-05-13T12:20:56.388Z",
+      "insuranceExpiration": "2017-05-13T12:20:56.388Z",
+      "insuranceNumber": "string",
+      "packageId": 0,
+      "patientDisplayId": "string",
+      "placeOfBirth": "string",
+      "religion": "string"
+      */
+  
+
+    var payload = {};
+    payload.insuranceNumber = 99999;
+    payload.insuranceExpiration = new Date();
+    payload.socialHistory = document.getElementById('doctorlanding:addPatient:socialHistory').value;
+    payload.familyHistory = document.getElementById('doctorlanding:addPatient:familyHistory').value;
+    payload.medicalHistory = document.getElementById('doctorlanding:addPatient:medicalHistory').value;
+    payload.aadharNumber = document.getElementById('doctorlanding:addPatient:aadharNumber').value;
+    payload.habbits = document.getElementById('doctorlanding:addPatient:habbits').value;
+    payload.patientNote = document.getElementById('doctorlanding:addPatient:patientNote').value;
+    payload.occupation = document.getElementById('doctorlanding:addPatient:occupation').value;
+    
+    payload.emergencyContactNumber = document.getElementById('doctorlanding:addPatient:emergencyContactPhonenumber').value;
+    payload.emergencyContactRelationship = document.getElementById('doctorlanding:addPatient:emergencyContactrelationship').value;
+    payload.emergencyContactName = document.getElementById('doctorlanding:addPatient:emergencyContactName').value;
+    
+    payload.state = document.getElementById('doctorlanding:addPatient:state').value;
+    payload.pincode = document.getElementById('doctorlanding:addPatient:pincode').value;
+    payload.city = document.getElementById('doctorlanding:addPatient:city').value;
+    payload.locality = document.getElementById('doctorlanding:addPatient:locality').value;
+    payload.street2 = document.getElementById('doctorlanding:addPatient:street2').value;
+    payload.street1 = document.getElementById('doctorlanding:addPatient:street1').value;
+    payload.country = 'India';
+        
+    payload.bloodGroup = document.getElementById('doctorlanding:addPatient:bloodgrp').value;
+    payload.gender = document.getElementById('doctorlanding:addPatient:gender').value;
+    payload.maritalStatus = document.getElementById('doctorlanding:addPatient:status').value;
+    payload.phoneNumber = document.getElementById('doctorlanding:addPatient:phoneNumber').value;
+    payload.emailAddress = document.getElementById('doctorlanding:addPatient:emailId').value;
+    payload.lastName = document.getElementById('doctorlanding:addPatient:lastname').value;
+    payload.middleName = document.getElementById('doctorlanding:addPatient:middlename').value;
+    payload.firstName = document.getElementById('doctorlanding:addPatient:firstname').value;
+    payload.uniqueUserId = document.getElementById('doctorlanding:addPatient:emailId').value;
+    console.log(JSON.stringify(payload));
+    
+    fetch(ADD_PATIENT, {
+            method: 'POST'
+            , mode: 'cors'
+            , redirect: 'follow'
+            , credentials: 'include'
+            , headers: {
+                'Accept': 'application/json'
+                , 'Content-Type': 'application/json'
+            }
+            , body: JSON.stringify(payload)
+        }).then(function (response) {
+            if (!response.ok) {
+                console.log(response);
+                throw Error(response)
+            }
+            return response;
+        }).then(function (response) {
+            console.log("ok", response);
+            toastr.success('New patient added sucessfully');           
+        }).catch(function (error) {
+            console.log(error);
+            toastr.error('Error while adding patient ', JSON.stringify(error));
+        });  
+}
+
+function updateDoctorFromDoctorLanding()
+{
+    var firstname= document.getElementById('doctorlanding:updateDoctor:firstname').value ;
+    var middlename = document.getElementById('doctorlanding:updateDoctor:middlename').value;
+    var lastname= document.getElementById('doctorlanding:updateDoctor:lastname').value;
+    var emailid = document.getElementById('doctorlanding:updateDoctor:emailid').value;
+    var qualification= document.getElementById('doctorlanding:updateDoctor:qualification').value;
+    var gender= document.getElementById('doctorlanding:updateDoctor:gender').value;
+    var specialization= document.getElementById('doctorlanding:updateDoctor:specialization').value;
+    var phonenumber= document.getElementById('doctorlanding:updateDoctor:phonenumber').value;
+    var licensenumber= document.getElementById('doctorlanding:updateDoctor:licensenumber').value;
+       
+    var payload = {};
+    payload.firstName = firstname;
+    payload.middleName = middlename;
+    payload.lastName = lastname;
+    payload.emailAddress = emailid;
+    payload.qualification = qualification;
+    payload.gender = gender;
+    payload.specialization = specialization;
+    payload.phoneNumber = phonenumber;
+    payload.licenseNumber = licensenumber;
+    
+    fetch(UPDATE_DOCTOR_BY_ID, {
+            method: 'PUT'
+            , mode: 'cors'
+            , redirect: 'follow'
+            , credentials: 'include'
+            , headers: {
+                'Accept': 'application/json'
+                , 'Content-Type': 'application/json'
+            }
+            , body: JSON.stringify(payload)
+        }).then(function (response) {
+            if (!response.ok) {
+                console.log(response);
+                throw Error(response)
+            }
+            return response;
+        }).then(function (response) {
+            console.log("ok", response);
+            toastr.success('Information updated sucessfully');           
+        }).catch(function (error) {
+            console.log(error);
+            toastr.error('Error while updating doctor ', JSON.stringify(error));
+        });    
+}
+
+function loadContentForSelectedContent(pageBookmark)
+{    
+   
+    if(pageBookmark == '#editProfile')
+    {
+        fetch(GET_DOCTOR_BY_ID, {
+                method: 'GET'
+                , mode: 'cors'
+                , redirect: 'follow'
+                , credentials: 'include'
+                , headers: {
+                    'Accept': 'application/json'
+                    , 'Content-Type': 'application/json'
+                }
+            }).then(function (response) {
+                if (!response.ok) {
+                    console.log(response);
+                    throw Error(response)
+                }
+                else{
+                    response.json().then(function(data) 
+                    {
+                        console.log(JSON.stringify(data));  
+                        document.getElementById('doctorlanding:adddoctor:firstname').value = data.firstName;
+                        document.getElementById('doctorlanding:adddoctor:middlename').value = data.middleName;
+                        document.getElementById('doctorlanding:adddoctor:lastname').value = data.lastName;
+                        document.getElementById('doctorlanding:adddoctor:emailid').value = data.emailAddress;
+                        document.getElementById('doctorlanding:adddoctor:qualification').value = data.qualification;
+                        document.getElementById('doctorlanding:adddoctor:gender').selectedIndex = '2';
+                        document.getElementById('doctorlanding:adddoctor:specialization').value = data.specialization;
+                        document.getElementById('doctorlanding:adddoctor:phonenumber').value = data.phoneNumber;
+                        document.getElementById('doctorlanding:adddoctor:licensenumber').value = data.licenseNumber;
+
+                    });
+                }
+                return response;
+            }).then(function (response) {
+                
+            }).catch(function (error) {
+                console.log(error);
+                toastr.error('Error while adding clinic ', JSON.stringify(error));
+            });
+     }
+}
+
+function logout()
+{
+    $('logout').toggle();   
+    loginUserFullName = "Login";
+    displayLoggedinUsername();
 }

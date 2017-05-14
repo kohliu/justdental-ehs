@@ -15,8 +15,11 @@ if(environment == 'LOCAL')
 console.info('Starting in '+environment+'  '+HOSTNAME);
 
 var NATIVE_LOGIN = HOSTNAME + '/api/jduser/login';
+var GET_DOCTOR_BY_ID = HOSTNAME + '/api/jddoctor/2';
+var UPDATE_DOCTOR_BY_ID = HOSTNAME + '/api/jddoctor/2';
 var QUICK_REGISTER = HOSTNAME + '/api/jduser';
 var SUBSCRIBE = HOSTNAME + '/api/jdsubscribe'; 
 var BOOK_APPNT_HOMEPAGE = HOSTNAME + '/api/jdappointment'; 
 var ADD_CLIINC_ADMIN_LANDING = HOSTNAME + '/api/jdclinic';
 var ADD_DOCTOR_ADMIN_LANDING = HOSTNAME + '/api/jduser';
+var ADD_PATIENT = HOSTNAME + '/api/jdpatient';
