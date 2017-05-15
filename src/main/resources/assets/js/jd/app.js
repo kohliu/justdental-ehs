@@ -806,7 +806,6 @@ function addPatientFromDoctorLanding()
             }
             return response;
         }).then(function (response) {
-            console.log("ok", response);
             toastr.success('New patient added sucessfully');           
         }).catch(function (error) {
             console.log(error);
@@ -885,15 +884,15 @@ function loadContentForSelectedContent(pageBookmark)
                     response.json().then(function(data) 
                     {
                         console.log(JSON.stringify(data));  
-                        document.getElementById('doctorlanding:adddoctor:firstname').value = data.firstName;
-                        document.getElementById('doctorlanding:adddoctor:middlename').value = data.middleName;
-                        document.getElementById('doctorlanding:adddoctor:lastname').value = data.lastName;
-                        document.getElementById('doctorlanding:adddoctor:emailid').value = data.emailAddress;
-                        document.getElementById('doctorlanding:adddoctor:qualification').value = data.qualification;
-                        document.getElementById('doctorlanding:adddoctor:gender').selectedIndex = '2';
-                        document.getElementById('doctorlanding:adddoctor:specialization').value = data.specialization;
-                        document.getElementById('doctorlanding:adddoctor:phonenumber').value = data.phoneNumber;
-                        document.getElementById('doctorlanding:adddoctor:licensenumber').value = data.licenseNumber;
+                        document.getElementById('doctorlanding:updateDoctor:firstname').value = data.firstName;
+                        document.getElementById('doctorlanding:updateDoctor:middlename').value = data.middleName;
+                        document.getElementById('doctorlanding:updateDoctor:lastname').value = data.lastName;
+                        document.getElementById('doctorlanding:updateDoctor:emailid').value = data.emailAddress;
+                        document.getElementById('doctorlanding:updateDoctor:qualification').value = data.qualification;
+                        document.getElementById('doctorlanding:updateDoctor:gender').selectedIndex = '2';
+                        document.getElementById('doctorlanding:updateDoctor:specialization').value = data.specialization;
+                        document.getElementById('doctorlanding:updateDoctor:phonenumber').value = data.phoneNumber;
+                        document.getElementById('doctorlanding:updateDoctor:licensenumber').value = data.licenseNumber;
 
                     });
                 }
