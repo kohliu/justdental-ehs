@@ -1,4 +1,4 @@
-function ValidateEmail(mail) {
+    function ValidateEmail(mail) {
     var isValidEmail = false;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         isValidEmail = true;
@@ -185,8 +185,8 @@ function bookAppointmentFromHomepage() {
     var phonenumber = document.getElementById('home.appmnt.phonenumber').value;
     var emailId = document.getElementById('home.appmnt.emailid').value;
     // var dob = document.getElementById('home.appmnt.dob').value;
-    var message = document.getElementById('home.appmnt.message').value;
-    payload.appointmentDescription = message;
+    //var message = document.getElementById('home.appmnt.message').value;
+    //payload.appointmentDescription = message;
     payload.creationDate = new Date();
     payload.appointmentTakenBy = firstName + '  ' + lastName;
     console.log(BOOK_APPNT_HOMEPAGE, JSON.stringify(payload));
@@ -740,6 +740,26 @@ function toggleDoctorMainContent(pageBookmark)
      loadContentForSelectedContent(pageBookmark);
 }
 
+function loadClinic()
+{
+    
+    $( "#rep" ).load( "/html/admin/cool.html", function() {
+  //alert( "Load was performed." );
+});
+}
+function displayForgetPwdModal(){
+    
+    $('#loginModal').hide();
+    $('#loginModal .close').click();
+
+     $('#forgetPwdModal').modal('show');
+}
+
+function displayLoginModal()
+{
+    
+}
+
 function addPatientFromDoctorLanding()
 {
    
@@ -787,6 +807,7 @@ function addPatientFromDoctorLanding()
     payload.middleName = document.getElementById('doctorlanding:addPatient:middlename').value;
     payload.firstName = document.getElementById('doctorlanding:addPatient:firstname').value;
     payload.uniqueUserId = document.getElementById('doctorlanding:addPatient:emailId').value;
+    payload.religion = document.getElementById('doctorlanding:addPatient:religion').value;
     console.log(JSON.stringify(payload));
     
     fetch(ADD_PATIENT, {
@@ -893,7 +914,6 @@ function loadContentForSelectedContent(pageBookmark)
                         document.getElementById('doctorlanding:updateDoctor:specialization').value = data.specialization;
                         document.getElementById('doctorlanding:updateDoctor:phonenumber').value = data.phoneNumber;
                         document.getElementById('doctorlanding:updateDoctor:licensenumber').value = data.licenseNumber;
-
                     });
                 }
                 return response;
