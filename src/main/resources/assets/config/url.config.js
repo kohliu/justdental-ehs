@@ -1,5 +1,5 @@
 //LAB and Live
-var environment = 'LAB';
+var environment = 'LIVE';
 
 if(environment == 'LOCAL')
 {
