@@ -301,51 +301,49 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Firstname" id='doctorlanding:addPatient:firstname'>
+                                                                <input class="form-control" type="text" placeholder="Firstname" id='doctorlanding:addPatient:firstname' data-toggle="tooltip" title="Please enter firstname">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Middlename" id='doctorlanding:addPatient:middlename'>
+                                                                <input class="form-control" type="text" placeholder="Middlename" id='doctorlanding:addPatient:middlename' data-toggle="tooltip" title="Please enter middlename">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Lastname" id='doctorlanding:addPatient:lastname'>
+                                                                <input class="form-control" type="text" placeholder="Lastname" id='doctorlanding:addPatient:lastname' data-toggle="tooltip" title="Please enter lastname">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Aadhar Number" id='doctorlanding:addPatient:aadharNumber'>
+                                                                <input class="form-control" type="text" placeholder="Aadhar Number" id='doctorlanding:addPatient:aadharNumber' data-toggle="tooltip" title="Please enter aadharNumber">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Patient Note" id='doctorlanding:addPatient:patientNote'>
-                                                            </div>
+                                                            <input class="form-control" type="text" placeholder="Education" id='doctorlanding:addPatient:education'data-toggle="tooltip" title="Please enter education details">
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Occupation" id='doctorlanding:addPatient:occupation'>
+                                                                <input class="form-control" type="text" placeholder="Occupation" id='doctorlanding:addPatient:occupation'data-toggle="tooltip" title="Please enter  occupation">
                                                             </div>
                                                         </div>
                                                     </div>                                                    
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="email id" id='doctorlanding:addPatient:emailId'>
+                                                                <input class="form-control" type="text" placeholder="email id" id='doctorlanding:addPatient:emailId'data-toggle="tooltip" title="Please enter emailId">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Phone number" id='doctorlanding:addPatient:phoneNumber'>
+                                                                <input class="form-control" type="text" placeholder="Phone number" id='doctorlanding:addPatient:phoneNumber'data-toggle="tooltip" title="Please enter phoneNumber">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <select id='doctorlanding:addPatient:status'>
+                                                                <select id='doctorlanding:addPatient:status' data-toggle="tooltip" title="Please enter marital status">
                                                                     <option disabled>Marital Status</option>
                                                                     <option>Single</option>
                                                                     <option>Married</option> 
@@ -357,7 +355,7 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <select id='doctorlanding:addPatient:gender'>
+                                                                <select id='doctorlanding:addPatient:gender' data-toggle="tooltip" title="Please enter gender">
                                                                     <option disabled>Select Gender</option>
                                                                     <option>Male</option>
                                                                     <option>Female</option>   
@@ -366,7 +364,7 @@
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <select id='doctorlanding:addPatient:bloodgrp'>
+                                                                <select id='doctorlanding:addPatient:bloodgrp' data-toggle="tooltip" title="Please enter blood group">
                                                                     <option disabled>Select blood Group</option>
                                                                     <option>A+</option>
                                                                     <option>A-</option>
@@ -382,7 +380,20 @@
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Religion" id='doctorlanding:addPatient:religion'>
+                                                                <select id='doctorlanding:addPatient:pkg' data-toggle="tooltip" title="Please enter package">
+                                                                    <option disabled>Select the package</option>
+                                                                    <option>Gold</option>
+                                                                    <option>Silver</option>
+                                                                    <option>Platinum</option>
+                                                                    <option>Not Sure</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" rows="2" placeholder="Patient Note" id='doctorlanding:addPatient:patientNote' data-toggle="tooltip" title="Please enter patient note"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -402,34 +413,34 @@
                                                    <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Street # 1"id='doctorlanding:addPatient:street1'>
+                                                                <input class="form-control" type="text" placeholder="Street # 1"id='doctorlanding:addPatient:street1' data-toggle="tooltip" title="Please enter street # 1"> 
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Street # 2" id='doctorlanding:addPatient:street2'>
+                                                                <input class="form-control" type="text" placeholder="Street # 2" id='doctorlanding:addPatient:street2' data-toggle="tooltip" title="Please enter street # 2">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Locality" id='doctorlanding:addPatient:locality'>
+                                                                <input class="form-control" type="text" placeholder="Locality" id='doctorlanding:addPatient:locality' data-toggle="tooltip" title="Please enter locality">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="City" id='doctorlanding:addPatient:city'>
+                                                                <input class="form-control" type="text" placeholder="City" id='doctorlanding:addPatient:city' data-toggle="tooltip" title="Please enter city">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Pincode" id='doctorlanding:addPatient:pincode'>
+                                                                <input class="form-control" type="text" placeholder="Pincode" id='doctorlanding:addPatient:pincode' data-toggle="tooltip" title="Please enter pincode">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="colmd-4">
                                                             <div class="form-group">
-                                                                <select id='doctorlanding:addPatient:state'>
+                                                                <select id='doctorlanding:addPatient:state' data-toggle="tooltip" title="Please enter state">
                                                                     <option disabled>Select State</option>
                                                                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                                                                     <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -468,8 +479,8 @@
                                                                     <option value="West Bengal">West Bengal</option> 
                                                                 </select>
                                                             </div>
-                                                        </div>
-                                                    </div>
+                                                        </div>                                                        
+                                                    </div>                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -486,17 +497,17 @@
                                                    <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person Name" id='doctorlanding:addPatient:emergencyContactName'>
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person Name" id='doctorlanding:addPatient:emergencyContactName' data-toggle="tooltip" title="Please enter emergency contact name">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person relationship" id='doctorlanding:addPatient:emergencyContactrelationship'>
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person relationship" id='doctorlanding:addPatient:emergencyContactrelationship' data-toggle="tooltip" title="Please enter emergency contact relationship">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Phone number" id='doctorlanding:addPatient:emergencyContactPhonenumber'>
+                                                                <input class="form-control" type="text" placeholder="Emergency Contact Phone number" id='doctorlanding:addPatient:emergencyContactPhonenumber' data-toggle="tooltip" title="Please enter emergency contact phone number">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -515,22 +526,132 @@
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Medical History" id='doctorlanding:addPatient:medicalHistory'></textarea>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="chronicHeadache" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Chronic Headaches
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="hivAids" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>HIV/AIDS
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="liverDisease" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Liver Disease
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="heartProblems" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Heart Problems
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="hepatitis" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Hepatitis
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="kidneyProblems" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Kidney Problems
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="bloodDisease" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Blood Disease
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="highLowBP" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>High/Low Blood Pressure
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="seizures" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Seizures
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="circulatoryProblems" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Circulatory Problems
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" name="doctorlanding:addPatient:medicalHistory[]" value="epilipsey" id="cb1" />Epilipsey
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" name="doctorlanding:addPatient:medicalHistory[]" value="tionsillnsis" id="cb1" />Tionsillnsis
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="arhthris" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Arhthris
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="largeWeightGainLoss" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Large Weight Gain/Loss
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="radiationTreatment" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Radiation Treatmenrt
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="allergies" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Allergies 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="faintingSmells" id="cb1" name="doctorlanding:addPatient:medicalHistory[]"/>Fainting Spells
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" value="others" id="doctorlanding:addPatient:otherMedicalHistoryChkBox" onclick="toggleOtherMedicalHistory()"/>Others
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <input type="text"  id="otherMedicalHistory" style="display:none">
+                                                                    </div>
+                                                                </div>                                                                
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Family History" id='doctorlanding:addPatient:familyHistory'></textarea>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" rows="5" placeholder="Family History" id='doctorlanding:addPatient:familyHistory' data-toggle="tooltip" title="Please enter your family history"></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Social History" id='doctorlanding:addPatient:socialHistory'></textarea>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" rows="5" placeholder="Social History" id='doctorlanding:addPatient:socialHistory' data-toggle="tooltip" title="Please enter your social history"></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <textarea class="form-control" rows="2" placeholder="Habbits" id='doctorlanding:addPatient:habbits'></textarea>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" rows="2" placeholder="Habbits" id='doctorlanding:addPatient:habbits' data-toggle="tooltip" title="Please enter your habbits"></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

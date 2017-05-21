@@ -1,9 +1,8 @@
-    function ValidateEmail(mail) {
+function ValidateEmail(mail) {
     var isValidEmail = false;
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
         isValidEmail = true;
     }
-    console.log(isValidEmail, mail);
     return isValidEmail;
 }
 
@@ -174,7 +173,7 @@ $(document).ready(function() {
     {
         $('#calendar').fullCalendar({
             // put your options and callbacks here
-        })
+        });
     }
 
 });
@@ -760,6 +759,12 @@ function displayLoginModal()
     
 }
 
+function toggleOtherMedicalHistory()
+{ 
+    console.log('called');
+    $('#otherMedicalHistory').toggle();  
+}
+
 function addPatientFromDoctorLanding()
 {
    
@@ -780,11 +785,27 @@ function addPatientFromDoctorLanding()
     payload.insuranceExpiration = new Date();
     payload.socialHistory = document.getElementById('doctorlanding:addPatient:socialHistory').value;
     payload.familyHistory = document.getElementById('doctorlanding:addPatient:familyHistory').value;
-    payload.medicalHistory = document.getElementById('doctorlanding:addPatient:medicalHistory').value;
+    
+    var cbElements = document.getElementsByName('doctorlanding:addPatient:medicalHistory[]');
+    var selectedMedicalHistory = '';
+    for(var i=0; i< cbElements.length ; i++)
+    {
+        if(cbElements[i].checked)
+        {
+            selectedMedicalHistory += ',' + cbElements[i].value;
+        }
+    }
+    if(document.getElementById('doctorlanding:addPatient:otherMedicalHistoryChkBox').checked)
+    {
+        selectedMedicalHistory  += ',' + document.getElementById('otherMedicalHistory').value;
+    }
+    payload.medicalHistory = selectedMedicalHistory;    
+    
     payload.aadharNumber = document.getElementById('doctorlanding:addPatient:aadharNumber').value;
     payload.habbits = document.getElementById('doctorlanding:addPatient:habbits').value;
     payload.patientNote = document.getElementById('doctorlanding:addPatient:patientNote').value;
     payload.occupation = document.getElementById('doctorlanding:addPatient:occupation').value;
+    payload.education = document.getElementById('doctorlanding:addPatient:education').value;
     
     payload.emergencyContactNumber = document.getElementById('doctorlanding:addPatient:emergencyContactPhonenumber').value;
     payload.emergencyContactRelationship = document.getElementById('doctorlanding:addPatient:emergencyContactrelationship').value;
@@ -807,7 +828,7 @@ function addPatientFromDoctorLanding()
     payload.middleName = document.getElementById('doctorlanding:addPatient:middlename').value;
     payload.firstName = document.getElementById('doctorlanding:addPatient:firstname').value;
     payload.uniqueUserId = document.getElementById('doctorlanding:addPatient:emailId').value;
-    payload.religion = document.getElementById('doctorlanding:addPatient:religion').value;
+    //payload.packageId = document.getElementById('doctorlanding:addPatient:pkg').value;
     console.log(JSON.stringify(payload));
     
     fetch(ADD_PATIENT, {
