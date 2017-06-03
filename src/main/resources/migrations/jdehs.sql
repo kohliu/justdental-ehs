@@ -464,3 +464,89 @@ CREATE TABLE jd_subscribe
 	emailAddress varchar(200),
 	PRIMARY KEY (subscriptionId)
 );
+
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'jduser1@gmail.com', 'jduser', 'jduser', 'jduser', 'jd_user1@gmail.com', '1234567891');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'jduser2@gmail.com', 'jduser', 'jduser', 'jduser', 'jd_user2@gmail.com', '1234567892');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'ganesh.gowtham@gmail.com', 'ganesh', 'ganesh', 'gowtham', 'ganesh.gowtham@gmail.com', '9886646693');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'sudhindra.samaga@gmail.com', 'sudhindra', 'sudhindra', 'samaga', 'sudhindra.samaga@gmail.com', '9886247722');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'aashish.hegde@gmail.com', 'aashish', 'aashish', 'hegde', 'aashish.hegde@gmail.com', '9980145424');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'abhishek.naidu@gmail.com', 'abhishek', 'abhishek', 'naidu', 'abhishek.naidu@gmail.com', '9739999274');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'ujjwal.kohli@gmail.com', 'ujjwal', 'ujjwal', 'kohli', 'ujjwal.kohli@gmail.com', '8088582691');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'drsantoshkumarr@gmail.com', 'santhosh', 'santhosh', 'kumar', 'drsantoshkumarr@gmail.com', '9986426673');
+insert into jdehs_dev.jd_user (jd_user.userType, jd_user.uniqueUserId, jd_user.userPassword,
+                               jd_user.firstName, jd_user.lastName, jd_user.emailAddress, jd_user.phoneNumber)
+values ('DOCTOR', 'shank104@umn.edu ', 'sumanth', 'sumanth', 'rao', 'shank104@umn.edu ', '9620736611');
+
+
+
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('1', '1');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('1', '2');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('1', '3');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('1', '4');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('1', '5');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('1', '6');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('1', '7');
+
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('2', '1');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('2', '2');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('2', '3');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('2', '4');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('2', '5');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('2', '6');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('2', '7');
+
+
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('3', '7');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('4', '7');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('5', '7');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('6', '7');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('7', '7');
+
+
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('8', '2');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('8', '6');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('9', '2');
+INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
+values ('9', '6');
+
+
+
+
