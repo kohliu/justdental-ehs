@@ -12,19 +12,27 @@
 
 package com.techstomach.ehs.resources.user;
 
+import com.techstomach.ehs.core.login.JdLoginTracking;
 import com.techstomach.ehs.core.user.JdUser;
+import com.techstomach.ehs.dao.login.JdLoginTrackingDAO;
 import com.techstomach.ehs.dao.role.JdRoleDAO;
 import com.techstomach.ehs.dao.user.JdUserDAO;
 import io.dropwizard.hibernate.UnitOfWork;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
+import org.joda.time.LocalTime;
 
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.security.SecureRandom;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -38,10 +46,15 @@ import java.util.logging.Logger;
 public class JdUserResource {
     private final static Logger LOGGER = Logger.getLogger(JdUserResource.class.getName());
     JdUserDAO jdUserDAO;
-    JdRoleDAO jdRoleDAO;
+    JdLoginTrackingDAO jdLoginTrackingDAO;
 
     public JdUserResource(JdUserDAO jdRoleDAO) {
         this.jdUserDAO = jdRoleDAO;
+    }
+
+    public JdUserResource(JdUserDAO jdRoleDAO, JdLoginTrackingDAO jdLoginTrackingDAO) {
+        this.jdUserDAO = jdRoleDAO;
+        this.jdLoginTrackingDAO = jdLoginTrackingDAO;
     }
 
     @GET
@@ -104,6 +117,15 @@ public class JdUserResource {
 
         LOGGER.info("User Add: successfully added user with username = " + jdUser.getUniqueUserId() + " and phone number = " + jdUser.getPhoneNumber());
         jdUser.setDateCreated(date);
+        JdLoginTracking newLoginTracker = new JdLoginTracking();
+        newLoginTracker.setActive(Boolean.TRUE);
+        newLoginTracker.setAppId("Browser");
+        newLoginTracker.setDateCreated(new Date());
+        final String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+        newLoginTracker.setLoginGUID(uuid);
+        HashSet<JdLoginTracking> logintrackerSet = new HashSet<>();
+        logintrackerSet.add(newLoginTracker);
+        jdUser.setLoggedInSession(logintrackerSet);
         return Response.ok(jdUserDAO.insert(jdUser)).build();
     }
 
@@ -120,7 +142,42 @@ public class JdUserResource {
             List<JdUser> jdUsers = jdUserDAO.validateUserByUserName(jdUser.getUniqueUserId(), jdUser.getUserPassword());
             if (!jdUsers.isEmpty()) {
                 LOGGER.info("Login: user found with matching username and password");
-                return Response.ok(jdUsers.get(0)).build();
+                JdUser validatedUser = jdUsers.get(0);
+                LOGGER.info("Generating a loginTracker for this user");
+                JdLoginTracking jdLoginTracking = jdLoginTrackingDAO.findById(validatedUser.getLoggedInSession().iterator().next().getLoginTrackId());
+                if(jdLoginTracking!=null) {
+                    // check if the sesssion has expired from the login tracker createDate
+                    DateTime now = new DateTime(new Date());
+                    DateTime sessionCreateTime = new DateTime(jdLoginTracking.getDateCreated());
+                    // 1 hour session expiry
+                    DateTime sessionExpiryDate = sessionCreateTime.plusHours(1);
+
+                    if (sessionExpiryDate.isAfter(now)) {
+                        LOGGER.info("User session is still active");
+                        return Response.ok(validatedUser).build();
+                    } else {
+                        LOGGER.info("User session is obsolete and a new login session id is required");
+                        jdLoginTracking.setActive(Boolean.FALSE);
+                        jdLoginTrackingDAO.update(jdLoginTracking);
+                        HashSet<JdLoginTracking> logintrackerSet = new HashSet<>();
+                        logintrackerSet.add(jdLoginTracking);
+                        validatedUser.setLoggedInSession(logintrackerSet);
+                        return Response.ok(validatedUser).build();
+                    }
+                }else {
+                    LOGGER.info("User does not have an active logged in session. Creating a new session");
+                    JdLoginTracking newLoginTracker = new JdLoginTracking();
+                    newLoginTracker.setActive(Boolean.TRUE);
+                    newLoginTracker.setAppId("Browser");
+                    newLoginTracker.setDateCreated(new Date());
+                    final String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+                    newLoginTracker.setLoginGUID(uuid);
+                    HashSet<JdLoginTracking> logintrackerSet = new HashSet<>();
+                    logintrackerSet.add(newLoginTracker);
+                    validatedUser.setLoggedInSession(logintrackerSet);
+                    jdUserDAO.insert(validatedUser);
+                    return Response.ok(validatedUser).build();
+                }
             }
             else
             {

@@ -142,10 +142,6 @@ public class MainService extends Application<ServiceConfiguration> {
         final JdRoleResource jdRoleResource = new JdRoleResource(jdRoleDAO);
         environment.jersey().register(jdRoleResource);
 
-        final JdUserDAO jdUserDAO = new JdUserDAO(hibernate.getSessionFactory());
-        final JdUserResource jdUserResource = new JdUserResource(jdUserDAO);
-        environment.jersey().register(jdUserResource);
-
         final JdNativeLoginDAO jdNativeLoginDAO = new JdNativeLoginDAO(hibernate.getSessionFactory());
         final JdNativeLoginResource jdNativeLoginResource = new JdNativeLoginResource(jdNativeLoginDAO);
         environment.jersey().register(jdNativeLoginResource);
@@ -185,6 +181,10 @@ public class MainService extends Application<ServiceConfiguration> {
         final JdSubscriptionDAO jdSubscriptionDAO = new JdSubscriptionDAO(hibernate.getSessionFactory());
         final JdSubscriptionResource jdSubscriptionResource = new JdSubscriptionResource(jdSubscriptionDAO);
         environment.jersey().register(jdSubscriptionResource);
+
+        final JdUserDAO jdUserDAO = new JdUserDAO(hibernate.getSessionFactory());
+        final JdUserResource jdUserResource = new JdUserResource(jdUserDAO,jdLoginTrackingDAO);
+        environment.jersey().register(jdUserResource);
 
         environment.healthChecks().register("health",
                 new DatabaseHealthCheck(jdbi, configuration.getDataSourceFactory().getValidationQuery()));

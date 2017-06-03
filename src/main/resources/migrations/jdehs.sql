@@ -118,13 +118,11 @@ CREATE TABLE jd_login_tracking
 (
 	loginTrackId  BIGINT NOT NULL AUTO_INCREMENT,
 	userId_fk  BIGINT,
-	lastLogin datetime,
-	appID INT,
+	appID varchar(255),
 	dateCreated datetime,
-	dateModified datetime,
-	modifiedBy varchar(255),
-	PRIMARY KEY (loginTrackId),
-	FOREIGN KEY (userId_fk) REFERENCES jd_user(userId)
+	loginGUID varchar(255),
+	isActive TINYINT(1),
+	PRIMARY KEY (loginTrackId)
 );
 
 DROP TABLE IF EXISTS jd_clinic;

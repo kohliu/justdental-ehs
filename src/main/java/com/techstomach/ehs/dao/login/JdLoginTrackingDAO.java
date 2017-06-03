@@ -13,8 +13,10 @@
 package com.techstomach.ehs.dao.login;
 
 import com.techstomach.ehs.core.login.JdLoginTracking;
+import com.techstomach.ehs.core.user.JdUser;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
@@ -38,6 +40,10 @@ public class JdLoginTrackingDAO extends AbstractDAO<JdLoginTracking> {
 
     public JdLoginTracking findById(long id) {
         return currentSession().get(JdLoginTracking.class, id);
+    }
+
+    public List<JdLoginTracking> findActiveLoginByUserId(long userId) {
+       return currentSession().createCriteria(JdLoginTracking.class).add(Restrictions.eq("userId_fk", userId)).add(Restrictions.eq("isActive",1)).list();
     }
 
     public void delete(JdLoginTracking jdLoginTracking) {

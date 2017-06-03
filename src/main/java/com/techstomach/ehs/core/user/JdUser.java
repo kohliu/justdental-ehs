@@ -14,10 +14,12 @@ package com.techstomach.ehs.core.user;
 
 import java.util.Date;
 import java.util.Set;
+import java.util.function.Consumer;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.techstomach.ehs.core.login.JdLoginTracking;
 import com.techstomach.ehs.core.role.JdRole;
 import com.techstomach.ehs.core.role.RoleType;
 
@@ -96,6 +98,10 @@ public class JdUser {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, targetEntity = JdRole.class)
     @JoinTable(name = "jd_user_role", joinColumns = { @JoinColumn(name = "userId_fk") }, inverseJoinColumns = { @JoinColumn(name = "roleId_fk") })
     private Set<JdRole> roles;
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "userId_fk", nullable = false)
+    private Set<JdLoginTracking> loggedInSession;
 
     public Long getUserId() {
         return userId;
@@ -231,5 +237,13 @@ public class JdUser {
 
     public void setRoles(Set<JdRole> roles) {
         this.roles = roles;
+    }
+
+    public Set<JdLoginTracking> getLoggedInSession() {
+        return loggedInSession;
+    }
+
+    public void setLoggedInSession(Set<JdLoginTracking> loggedInSession) {
+        this.loggedInSession = loggedInSession;
     }
 }

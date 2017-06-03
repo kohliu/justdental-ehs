@@ -13,16 +13,10 @@
 package com.techstomach.ehs.core.login;
 
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.techstomach.ehs.core.user.JdUser;
 
@@ -36,30 +30,27 @@ public class JdLoginTracking {
     @JsonProperty
     private Long loginTrackId;
 
-    @ManyToOne
-    @JoinColumn(name = "userId_fk")
-    @JsonProperty
-    private JdUser userIdFk;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "userId_fk", nullable=false)
+    @Column(name ="userId_fk", insertable = false, updatable = false)
+    @JsonIgnore
+    private Long userIdFk;
 
     @Column(name = "appId")
     @JsonProperty
-    private Integer appId;
+    private String appId = "Browser";
 
     @Column(name = "dateCreated")
     @JsonProperty
     private Date dateCreated;
 
-    @Column(name = "dateModified")
+    @Column(name = "loginGUID")
     @JsonProperty
-    private Date dateModified;
+    private String loginGUID;
 
-    @Column(name = "lastLogin")
+    @Column(name = "isActive")
     @JsonProperty
-    private Date lastLogin;
-
-    @Column(name = "modifiedBy")
-    @JsonProperty
-    private String modifiedBy;
+    private Boolean isActive = Boolean.TRUE;
 
     public Long getLoginTrackId() {
         return loginTrackId;
@@ -69,19 +60,19 @@ public class JdLoginTracking {
         this.loginTrackId = loginTrackId;
     }
 
-    public JdUser getUserIdFk() {
+    public Long getUserIdFk() {
         return userIdFk;
     }
 
-    public void setUserIdFk(JdUser userIdFk) {
+    public void setUserIdFk(Long userIdFk) {
         this.userIdFk = userIdFk;
     }
 
-    public Integer getAppId() {
+    public String getAppId() {
         return appId;
     }
 
-    public void setAppId(Integer appId) {
+    public void setAppId(String appId) {
         this.appId = appId;
     }
 
@@ -93,27 +84,19 @@ public class JdLoginTracking {
         this.dateCreated = dateCreated;
     }
 
-    public Date getDateModified() {
-        return dateModified;
+    public String getLoginGUID() {
+        return loginGUID;
     }
 
-    public void setDateModified(Date dateModified) {
-        this.dateModified = dateModified;
+    public void setLoginGUID(String loginGUID) {
+        this.loginGUID = loginGUID;
     }
 
-    public Date getLastLogin() {
-        return lastLogin;
+    public Boolean getActive() {
+        return isActive;
     }
 
-    public void setLastLogin(Date lastLogin) {
-        this.lastLogin = lastLogin;
-    }
-
-    public String getModifiedBy() {
-        return modifiedBy;
-    }
-
-    public void setModifiedBy(String modifiedBy) {
-        this.modifiedBy = modifiedBy;
+    public void setActive(Boolean isActive) {
+        this.isActive = isActive;
     }
 }
