@@ -17,9 +17,29 @@ CREATE TABLE jd_role
 	dateCreated datetime,
 	dateModified datetime,
 	modifiedBy varchar(255),
-	PRIMARY KEY (roleId)
+	PRIMARY KEY (roleId,roleName)
 );
 
+INSERT INTO jd_role (jd_role.roleName,jd_role.roleDescription,jd_role.isActive,jd_role.dateCreated,jd_role.dateModified,jd_role.modifiedBy)
+values ('PATIENT', 'JD Patient',1,'2017-06-06 00:00:00','2017-06-06 00:00:00','kohliu');
+
+INSERT INTO jd_role (jd_role.roleName,jd_role.roleDescription,jd_role.isActive,jd_role.dateCreated,jd_role.dateModified,jd_role.modifiedBy)
+values ('DOCTOR', 'JD Doctor',1,'2017-06-06 00:00:00','2017-06-06 00:00:00','kohliu');
+
+INSERT INTO jd_role (jd_role.roleName,jd_role.roleDescription,jd_role.isActive,jd_role.dateCreated,jd_role.dateModified,jd_role.modifiedBy)
+values ('DOCTOR_CLINIC', 'JD Doctor',1,'2017-06-06 00:00:00','2017-06-06 00:00:00','kohliu');
+
+INSERT INTO jd_role (jd_role.roleName,jd_role.roleDescription,jd_role.isActive,jd_role.dateCreated,jd_role.dateModified,jd_role.modifiedBy)
+values ('DOCTOR_SPECIALIST', 'JD Doctor',1,'2017-06-06 00:00:00','2017-06-06 00:00:00','kohliu');
+
+INSERT INTO jd_role (jd_role.roleName,jd_role.roleDescription,jd_role.isActive,jd_role.dateCreated,jd_role.dateModified,jd_role.modifiedBy)
+values ('CLINIC_STAFF', 'JD Clinic Staff',1,'2017-06-06 00:00:00','2017-06-06 00:00:00','kohliu');
+
+INSERT INTO jd_role (jd_role.roleName,jd_role.roleDescription,jd_role.isActive,jd_role.dateCreated,jd_role.dateModified,jd_role.modifiedBy)
+values ('ADMIN', 'JD Admin',1,'2017-06-06 00:00:00','2017-06-06 00:00:00','kohliu');
+
+INSERT INTO jd_role (jd_role.roleName,jd_role.roleDescription,jd_role.isActive,jd_role.dateCreated,jd_role.dateModified,jd_role.modifiedBy)
+values ('TECH_SUPPORT', 'JD Tech support',1,'2017-06-06 00:00:00','2017-06-06 00:00:00','kohliu');
 
 DROP TABLE IF EXISTS jd_user;
 
@@ -48,6 +68,14 @@ CREATE TABLE jd_user
 	isActive INT,
 	PRIMARY KEY (userId)
 -- FOREIGN KEY (roleId_fk) REFERENCES jd_role(roleId)
+);
+
+DROP TABLE IF EXISTS jd_user_role;
+
+CREATE TABLE jd_user_role
+(
+	userId_fk BIGINT,
+	roleId_fk BIGINT
 );
 
 DROP TABLE IF EXISTS jd_sso_login;
@@ -435,4 +463,4 @@ CREATE TABLE jd_subscribe
 	subscriptionId BIGINT NOT NULL AUTO_INCREMENT,
 	emailAddress varchar(200),
 	PRIMARY KEY (subscriptionId)
-);;
+);

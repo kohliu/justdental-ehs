@@ -13,6 +13,7 @@
 package com.techstomach.ehs.core.user;
 
 import java.util.Date;
+import java.util.Set;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -24,7 +25,6 @@ import com.techstomach.ehs.core.role.RoleType;
 @Entity
 @Table(name = "jd_user", catalog = "jdehs_dev")
 @Inheritance(strategy=InheritanceType.JOINED)
-//@DiscriminatorColumn(name = "roleId_fk")
 public class JdUser {
 
     @Id
@@ -92,6 +92,10 @@ public class JdUser {
     @Column(name = "gender")
     @JsonProperty
     private String gender;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, targetEntity = JdRole.class)
+    @JoinTable(name = "jd_user_role", joinColumns = { @JoinColumn(name = "userId_fk") }, inverseJoinColumns = { @JoinColumn(name = "roleId_fk") })
+    private Set<JdRole> roles;
 
     public Long getUserId() {
         return userId;
@@ -219,5 +223,13 @@ public class JdUser {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public Set<JdRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<JdRole> roles) {
+        this.roles = roles;
     }
 }
