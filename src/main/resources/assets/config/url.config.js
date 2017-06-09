@@ -1,5 +1,5 @@
 //LAB and Live
-var environment = 'LIVE';
+var environment = 'LAB';
 
 if(environment == 'LOCAL')
 {
@@ -23,3 +23,6 @@ var BOOK_APPNT_HOMEPAGE = HOSTNAME + '/api/jdappointment';
 var ADD_CLIINC_ADMIN_LANDING = HOSTNAME + '/api/jdclinic';
 var ADD_DOCTOR_ADMIN_LANDING = HOSTNAME + '/api/jduser';
 var ADD_PATIENT = HOSTNAME + '/api/jdpatient';
+var GET_ALL_PATIENT = HOSTNAME + '/api/jdpatient';
+var DELETE_PATIENT = HOSTNAME + '/api/jdpatient/';
+var GET_PATIENT = HOSTNAME + '/api/jdpatient/';

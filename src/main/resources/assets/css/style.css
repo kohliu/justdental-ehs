@@ -356,6 +356,7 @@ blockquote footer{
 .mb-60{margin-bottom:60px;}
 .mb-80{margin-bottom:80px;}
 .mb-100{margin-bottom:100px;}
+.mb-120{margin-bottom:120px;}
 
 .pt-20{padding-top:20px;}       /* Padding Top Classes */
 .pt-40{padding-top:40px;}
@@ -4321,4 +4322,22 @@ blockquote footer{
 
 #custom-search-input .glyphicon-search{
     font-size: 23px;
+}
+
+
+td.editIcon {
+    background: url('/images/edit.png') no-repeat center center;
+    cursor: pointer;
+}
+
+td.deleteIcon {
+    background: url('/images/delete.png') no-repeat center center;
+    cursor: pointer;
+}
+
+body .deleteDoctorModal {
+    /* new custom width */
+    width: 750px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -375px;
 }

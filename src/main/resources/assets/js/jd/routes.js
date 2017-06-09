@@ -7,12 +7,29 @@ function doNothing()
 
 }
 
+function loadClinicPage() {    
+    return replaceBodyContent('/html/doctor/doctorlanding.html', doNothing);
+}
+
+function loadTeamPage() {    
+    return replaceBodyContent('/html/doctor/doctorlanding.html', doNothing);
+}
+
 function loadDoctorLandingPage() {    
     return replaceBodyContent('/html/doctor/doctorlanding.html', initDoctorLandingPage);
 }
 
+function loadrLandingPage() {    
+    return replaceBodyContent('/html/doctor/doctorlanding.html', initDoctorLandingPage);
+}
+
 function loadAdminLandingPage() {    
+    console.log('jdUserId   ',jdUserId);
     return replaceBodyContent('/html/admin/adminlanding.html', initAdminLandingPage);
+}
+
+function loadReceptionistLandingPage() {    
+    return replaceBodyContent('html/receptionist/receptionistlanding.html', initDoctorLandingPage);
 }
 
 function loadMultiProfilePage() {

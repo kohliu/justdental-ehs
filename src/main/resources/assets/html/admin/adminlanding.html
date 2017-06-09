@@ -1,1053 +1,909 @@
-<!DOCTYPE html>
-<!--
-  ~ Copyright (c) 2017 Techstomach (TM)
-  ~
-  ~ This software is an intellectual property of Techstomach Solutions Pvt Ltd,India.
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>JustDental - Smile with us | For all your dental needs | India</title>
-    <!-- Favicon -->
-    <link rel="icon" href="http://www.justdental.in/wp-content/uploads/2016/11/cropped-logo_fixed-32x32.png" sizes="32x32" />
-    <link rel="icon" href="http://www.justdental.in/wp-content/uploads/2016/11/cropped-logo_fixed-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="http://www.justdental.in/wp-content/uploads/2016/11/cropped-logo_fixed-180x180.png" />
-    <!--Bootstrap Framework Version 3.3.7-->
-    <link href="../../../css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <!--Font Awesome Version 4.6.3 -->
-    <link href="../../../css/font-awesome.min.css" type="text/css" rel="stylesheet">
-    <!-- Medical Icons -->
-    <link href="../../../css/medical-icons.css" type="text/css" rel="stylesheet">
-    <!-- Stylesheets -->
-    <link href="../../../css/vendors.css" type="text/css" rel="stylesheet">
-    <link href="../../../css/style.css" type="text/css" rel="stylesheet" id="style">
-    <link href="../../../css/components.css" type="text/css" rel="stylesheet" id="components">
-    <!--Slider Revolution -->
-    <link href="../../../slider-revolution/css/settings.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="../../slider-revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="../../slider-revolution/css/navigation.css">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Volkhov:400,400i" rel="stylesheet">
-   
-    <!-- Respond.js and HTML shiv provide HTML5 support in older browsers like IE9 and 8 -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-89613573-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</head>
-
-<body>
-    <div class="loader-backdrop">
-        <!-- Loader -->
-        <div class="loader"> </div>
-    </div>
-    <header class="header-1">           <!-- Header Style 2 -->
-         <!-- Navigation Bar -->
-        <nav class="navbar navbar-default shadow-border">        
-            <div class="container">            
-                <div class="navbar-header shadow-border">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
-                        <span class="sr-only">Toggle Menu</span>
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="../../index.html">
-                        <img src="../../images/JD_logo.png" alt="" height="60px" width="60px">
-                    </a>
-                    <a class="navbar-brand" href="../../index.html">
-                        <div style="color: #303b41;font-weight: 800;font-size: 35px;letter-spacing: 1px;background-color: transparent;
-                                    z-index: 1;vertical-align:top;">Just Dental</div>
-                        <!--<br>                        -->
-                        <div style="line-height:80%;">
-                            <br>
-                        </div>
-                        <div style="color: #303b41;font-weight: 400;font-size: 16px;letter-spacing: 1px;background-color: transparent;
-                                    z-index: 1;vertical-align:top;">Explore a new world of dentistry</div>
-                    </a>
+<div class="container mt-20 mb-120">
+    <div class="row top90">
+        <div class="col-md-3" style="height:300px">
+            <div class="row ">
+                <div class="col-md-offset-2 col-md-8"> <img src="../../images/santhosh.jpg" alt="" class="img-rounded img-responsive patient-profile-img" /> </div>
+            </div>
+            <div class="row mt-20 mb-20">
+                <div class="col-md-12">
+                    <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#profileEditModal"> <i class="fa fa-edit"></i> Edit </button>
                 </div>
-                
-                <div class="collapse navbar-collapse" id="main-navigation">         <!-- Main Menu -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="../../index.html">Home</a>                            
-                        </li>                                            
-                        <li><a href="/html/static/clinics.html">Our Clinics</a>
-                        <li><a href="../../index.html#aboutus">About us</a> 
-                        <li><a href="../../index.html#contactus" >Contact us</a>                            
-                        </li>                        
-                    </ul>
-                </div>
-            </div>            
-        </nav>
-	</header>
-    
-    <div class="container mt-20">
-        <div class="row top90">
-            <div class="col-md-3" style="height:300px">
-                <div class="row ">
-                    <div class="col-md-offset-2 col-md-8"> <img src="../../images/santhosh.jpg" alt="" class="img-rounded img-responsive patient-profile-img" /> </div>
-                </div>
-                <div class="row mt-20 mb-20">
-                    <div class="col-md-12">
-                        <button class="btn btn-info btn-md btn-block btn-round" data-toggle="modal" data-target="#profileEditModal"> <i class="fa fa-edit"></i> Edit </button>
-                    </div>
-                </div>
-                <div class="row top5">
-                    <div class="col-md-12">
-                        <blockquote>
-                            <p>Mr. Santhosh Kumar</p> <!--  <small>
+            </div>
+            <div class="row top5">
+                <div class="col-md-12">
+                    <blockquote>
+                        <p>Mr. Santhosh Kumar</p>
+                        <!--  <small>
                         <cite title="Source Title">35 / Male - Bengaluru <i class="glyphicon glyphicon-map-marker"></i></cite> 
                     </small> --></blockquote>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="contact-list">
-                            <li> <i class="fa fa-location-arrow"></i> Behind Canara bank </li>
-                            <li> Ramamandir, 3rd block Rajajinagar, </li>
-                            <li> Bangalore </li>
-                            <li> <i class="fa fa-phone"></i> +91 7892317589 </li>
-                            <li> <i class="fa fa-envelope"></i> drsantoshkumarr@gmail.com </li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="contact-list">
+                        <li> <i class="fa fa-location-arrow"></i> Behind Canara bank </li>
+                        <li> Ramamandir, 3rd block Rajajinagar, </li>
+                        <li> Bangalore </li>
+                        <li> <i class="fa fa-phone"></i> +91 7892317589 </li>
+                        <li> <i class="fa fa-envelope"></i> drsantoshkumarr@gmail.com </li>
+                    </ul>
                 </div>
-                <div class="accordion-2">                    
-                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" role="tab" id="a2heading2">
-                                <h4 class="panel-title">
+            </div>
+            <div class="accordion-2">
+                <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="a2heading2">
+                            <h4 class="panel-title">
                                     <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body2" aria-expanded="false" aria-controls="a2body1">
                                         Quick Links
                                     </a>
-                                </h4>
+                                </h4> </div>
+                        <div id="a2body2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading2">
+                            <div class="panel-body">
+                                <ul class="list-styled">
+                                    <li>Past Digital Reports</li>
+                                    <li>Invoices</li>
+                                    <li>Prescriptions</li>
+                                </ul>
                             </div>
-                            <div id="a2body2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading2">
-                                <div class="panel-body">
-                                    <ul class="list-styled">
-                                        <li>Past Digital Reports</li>
-                                        <li>Invoices</li>
-                                        <li>Prescriptions</li>                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-warning"> <i class="fa fa-info-circle"></i> Your next appointment is on 10 March 2017 </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="nav nav-tabs list-group">
-                            <li class="active"><a data-toggle="tab" href="#clinics">Clinics</a></li>
-                            <li><a data-toggle="tab" href="#doctors">Doctors</a></li>
-                            <li><a data-toggle="tab" href="#appointments">Appointments</a></li>                            
-                            <li><a data-toggle="tab" href="#reports">Reports</a></li>
-                            <li><a data-toggle="tab" href="#bills">Bills</a></li>
-                            <li><a data-toggle="tab" href="#prescription">Prescription</a></li>
-                            <li><a data-toggle="tab" href="#conversations">Conversations</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="clinics" class="tab-pane fade in active">
-                                <div class="row">
-                                    <div class="col-md-4 pull-right">
-                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#addClinicModal"> Add Clinic</button>
-                                    </div>
-                                </div>
-                                <div class="row mt-20">
-                                    <div class="col-md-12">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sno #</th>
-                                                    <th>Description</th>
-                                                    <th>Consulting Doctor</th>
-                                                    <th>Clinic Name</th>
-                                                    <th>Date</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>RC - #1</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>RC - #2</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>RC - #3</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">21/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Crown Measurement</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-warning">24/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>7</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>8</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>                                                 
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="doctors" class="tab-pane fade in">
-                                <div class="row">
-                                    <div class="col-md-4 pull-right">
-                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#addDoctorModal"> Add Doctor</button>
-                                    </div>
-                                </div>
-                                <div class="row mt-20">
-                                    <div class="col-md-12">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sno #</th>
-                                                    <th>Description</th>
-                                                    <th>Consulting Doctor</th>
-                                                    <th>Clinic Name</th>
-                                                    <th>Date</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>RC - #1</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>RC - #2</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>RC - #3</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">21/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Crown Measurement</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-warning">24/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>7</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>8</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>                                                 
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="appointments" class="tab-pane fade in">
-                                <div class="row">
-                                    <div class="col-md-4 pull-right">
-                                        <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="fa fa-calendar"></i> Book Appointment </button>
-                                    </div>
-                                </div>
-                                <div class="row mt-20">
-                                    <div class="col-md-12">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sno #</th>
-                                                    <th>Description</th>
-                                                    <th>Consulting Doctor</th>
-                                                    <th>Clinic Name</th>
-                                                    <th>Date</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>RC - #1</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>RC - #2</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">20/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>RC - #3</td>
-                                                    <td>Dr Sumanth</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-default">21/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Crown Measurement</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-warning">24/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>7</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>8</td>
-                                                    <td>Crown Fitting</td>
-                                                    <td>Dr Suresh</td>
-                                                    <td>Rukmini Clinic</td>
-                                                    <td><span class="label label-success">28/Jan/2017</span></td>
-                                                    <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
-                                                </tr>                                                 
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="reports" class="tab-pane fade in active"> </div>
-                            <div id="bills" class="tab-pane fade in active"> </div>
-                            <div id="prescription" class="tab-pane fade in active"> </div>
-                            <div id="conversations" class="tab-pane fade in active"> </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row"> </div>
-        <!-- Book Appointment Modal -->
-        <div class="modal fade modal-popup" id="bookAppointmentModal" data-open-onload="false" data-open-delay="750" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <h3 class="heading">Welcome <span class="color1"></span> Santhosh, book your appointment </h3>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Phone Number" value="+91 7892317589"> </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" placeholder="Your Email ID" value="drsantoshkumarr@gmail.com"> </div>
-                                    </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-warning"> <i class="fa fa-info-circle"></i> Your next appointment is on 10 March 2017 </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs list-group">
+                        <li class="active"><a data-toggle="tab" href="#clinics">Clinics</a></li>
+                        <li><a data-toggle="tab" href="#doctors">Doctors</a></li>
+                        <li><a data-toggle="tab" href="#appointments">Appointments</a></li>
+                      <!--  <li><a data-toggle="tab" href="#reports">Reports</a></li>
+                        <li><a data-toggle="tab" href="#bills">Bills</a></li>
+                        <li><a data-toggle="tab" href="#prescription">Prescription</a></li>
+                        <li><a data-toggle="tab" href="#conversations">Conversations</a></li>
+                        -->
+                    </ul>
+                    <div class="tab-content">
+                        <div id="clinics" class="tab-pane fade in active">
+                            <div class="row">
+                                <div class="col-md-4 pull-right">
+                                    <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#addClinicModal"> Add Clinic</button>
                                 </div>
-                                <div class="row">                                    
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <select>
-                                                <option>Select Locality</option>
-                                                <option>Bengaluru - Malleswaram</option>
-                                                <option>Bengaluru - Marathahalli</option>
-                                                <option>Bengaluru - Domlur</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <select>
-                                                <option>Select Clinic</option>
-                                                <option>Smile Clinic</option>
-                                                <option>Partha Dental Hospitals</option>
-                                                <option>Rashmi Dental Clinic</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <select>
-                                                <option>Select Doctor</option>
-                                                <option>Dr Suresh</option>
-                                                <option>Dr Guru</option>
-                                                <option>Dr Manish</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="row mt-20">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sno #</th>
+                                                <th>Description</th>
+                                                <th>Consulting Doctor</th>
+                                                <th>Clinic Name</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>RC - #1</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">20/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>RC - #2</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">20/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>RC - #3</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">21/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Crown Measurement</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-warning">24/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <select>
-                                                <option>Select Appointment Slot</option>
-                                                <option>9:00 p.m. - 12:00 p.m.</option>
-                                                <option>12:00 p.m. - 4:00 p.m.</option>
-                                                <option>4:00 p.m. - 8:00 p.m.</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <select>
-                                                <option>Select Treatment (optional)</option>
-                                                <option>Root Canal</option>
-                                                <option>Dental Filling</option>
-                                                <option>Crown &nbsp; Bridge fixing</option>
-                                                <option>General Consultation</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="5" placeholder="Appointment Description"></textarea>
-                                        </div>
-                                    </div>
-                                </div>   
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Book Appointment</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
+                        <div id="doctors" class="tab-pane fade in">
+                            <div class="row">
+                                <div class="col-md-4 pull-right">
+                                    <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#addDoctorModal"> Add Doctor</button>
+                                </div>
+                            </div>
+                            <div class="row mt-20">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sno #</th>
+                                                <th>Description</th>
+                                                <th>Consulting Doctor</th>
+                                                <th>Clinic Name</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>RC - #1</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">20/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>RC - #2</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">20/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>RC - #3</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">21/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Crown Measurement</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-warning">24/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="appointments" class="tab-pane fade in">
+                            <div class="row">
+                                <div class="col-md-4 pull-right">
+                                    <button class="btn btn-primary btn-md btn-block btn-round" data-toggle="modal" data-target="#bookAppointmentModal"> <i class="fa fa-calendar"></i> Book Appointment </button>
+                                </div>
+                            </div>
+                            <div class="row mt-20">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sno #</th>
+                                                <th>Description</th>
+                                                <th>Consulting Doctor</th>
+                                                <th>Clinic Name</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>RC - #1</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">20/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>RC - #2</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">20/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>RC - #3</td>
+                                                <td>Dr Sumanth</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-default">21/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Crown Measurement</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-warning">24/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Crown Fitting</td>
+                                                <td>Dr Suresh</td>
+                                                <td>Rukmini Clinic</td>
+                                                <td><span class="label label-success">28/Jan/2017</span></td>
+                                                <td><i class="fa fa-edit fa-fw text-warning"></i><i class="fa fa-times-circle fa-fw text-danger"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="reports" class="tab-pane fade in active"> </div>
+                        <div id="bills" class="tab-pane fade in active"> </div>
+                        <div id="prescription" class="tab-pane fade in active"> </div>
+                        <div id="conversations" class="tab-pane fade in active"> </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Profile edit Modal -->
-        <div class="modal fade" id="profileEditModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                            <h3 class="heading">Edit your profile</h3>
+    </div>
+    <div class="row"> </div>
+    <!-- Book Appointment Modal -->
+    <div class="modal fade modal-popup" id="bookAppointmentModal" data-open-onload="false" data-open-delay="750" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h3 class="heading">Welcome <span class="color1"></span> Santhosh, book your appointment </h3> </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Your Phone Number" value="+91 7892317589"> </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Your Email ID" value="drsantoshkumarr@gmail.com"> </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>Select Locality</option>
+                                            <option>Bengaluru - Malleswaram</option>
+                                            <option>Bengaluru - Marathahalli</option>
+                                            <option>Bengaluru - Domlur</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="accordion-2">
-                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="a2heading1">
-                                                <h4 class="panel-title">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>Select Clinic</option>
+                                            <option>Smile Clinic</option>
+                                            <option>Partha Dental Hospitals</option>
+                                            <option>Rashmi Dental Clinic</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>Select Doctor</option>
+                                            <option>Dr Suresh</option>
+                                            <option>Dr Guru</option>
+                                            <option>Dr Manish</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>Select Appointment Slot</option>
+                                            <option>9:00 p.m. - 12:00 p.m.</option>
+                                            <option>12:00 p.m. - 4:00 p.m.</option>
+                                            <option>4:00 p.m. - 8:00 p.m.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>Select Treatment (optional)</option>
+                                            <option>Root Canal</option>
+                                            <option>Dental Filling</option>
+                                            <option>Crown &nbsp; Bridge fixing</option>
+                                            <option>General Consultation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="5" placeholder="Appointment Description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Book Appointment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Profile edit Modal -->
+    <div class="modal fade" id="profileEditModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h3 class="heading">Edit your profile</h3> </div>
+                            </div>
+                            <div class="accordion-2">
+                                <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="a2heading1">
+                                            <h4 class="panel-title">
                                                     <a role="button" data-toggle="collapse" data-parent="#a2" href="#a2body1" aria-expanded="true" aria-controls="a2body1">
                                                         Basic Information
                                                     </a>
-                                                </h4>
-                                            </div>
-                                            <div id="a2body1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading1">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Firstname" value="Santhosh">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Middlename" >
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
-                                                            </div>
+                                                </h4> </div>
+                                        <div id="a2body1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="a2heading1">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Firstname" value="Santhosh"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Middlename"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Lastname" value="Kumar"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="email id" value="drsantoshkumarr@gmail.com"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Phone number" value="+91 7892317589"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option>Marital Status</option>
+                                                                <option>Single</option>
+                                                                <option>Married</option>
+                                                                <option>Dont want to disclose</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="email id" value="drsantoshkumarr@gmail.com">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Phone number" value="+91 7892317589">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select>
-                                                                    <option>Marital Status</option>
-                                                                    <option>Single</option>
-                                                                    <option>Married</option>                                                                    
-                                                                    <option>Dont want to disclose</option>                                                                    
-                                                                </select>
-                                                            </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option>Select Gender</option>
+                                                                <option>Male</option>
+                                                                <option>Female</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select>
-                                                                    <option>Select Gender</option>
-                                                                    <option>Male</option>
-                                                                    <option>Female</option>                                                                    
-                                                                </select>
-                                                            </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option>Select blood Group</option>
+                                                                <option>A+</option>
+                                                                <option>A-</option>
+                                                                <option>B+</option>
+                                                                <option>B-</option>
+                                                                <option>O+</option>
+                                                                <option>O-</option>
+                                                                <option>AB+</option>
+                                                                <option>AB-</option>
+                                                                <option>Not Sure</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select>
-                                                                    <option>Select blood Group</option>
-                                                                    <option>A+</option>
-                                                                    <option>A-</option>
-                                                                    <option>B+</option>
-                                                                    <option>B-</option>
-                                                                    <option>O+</option>
-                                                                    <option>O-</option>
-                                                                    <option>AB+</option>
-                                                                    <option>AB-</option>
-                                                                    <option>Not Sure</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Lastname" value="Kumar">
-                                                            </div>
-                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Lastname" value="Kumar"> </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="a2heading20">
-                                                <h4 class="panel-title">
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="a2heading20">
+                                            <h4 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body20" aria-expanded="false" aria-controls="a2body20">
                                                       Contact Address Information
                                                     </a>
-                                                </h4>
-                                            </div>
-                                            <div id="a2body20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading20">
-                                                <div class="panel-body">
-                                                   <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Street # 1" value="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Street # 2" >
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Locality">
-                                                            </div>
-                                                        </div>
+                                                </h4> </div>
+                                        <div id="a2body20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading20">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Street # 1" value=""> </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="City" value="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Pincode" >
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select>
-                                                                    <option>Select State</option>
-                                                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                                                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                                                    <option value="Assam">Assam</option>
-                                                                    <option value="Bihar">Bihar</option>
-                                                                    <option value="Chandigarh">Chandigarh</option>
-                                                                    <option value="Chhattisgarh">Chhattisgarh</option>
-                                                                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                                                                    <option value="Daman and Diu">Daman and Diu</option>
-                                                                    <option value="Delhi">Delhi</option>
-                                                                    <option value="Goa">Goa</option>
-                                                                    <option value="Gujarat">Gujarat</option>
-                                                                    <option value="Haryana">Haryana</option>
-                                                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                                                    <option value="Jharkhand">Jharkhand</option>
-                                                                    <option value="Karnataka">Karnataka</option>
-                                                                    <option value="Kerala">Kerala</option>
-                                                                    <option value="Lakshadweep">Lakshadweep</option>
-                                                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                                                    <option value="Maharashtra">Maharashtra</option>
-                                                                    <option value="Manipur">Manipur</option>
-                                                                    <option value="Meghalaya">Meghalaya</option>
-                                                                    <option value="Mizoram">Mizoram</option>
-                                                                    <option value="Nagaland">Nagaland</option>
-                                                                    <option value="Orissa">Orissa</option>
-                                                                    <option value="Pondicherry">Pondicherry</option>
-                                                                    <option value="Punjab">Punjab</option>
-                                                                    <option value="Rajasthan">Rajasthan</option>
-                                                                    <option value="Sikkim">Sikkim</option>
-                                                                    <option value="Tamil Nadu">Tamil Nadu</option>
-                                                                    <option value="Tripura">Tripura</option>
-                                                                    <option value="Uttaranchal">Uttaranchal</option>
-                                                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                                                    <option value="West Bengal">West Bengal</option>           
-                                                                </select>
-                                                            </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Street # 2"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Locality"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="City" value=""> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Pincode"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option>Select State</option>
+                                                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                                <option value="Assam">Assam</option>
+                                                                <option value="Bihar">Bihar</option>
+                                                                <option value="Chandigarh">Chandigarh</option>
+                                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                                                <option value="Daman and Diu">Daman and Diu</option>
+                                                                <option value="Delhi">Delhi</option>
+                                                                <option value="Goa">Goa</option>
+                                                                <option value="Gujarat">Gujarat</option>
+                                                                <option value="Haryana">Haryana</option>
+                                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                                <option value="Jharkhand">Jharkhand</option>
+                                                                <option value="Karnataka">Karnataka</option>
+                                                                <option value="Kerala">Kerala</option>
+                                                                <option value="Lakshadweep">Lakshadweep</option>
+                                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                                <option value="Maharashtra">Maharashtra</option>
+                                                                <option value="Manipur">Manipur</option>
+                                                                <option value="Meghalaya">Meghalaya</option>
+                                                                <option value="Mizoram">Mizoram</option>
+                                                                <option value="Nagaland">Nagaland</option>
+                                                                <option value="Orissa">Orissa</option>
+                                                                <option value="Pondicherry">Pondicherry</option>
+                                                                <option value="Punjab">Punjab</option>
+                                                                <option value="Rajasthan">Rajasthan</option>
+                                                                <option value="Sikkim">Sikkim</option>
+                                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                                <option value="Tripura">Tripura</option>
+                                                                <option value="Uttaranchal">Uttaranchal</option>
+                                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                                <option value="West Bengal">West Bengal</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="a2heading30">
-                                                <h4 class="panel-title">
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="a2heading30">
+                                            <h4 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body30" aria-expanded="false" aria-controls="a2body30">
                                                       Emergency Contact Information
                                                     </a>
-                                                </h4>
-                                            </div>
-                                            <div id="a2body30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading30">
-                                                <div class="panel-body">
-                                                   <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person Name" value="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Person relationship" >
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Emergency Contact Phone number" value="Kumar">
-                                                            </div>
-                                                        </div>
+                                                </h4> </div>
+                                        <div id="a2body30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading30">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Emergency Contact Person Name" value=""> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Emergency Contact Person relationship"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Emergency Contact Phone number" value="Kumar"> </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="a2heading40">
-                                                <h4 class="panel-title">
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="a2heading40">
+                                            <h4 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#a2body40" aria-expanded="false" aria-controls="a2body40">
                                                       Medical history
                                                     </a>
-                                                </h4>
-                                            </div>
-                                            <div id="a2body40" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading40">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Medical History"></textarea>
-                                                        </div>
+                                                </h4> </div>
+                                        <div id="a2body40" class="panel-collapse collapse" role="tabpanel" aria-labelledby="a2heading40">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control" rows="5" placeholder="Medical History"></textarea>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Family History"></textarea>
-                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control" rows="5" placeholder="Family History"></textarea>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <textarea class="form-control" rows="5" placeholder="Social History"></textarea>
-                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <textarea class="form-control" rows="5" placeholder="Social History"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Update my Profile</button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary pull-right" type="submit"><i class="fa fa-paper-plane"></i> Update my Profile</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Add Clinic -->
-        <div class="modal fade" id="addClinicModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                            <h3 class="heading">Add New Clinic</h3>
-                                    </div>
-                                </div>
-                                <div class="accordion-2">
-                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="addClinicBasicInfoHeader">
-                                                <h4 class="panel-title">
+    </div>
+    <!-- Add Clinic -->
+    <div class="modal fade" id="addClinicModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h3 class="heading">Add New Clinic</h3> </div>
+                            </div>
+                            <div class="accordion-2">
+                                <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="addClinicBasicInfoHeader">
+                                            <h4 class="panel-title">
                                                     <a role="button" data-toggle="collapse" data-parent="#a2" href="#addClinicBasicInfoBody" aria-expanded="true" aria-controls="addClinicBasicInfoBody">
                                                         Clinic Information
                                                     </a>
-                                                </h4>
-                                            </div>
-                                            <div id="addClinicBasicInfoBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="addClinicBasicInfoHeader">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Clinic Name" data-toggle="tooltip" title="Clinic Name" id="adminlanding:addclinic:clinicname">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Tax Number" data-toggle="tooltip" title="Please enter tax number"id="adminlanding:addclinic:taxnumber">
-                                                            </div>
-                                                        </div>                                                        
-                                                    </div> 
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Primary Contact Name" data-toggle="tooltip" title="Primary Contact Name" data-toggle="tooltip" title="Please enter primary contact name"id="adminlanding:addclinic:primarycontactname">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Primary Contact Number" id="adminlanding:addclinic:primarycontactnumber" data-toggle="tooltip" title="Please enter primary contact number">
-                                                            </div>
-                                                        </div>                                                        
-                                                    </div> 
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <select  id="adminlanding:addclinic:workingday" data-toggle="tooltip" title="Please select working days">
-                                                                  <option value="">Working Days</option>
-                                                                  <option value="alldays">All Days</option>
-                                                                  <option value="weekdays">Week Days</option>
-                                                                  <option value="Weekedns">Weekends Days</option>
-                                                                </select>  
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group" >
-                                                                <select id="adminlanding:addclinic:clinictype" data-toggle="tooltip" title="Please select clinic type">
-                                                                  <option value="">Clinic Type</option>
-                                                                  <option value="platinum">Platinum</option>
-                                                                </select>  
-                                                            </div>
-                                                        </div>                                                        
+                                                </h4> </div>
+                                        <div id="addClinicBasicInfoBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="addClinicBasicInfoHeader">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Clinic Name" data-toggle="tooltip" title="Clinic Name" id="adminlanding:addclinic:clinicname"> </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-2">
-                                                            <div class="form-group">
-                                                                <select  id="adminlanding:addclinic:fromhour">
-                                                                  <option value="1">1</option>
-                                                                  <option value="2">2</option>
-                                                                  <option value="3">3</option>
-                                                                  <option value="4">4</option>
-                                                                  <option value="5">5</option>
-                                                                  <option value="6">6</option>
-                                                                  <option value="7">7</option>
-                                                                  <option value="8">8</option>
-                                                                  <option value="9">9</option>
-                                                                  <option value="10">10</option>
-                                                                  <option value="11">11</option>
-                                                                  <option value="12">12</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="form-group">
-                                                                <select  id="adminlanding:addclinic:fromminutes">
-                                                                  <option value="15">15</option>
-                                                                  <option value="30">30</option>
-                                                                  <option value="45">45</option>
-                                                                  <option value="00">00</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-1">
-                                                            <div class="form-group">
-                                                              <select  id="adminlanding:addclinic:fromtimezone">
-                                                                  <option value="AM">AM</option>
-                                                                  <option value="PM">PM</option>
-                                                                </select>                                                                
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-1 col-md-offset-1">
-                                                            <div class="form-group">
-                                                              <label>Till</label>                                                             
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-1">
-                                                            <div class="form-group">
-                                                              <select  id="adminlanding:addclinic:tohour">
-                                                                  <option value="1">1</option>
-                                                                  <option value="2">2</option>
-                                                                  <option value="3">3</option>
-                                                                  <option value="4">4</option>
-                                                                  <option value="5">5</option>
-                                                                  <option value="6">6</option>
-                                                                  <option value="7">7</option>
-                                                                  <option value="8">8</option>
-                                                                  <option value="9">9</option>
-                                                                  <option value="10">10</option>
-                                                                  <option value="11">11</option>
-                                                                  <option value="12">12</option>
-                                                                </select>                                                                
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="form-group1">
-                                                              <select  id="adminlanding:addclinic:tominutes">
-                                                                  <option value="15">15</option>
-                                                                  <option value="30">30</option>
-                                                                  <option value="45">45</option>
-                                                                  <option value="00">00</option>
-                                                                </select>                                                                
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="form-group">
-                                                                <select id="adminlanding:addclinic:totimezone">
-                                                                    <option value="AM">AM</option>
-                                                                  <option value="PM">PM</option>
-                                                                </select>
-                                                            </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Tax Number" data-toggle="tooltip" title="Please enter tax number" id="adminlanding:addclinic:taxnumber"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Primary Contact Name" data-toggle="tooltip" title="Primary Contact Name" data-toggle="tooltip" title="Please enter primary contact name" id="adminlanding:addclinic:primarycontactname"> </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Primary Contact Number" id="adminlanding:addclinic:primarycontactnumber" data-toggle="tooltip" title="Please enter primary contact number"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="adminlanding:addclinic:workingday" data-toggle="tooltip" title="Please select working days">
+                                                                <option value="">Working Days</option>
+                                                                <option value="alldays">All Days</option>
+                                                                <option value="weekdays">Week Days</option>
+                                                                <option value="Weekedns">Weekends Days</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="gMap" data-toggle="tooltip" title="Please enter google map url" id="adminlanding:addclinic:gmap">
-                                                            </div>
-                                                        </div>                                                        
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="adminlanding:addclinic:clinictype" data-toggle="tooltip" title="Please select clinic type">
+                                                                <option value="">Clinic Type</option>
+                                                                <option value="platinum">Platinum</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Notification" data-toggle="tooltip" title="Please enter notifcation" id="adminlanding:addclinic:notification">
-                                                            </div>
-                                                        </div>                                                        
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <select class="form-control" class="form-control" id="adminlanding:addclinic:fromhour">
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                                <option value="11">11</option>
+                                                                <option value="12">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <select class="form-control" class="form-control" id="adminlanding:addclinic:fromminutes">
+                                                                <option value="15">15</option>
+                                                                <option value="30">30</option>
+                                                                <option value="45">45</option>
+                                                                <option value="00">00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="adminlanding:addclinic:fromtimezone">
+                                                                <option value="AM">AM</option>
+                                                                <option value="PM">PM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1 col-md-offset-1">
+                                                        <div class="form-group">
+                                                            <label>Till</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="adminlanding:addclinic:tohour">
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                                <option value="11">11</option>
+                                                                <option value="12">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group1">
+                                                            <select class="form-control" id="adminlanding:addclinic:tominutes">
+                                                                <option value="15">15</option>
+                                                                <option value="30">30</option>
+                                                                <option value="45">45</option>
+                                                                <option value="00">00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="adminlanding:addclinic:totimezone">
+                                                                <option value="AM">AM</option>
+                                                                <option value="PM">PM</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input class="form-control" class="form-control" type="text" placeholder="gMap" data-toggle="tooltip" title="Please enter google map url" id="adminlanding:addclinic:gmap"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input class="form-control" class="form-control" type="text" placeholder="Notification" data-toggle="tooltip" title="Please enter notifcation" id="adminlanding:addclinic:notification"> </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="addClinicAddressHeader">
-                                                <h4 class="panel-title">
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="addClinicAddressHeader">
+                                            <h4 class="panel-title">
                                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#a2" href="#addClinicAddressBody" aria-expanded="false" aria-controls="addClinicAddressBody">
                                                       Contact Address Information
                                                     </a>
-                                                </h4>
-                                            </div>
-                                            <div id="addClinicAddressBody" class="panel-collapse collapse" role="tabpanel" aria-labelledby="addClinicAddressHeader">
-                                                <div class="panel-body">
-                                                   <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Street # 1" data-toggle="tooltip" title="Please enter street # 1"  id="adminlanding:addclinic:street1">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Street # 2" toggle="tooltip" title="Please enter street # 2" id="adminlanding:addclinic:street2">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Locality" toggle="tooltip" title="Please enter locality"id="adminlanding:addclinic:locality">
-                                                            </div>
-                                                        </div>
+                                                </h4> </div>
+                                        <div id="addClinicAddressBody" class="panel-collapse collapse" role="tabpanel" aria-labelledby="addClinicAddressHeader">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Street # 1" data-toggle="tooltip" title="Please enter street # 1" id="adminlanding:addclinic:street1"> </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="City" value="" toggle="tooltip" title="Please enter city"id="adminlanding:addclinic:city">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Pincode" 
-                                                                       toggle="tooltip" title="Please enter pincode"id="adminlanding:addclinic:pincode" >
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select id="adminlanding:addclinic:state" toggle="tooltip" title="Please enter state">
-                                                                    <option>Select State</option>
-                                                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                                                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                                                    <option value="Assam">Assam</option>
-                                                                    <option value="Bihar">Bihar</option>
-                                                                    <option value="Chandigarh">Chandigarh</option>
-                                                                    <option value="Chhattisgarh">Chhattisgarh</option>
-                                                                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                                                                    <option value="Daman and Diu">Daman and Diu</option>
-                                                                    <option value="Delhi">Delhi</option>
-                                                                    <option value="Goa">Goa</option>
-                                                                    <option value="Gujarat">Gujarat</option>
-                                                                    <option value="Haryana">Haryana</option>
-                                                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                                                    <option value="Jharkhand">Jharkhand</option>
-                                                                    <option value="Karnataka">Karnataka</option>
-                                                                    <option value="Kerala">Kerala</option>
-                                                                    <option value="Lakshadweep">Lakshadweep</option>
-                                                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                                                    <option value="Maharashtra">Maharashtra</option>
-                                                                    <option value="Manipur">Manipur</option>
-                                                                    <option value="Meghalaya">Meghalaya</option>
-                                                                    <option value="Mizoram">Mizoram</option>
-                                                                    <option value="Nagaland">Nagaland</option>
-                                                                    <option value="Orissa">Orissa</option>
-                                                                    <option value="Pondicherry">Pondicherry</option>
-                                                                    <option value="Punjab">Punjab</option>
-                                                                    <option value="Rajasthan">Rajasthan</option>
-                                                                    <option value="Sikkim">Sikkim</option>
-                                                                    <option value="Tamil Nadu">Tamil Nadu</option>
-                                                                    <option value="Tripura">Tripura</option>
-                                                                    <option value="Uttaranchal">Uttaranchal</option>
-                                                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                                                    <option value="West Bengal">West Bengal</option>    
-                                                                </select>
-                                                            </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Street # 2" toggle="tooltip" title="Please enter street # 2" id="adminlanding:addclinic:street2"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Locality" toggle="tooltip" title="Please enter locality" id="adminlanding:addclinic:locality"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="City" value="" toggle="tooltip" title="Please enter city" id="adminlanding:addclinic:city"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Pincode" toggle="tooltip" title="Please enter pincode" id="adminlanding:addclinic:pincode"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="adminlanding:addclinic:state" toggle="tooltip" title="Please enter state">
+                                                                <option>Select State</option>
+                                                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                                <option value="Assam">Assam</option>
+                                                                <option value="Bihar">Bihar</option>
+                                                                <option value="Chandigarh">Chandigarh</option>
+                                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                                                <option value="Daman and Diu">Daman and Diu</option>
+                                                                <option value="Delhi">Delhi</option>
+                                                                <option value="Goa">Goa</option>
+                                                                <option value="Gujarat">Gujarat</option>
+                                                                <option value="Haryana">Haryana</option>
+                                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                                <option value="Jharkhand">Jharkhand</option>
+                                                                <option value="Karnataka">Karnataka</option>
+                                                                <option value="Kerala">Kerala</option>
+                                                                <option value="Lakshadweep">Lakshadweep</option>
+                                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                                <option value="Maharashtra">Maharashtra</option>
+                                                                <option value="Manipur">Manipur</option>
+                                                                <option value="Meghalaya">Meghalaya</option>
+                                                                <option value="Mizoram">Mizoram</option>
+                                                                <option value="Nagaland">Nagaland</option>
+                                                                <option value="Orissa">Orissa</option>
+                                                                <option value="Pondicherry">Pondicherry</option>
+                                                                <option value="Punjab">Punjab</option>
+                                                                <option value="Rajasthan">Rajasthan</option>
+                                                                <option value="Sikkim">Sikkim</option>
+                                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                                <option value="Tripura">Tripura</option>
+                                                                <option value="Uttaranchal">Uttaranchal</option>
+                                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                                <option value="West Bengal">West Bengal</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1055,143 +911,98 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary pull-right" type="button" onclick="addClinicFromAdminLanding()"><i class="fa fa-paper-plane"></i>Add New Clinic</button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary pull-right" type="button" onclick="addClinicFromAdminLanding()"><i class="fa fa-paper-plane"></i>Add New Clinic</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        
-         <!-- Add Doctor -->
-        <div class="modal fade" id="addDoctorModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                            <h3 class="heading">Add New Doctor</h3>
-                                    </div>
-                                </div>
-                                <div class="accordion-2">
-                                    <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="addDoctorBasicInfoHeader">
-                                                <h4 class="panel-title">
+    </div>
+    <!-- Add Doctor -->
+    <div class="modal fade" id="addDoctorModal" data-open-onload="false" data-open-delay="0" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h3 class="heading">Add New Doctor</h3> </div>
+                            </div>
+                            <div class="accordion-2">
+                                <div class="panel-group" id="a2" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="addDoctorBasicInfoHeader">
+                                            <h4 class="panel-title">
                                                     <a role="button" data-toggle="collapse" data-parent="#a2" href="#addDoctorBasicInfoBody" aria-expanded="true" aria-controls="addDoctorBasicInfoBody">
                                                         Doctor Information
                                                     </a>
-                                                </h4>
-                                            </div>
-                                            <div id="addDoctorBasicInfoBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="addDoctorBasicInfoHeader">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="First Name" data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:firstname'>
-                                                            </div>
+                                                </h4> </div>
+                                        <div id="addDoctorBasicInfoBody" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="addDoctorBasicInfoHeader">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="First Name" data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:firstname'> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Middle Name" data-toggle="tooltip" title="Please enter middle name" id='adminlanding:adddoctor:middlename'> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Last Name" data-toggle="tooltip" title="Please enter lastname" id='adminlanding:adddoctor:lastname'> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Email Address" data-toggle="tooltip" title="Please enter email id" id='adminlanding:adddoctor:emailid'> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Qualification" data-toggle="tooltip" title="Please enter qualification" id='adminlanding:adddoctor:qualification'> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id='adminlanding:adddoctor:gender' data-toggle="tooltip" title="Please enter gender">
+                                                                <option>Gender</option>
+                                                                <option>Male</option>
+                                                                <option>Female</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Middle Name" data-toggle="tooltip" title="Please enter middle name"id='adminlanding:adddoctor:middlename'>
-                                                            </div>
-                                                        </div> 
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Last Name" data-toggle="tooltip" title="Please enter lastname" id='adminlanding:adddoctor:lastname'>
-                                                            </div>
-                                                        </div> 
-                                                    </div> 
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Email Address" data-toggle="tooltip" title="Please enter email id" id='adminlanding:adddoctor:emailid'>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Qualification" data-toggle="tooltip" title="Please enter qualification" id='adminlanding:adddoctor:qualification'>
-                                                            </div>
-                                                        </div> 
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <select id='adminlanding:adddoctor:gender' data-toggle="tooltip" title="Please enter gender">
-                                                                    <option>Gender</option>
-                                                                    <option>Male</option>
-                                                                    <option>Female</option>
-                                                                </select>                                                                
-                                                            </div>
-                                                        </div>                                                      
-                                                    </div> 
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="Specialization" id='adminlanding:adddoctor:specialization' data-toggle="tooltip" title="Please enter specialization">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" data-toggle="tooltip" title="Please enter phonenumber" placeholder="Phone number"id='adminlanding:adddoctor:phonenumber' >
-                                                            </div>
-                                                        </div>       
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" placeholder="License Number" data-toggle="tooltip" title="Please enter license number"data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:licensenumber'>
-                                                            </div>
-                                                        </div> 
-                                                    </div>                                                     
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="Specialization" id='adminlanding:adddoctor:specialization' data-toggle="tooltip" title="Please enter specialization"> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" data-toggle="tooltip" title="Please enter phonenumber" placeholder="Phone number" id='adminlanding:adddoctor:phonenumber'> </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" placeholder="License Number" data-toggle="tooltip" title="Please enter license number" data-toggle="tooltip" title="First Name" id='adminlanding:adddoctor:licensenumber'> </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary pull-right" type="button" onclick="addDoctorFromAdminLanding()"><i class="fa fa-paper-plane"></i>Add New Doctor</button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary pull-right" type="button" onclick="addDoctorFromAdminLanding()"><i class="fa fa-paper-plane"></i>Add New Doctor</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    
     </div>
-    <!-- JQuery Version 3.1.0 -->
-    <script src="../../js/jquery.min.js" type="text/javascript"></script>
-    <!-- Bootstrap Version 3.3.7 -->
-    <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
-    <!--Slider Revolution version 5.0
-        <script type="text/javascript" src="../../slider-revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="../../slider-revolution/js/jquery.themepunch.revolution.min.js"></script>
-    -->
-    <!-- Include only when working on Local system. Not required on server 
-        <script type="text/javascript" src="../../slider-revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="../../slider-revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script type="text/javascript" src="../../slider-revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="../../slider-revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="../../slider-revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    -->
-    <!-- Owl Carousel 2.0.0 -->
-    <script src="../../../js/owl.carousel.min.js" type="text/javascript"></script>
-    <!-- Bootstrap Select (Dropdown Styling) -->
-    <script src="../../../js/bootstrap-select.min.js" type="text/javascript"></script>
-    <!-- jQuery UI (Date Picker) -->
-    <script src="../../../js/jquery-ui.min.js" type="text/javascript"></script>
-    <!-- Fetch JS -->
-    <script src="../../../js/fetch.min.js" type="text/javascript"></script>
-    <!-- Fetch JS -->
-    <script src="../../config/url.config.js" type="text/javascript"></script>
-    <!-- Custom JS -->
-    <script src="../../../../js/script.js" type="text/javascript"></script>
-    <script src="../../js/jd/misc.js" type="text/javascript"></script>    
-    
-    <script src="/js/jd/app.js" type="text/javascript"></script>
-     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
-</body>
-
-</html>
+</div>
