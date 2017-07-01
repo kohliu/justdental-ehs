@@ -188,6 +188,12 @@ public class JdUserResource {
                     LOGGER.info("Login: user found with matching phoneNumber and password");
                     return Response.ok(jdUsers.get(0)).build();
                 }
+                LOGGER.info("Login: user not found with matching phoneNumber. trying with emailId ...");
+                jdUsers = jdUserDAO.validateUserByEmail(jdUser.getEmailAddress(), jdUser.getUserPassword());
+                if (!jdUsers.isEmpty()) {
+                    LOGGER.info("Login: user found with matching emailAddress and password");
+                    return Response.ok(jdUsers.get(0)).build();
+                }
             }
         }
         catch (Exception e) {
