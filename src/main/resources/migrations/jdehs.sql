@@ -493,6 +493,7 @@ values ('DOCTOR', 'shank104@umn.edu ', 'sumanth', 'sumanth', 'rao', 'shank104@um
 
 
 
+
 INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
 values ('1', '1');
 INSERT INTO jdehs_dev.jd_user_role (jd_user_role.userId_fk, jd_user_role.roleId_fk)
