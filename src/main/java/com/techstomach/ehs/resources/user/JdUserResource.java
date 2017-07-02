@@ -144,23 +144,24 @@ public class JdUserResource {
                 LOGGER.info("Login: user found with matching username and password");
                 JdUser validatedUser = jdUsers.get(0);
                 LOGGER.info("Generating a loginTracker for this user");
-                JdLoginTracking jdLoginTracking = jdLoginTrackingDAO.findById(validatedUser.getLoggedInSession().iterator().next().getLoginTrackId());
-                if(jdLoginTracking!=null) {
+                List<JdLoginTracking> jdLoginTracking = jdLoginTrackingDAO.findActiveLoginByUserId(validatedUser.getUserId());
+                if(jdLoginTracking!=null && jdLoginTracking.size()>0) {
+                    JdLoginTracking activeTracker = jdLoginTracking.get(0);
                     // check if the sesssion has expired from the login tracker createDate
                     DateTime now = new DateTime(new Date());
-                    DateTime sessionCreateTime = new DateTime(jdLoginTracking.getDateCreated());
+                    DateTime sessionCreateTime = new DateTime(activeTracker.getDateCreated());
                     // 1 hour session expiry
                     DateTime sessionExpiryDate = sessionCreateTime.plusHours(1);
-
+                LOGGER.info("Session create time: "+sessionCreateTime+ ", session expiry time: "+sessionExpiryDate);
                     if (sessionExpiryDate.isAfter(now)) {
                         LOGGER.info("User session is still active");
                         return Response.ok(validatedUser).build();
                     } else {
                         LOGGER.info("User session is obsolete and a new login session id is required");
-                        jdLoginTracking.setActive(Boolean.FALSE);
-                        jdLoginTrackingDAO.update(jdLoginTracking);
+                        activeTracker.setActive(Boolean.FALSE);
+                        jdLoginTrackingDAO.update(activeTracker);
                         HashSet<JdLoginTracking> logintrackerSet = new HashSet<>();
-                        logintrackerSet.add(jdLoginTracking);
+                        logintrackerSet.add(activeTracker);
                         validatedUser.setLoggedInSession(logintrackerSet);
                         return Response.ok(validatedUser).build();
                     }
@@ -185,6 +186,12 @@ public class JdUserResource {
                 jdUsers = jdUserDAO.validateUserByPhone(jdUser.getPhoneNumber(), jdUser.getUserPassword());
                 if (!jdUsers.isEmpty()) {
                     LOGGER.info("Login: user found with matching phoneNumber and password");
+                    return Response.ok(jdUsers.get(0)).build();
+                }
+                LOGGER.info("Login: user not found with matching phoneNumber. trying with emailId ...");
+                jdUsers = jdUserDAO.validateUserByEmail(jdUser.getEmailAddress(), jdUser.getUserPassword());
+                if (!jdUsers.isEmpty()) {
+                    LOGGER.info("Login: user found with matching emailAddress and password");
                     return Response.ok(jdUsers.get(0)).build();
                 }
             }

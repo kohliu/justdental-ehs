@@ -43,7 +43,7 @@ public class JdLoginTrackingDAO extends AbstractDAO<JdLoginTracking> {
     }
 
     public List<JdLoginTracking> findActiveLoginByUserId(long userId) {
-       return currentSession().createCriteria(JdLoginTracking.class).add(Restrictions.eq("userId_fk", userId)).add(Restrictions.eq("isActive",1)).list();
+       return  currentSession().createCriteria(JdLoginTracking.class).add(Restrictions.eq("userIdFk", userId)).add(Restrictions.eq("isActive", true)).list();
     }
 
     public void delete(JdLoginTracking jdLoginTracking) {
